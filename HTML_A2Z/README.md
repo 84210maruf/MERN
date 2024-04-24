@@ -1,5 +1,7 @@
-Module-1
-"Learn and Explore HTML
+HTML----text/paragraph
 
-1.structure
-2.
+tags---> 
+paragraph  <p></p> [paragraph writing]
+ahnchor    <a></a> [for add a link]
+
+
