@@ -1,6 +1,11 @@
+
+p{
+    font-size: 12px;
+}
 .main {
     font-size: 32px;
     font-weight: bold;
+    margin:30px;
     text-align: center;
 }
 
@@ -9,7 +14,7 @@
     width: 400px;
     height: 100px;
     border: 50px solid green;
-    margin: 50px;
+    margin: auto;
     text-align: center;
     font-size: 32px;
     font-weight: bold;
@@ -17,19 +22,18 @@
 
  
 .gfg {
-    margin-left: 60px;
-    border: 50px solid #009900;
+    margin: auto;
+    border: 20px solid #009900;
     width: 300px;
-    height: 200px;
+    height: auto;
     text-align: center;
-    padding: 50px;
+    padding: 30px;
 }
  
 .gfg1 {
     font-size: 42px;
     font-weight: bold;
     color: #009900;
-    margin-top: 60px;
     background-color: #c5c5db;
 }
  
@@ -37,4 +41,25 @@
     font-size: 18px;
     font-weight: bold;
     background-color: #c5c5db;
+}
+.span1{
+    border:2px solid #009900;
+    height: 20px;
+    padding: 10px;
+    /*Display block na korle height kaj korbe na
+    coz.. 'span' is a inline elementis 
+    inline element e height and padding top, bottom not working.. 
+    */
+    display: block;
+}
+.span2{
+    border:2px solid #009900;
+    height: 20px;
+    padding: 10px;
+    /*Display block na korle height kaj korbe na
+    coz.. 'span' is a inline elementis 
+    inline element e height and padding top, bottom not working..
+    'inline-block' baer both criteria 
+    */
+    display: inline-block;
 }
