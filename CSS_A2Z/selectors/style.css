@@ -102,6 +102,12 @@ Addjunction shiblling selector
     color: blue;
 }
 
+/*All Shibling Selecting*/
+
+.Mother{
+    color: red;
+}
+
 
 /*******
  Attribute selectors 
