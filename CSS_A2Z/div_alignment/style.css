@@ -1,0 +1,24 @@
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+
+    /* Center aligned .container content */
+    display: flex;
+    justify-content: center; /* ROW wise align */
+    align-items: center;/* Column Wise align */
+
+
+    margin: 10px;
+    border: 2px solid red;
+    min-height: 500px;
+}
+
+.container-item{
+    height: 100px;
+    width: 50px;
+    background-color: black;
+}
