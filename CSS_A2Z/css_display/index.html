@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script type="module" src="./scripts.js"></script>
+</head>
+
+<body>
+
+
+    <div class="border">
+        <h1>Display:block;</h1>
+        <p><span>Div, P, H1-H6, ul, ol, li, from, section, header, footer</span> ETC.. elements
+            are by-defult
+            <strong>Block</strong> element
+        </p>
+        <p><b>Note :</b> A block-level element ALWAYS starts on a <strong>new line</strong> and takes up the
+            <strong>full width</strong> available and <strong>customize</strong> <span>width, height, padding,
+                margin</span>
+        </p>
+    </div>
+    <br>
+    <div class="border">
+        <h1>Display:inline;</h1>
+        <p><span>button, span, strong, input, b(bold), a(anchor), em, i(italic),map, br, select, img, small, date, time,
+                lebel </span> ETC..elements are by-defult
+            <strong>Block</strong> element
+        </p>
+        <p><b>Note :</b> An inline element <strong>DOES NOT start on a new line</strong> and only takes up as much width
+            as necessary.
+            <span>Height, padding[top,bottom], margin[top,bottom]</span> not working...
+            <strong>Solution</strong> is customize <span>Display:</span> properties As
+            <strong style="border:2px dashed blue;">Display:inline-block;</strong>
+        </p>
+
+    </div>
+
+
+
+    <h1>Display Customize</h1>
+
+    <div hidden>
+        <h3>By-defult div element disply as [display:block;]</h3>
+        <div class="border">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+        <h3>[display:none;]</h3>
+        <div class="container-1 border">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <article class="container">
+        <span>First</span>
+        <span>Second</span>
+        <span>Third</span>
+    </article>
+
+    <article class="container">
+        <span>First</span>
+        <span>Second</span>
+        <span>Third</span>
+    </article>
+
+    <article class="container">
+        <span>First</span>
+        <span>Second</span>
+        <span>Third</span>
+    </article>
+
+    <article class="container">
+        <span>First</span>
+        <span>Second</span>
+        <span>Third</span>
+    </article>
+
+    <div>
+        <label for="display">Choose a display value:</label>
+        <select id="display">
+            <option selected>block</option>
+            <option>inline</option>
+            <option>inline-flex</option>
+            <option>inline-block</option>
+            <option>flex</option>
+            <option>grid</option>
+            <option>inline-grid</option>
+            <option>inline grid</option>
+            <option>table</option>
+            <option>block table</option>
+            <option>list-item</option>
+            <option>inline flow-root</option>
+            <option>inline flex</option>
+            <option>none</option>
+        </select>
+    </div>
+
+
+
+    <article class="container">
+
+    </article>
+    <article class="container">
+
+    </article>
+    <article class="container">
+
+    </article>
+    <article class="container">
+
+    </article>
+    <article class="container">
+
+    </article>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+/* Fixed */
+.content{
+    height: 50px;
+    width: 50px;
+    background-color: aquamarine;
+}
+.border{
+    border: 2px dashed gray;
+}
+strong{
+    color: orangered;
+}
+span{
+    color: cornflowerblue;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 50px;
+    color: orangered;
+}
+
+/* ######### Display customize #################### */
+
+.container{
+
+    /* precomposed values */
+/* display: block; */
+/* display: inline; */
+/* display: inline-block; */
+/* display: flex; */
+/* display: inline-flex; */
+/* display: grid; */
+/* display: inline-grid; */
+/* display: flow-root; */
+
+/* box generation */
+/* display: none; */
+/* display: contents; */
+
+/* multi-keyword syntax */
+/* display: block flex; */
+/* display: block flow; */
+/* display: block flow-root; */
+/* display: block grid; */
+/* display: inline flex; */
+/* display: inline flow; */
+/* display: inline flow-root; */
+/* display: inline grid; */
+
+
+/* other values */
+
+/* display: table; */
+/* display: table-row;*/ /* all table elements have an equivalent CSS display value */
+/* display: list-item; */
+
+
+/* Global values */
+
+/* display: inherit; */
+/* display: initial; */
+/* display: revert; */
+/* display: revert-layer; */
+/* display: unset; */
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    border: 2px solid greenyellow;
+}
+
+.container-1{
+    display: contents;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+    font-family: helvetica, arial, sans-serif;
+    letter-spacing: 1px;
+    padding-top: 10px;
+  }
+  
+  article {
+    background-color: red;
+  }
+  
+  article span {
+    background-color: black;
+    color: white;
+    margin: 1px;
+  }
+  
+  article,
+  span {
+    padding: 10px;
+    border-radius: 7px;
+  }
+  
+  article,
+  div {
+    margin: 20px;
+  }
+
+  /* CSS Display if javascript not apply */
+/* 
+  article{
+    display: none;
+  }
+   */
