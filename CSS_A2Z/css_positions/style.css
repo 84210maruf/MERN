@@ -15,12 +15,14 @@
 
     /* position:relative; */
 
-    /* position:absolute; */
+    position:absolute;
 
     /* position:fixed; */
 
 
-    position:sticky;
+    /* position:sticky; */
+
+    /* z-index: 11; */
 
     top: 30px;
     left: 30px;
