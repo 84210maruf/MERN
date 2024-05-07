@@ -1,0 +1,29 @@
+
+  
+  .box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+
+  }
+  
+  .two {
+    /*By-defult position*/
+    /* position:static; */
+
+    /* position:relative; */
+
+    /* position:absolute; */
+
+    /* position:fixed; */
+
+
+    position:sticky;
+
+    top: 30px;
+    left: 30px;
+
+    background: blue;
+  }
