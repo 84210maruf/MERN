@@ -18,7 +18,7 @@
 
 }
 
-.two {
+#two {
   /*By-defult position*/
   /* position:static; */
 
@@ -37,4 +37,7 @@
   left: 30px;
 
   background: blue;
+}
+.one{
+
 }

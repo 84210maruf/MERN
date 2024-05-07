@@ -1,4 +1,4 @@
-const articles = document.querySelectorAll(".container");
+const articles = document.querySelectorAll("articale");
 const select = document.querySelector("select");
 
 function updateDisplay() {
