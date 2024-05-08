@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+/* bangla fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+/* .mina-regular {
+    font-family: "Mina", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .mina-bold {
+    font-family: "Mina", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  } */
+  body{
+    
+   margin: 0 100px;
+
+    font-family: "Mina", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+
+    color:tan;
+
+    background-color:rgb(190, 193, 193);
+
+  }
+
+
+/* ############## Header Section ############# */
+
+header {
+    background-color: rgb(17, 117, 117);
+    width: 100%;
+    min-height: 200px;
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.header-container-one {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 250px;
+    height: 300px;
+
+}
+.logo {
+
+
+    height: 150px;
+    width: 100px;
+
+    background-image: url('./images/logo.png');
+    background-repeat: no-repeat;
+    background-size: 100px 150px;
+
+}
+
+
+
+.header-container-two {
+
+    width: 50%;
+    height: 300px;
+
+    text-align: center;
+ 
+
+}
+
+.header-title-1 {
+
+    font-size: 30px;
+
+}
+
+.header-title-2 {
+
+    position: relative;
+    top: -30px;
+}
+
+.header-title-3 {
+
+    font-size: 23px;
+
+    position: relative;
+    top: -50px;
+
+}
+
+.header-title-4 {
+
+    font-size: 23px;
+
+    position: relative;
+    top: -30px;
+
+}
+.header-title-5 {
+
+    font-size: 23px;
+
+    position: relative;
+    top: -50px;
+
+}
+
+
+
+
+.header-container-three {
+
+    width: 250px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.header-container-three > span{
+
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+
+    height: 30px;
+    width: 60%;
+
+    position: relative;
+    top: 50px;
+
+    font-size: 15px;
+
+    border: 1px solid rgb(210, 182, 144);
+    border-radius: 4px;
+    color: rgb(219, 216, 149);
+    background-color:  rgb(9, 154, 154);
+}
+.header-container-footer{
+
+    height: 10px;
+    width: 100%;
+    background-color: rgb(28, 73, 73);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container-footer span{
+
+    width: 95%;
+    border-bottom: 3px dashed rgb(235, 186, 122);
+}
+
+
+
+
+
+
+
+/* ############## Nav Section ############# */
+
+nav {
+
+    background-color: rgb(2, 104, 104);
+    width: 100%;
+    min-height: 80px;
+    
+
+
+    position: sticky;
+    top: 0; /* here.. top na dile position kaj kore na */
+   
+}
+
+.nav-container{
+    padding: 10px;
+}
+
+.nav-container ul{
+
+    list-style: none;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.nav-li{
+    padding: 5px;
+    color: t;
+}
+.nav-li a{
+    text-decoration: none;
+    color: inherit;
+}
+select[id='home']{
+
+    color: tan;
+    background-color:  rgb(2, 104, 104);
+
+    width: 20px;
+    border: none;
+    /* appearance:none; */
+
+}
+option[value='home']{
+    
+}
+
+
+
+
+
+/* ############ Container section  ############ */
+
+
+
+
+.container {
+    
+
+    width: 100%;
+    min-height: 700px;
+
+    background-color: #afb0b0;;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############## Footer Section ############# */
+
+footer {
+    background-color: rgb(25, 98, 98);
+    width: 100%;
+    height: 200px;
+    color: #757b7b;
+    font-size: 15px;
+
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content:end;
+}
+#copyright{
+    position: relative;
+    bottom: -20px;
+}
+
+
