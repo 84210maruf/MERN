@@ -17,7 +17,7 @@ body {
   } */
   body{
     
-   margin: 0 100px;
+   /* margin: 0 100px; */
 
     font-family: "Mina", sans-serif;
     font-weight: 800;
@@ -25,7 +25,9 @@ body {
 
     color:tan;
 
-    background-color:rgb(190, 193, 193);
+    background-color:rgb(164, 168, 168);
+    /* background-image: url(../images/annie-spratt-h-LcVG8W1XY-unsplash.jpg);
+    background-size: cover; */
 
   }
 
@@ -35,7 +37,7 @@ body {
 
 .container-develop{
 
-    color: black;
+    color:#757b7b;
 
     display: flex;
     flex-direction: column;
@@ -44,7 +46,12 @@ body {
 
     min-height: 380px;
     text-align: center;
+    background-image: url(../images/ashkan-forouzani-7blIFp0kFP4-unsplash.jpg);
+    background-size: cover;
 
+}
+.container-develop p {
+    color:teal;
 }
 .container-develop button {
 
@@ -52,7 +59,7 @@ body {
     margin-top: 20px;
     
     border: 1px solid teal;
-    background-color: #7ea5a5;
+    background-color:unset;
 }
 .container-develop button a{
 

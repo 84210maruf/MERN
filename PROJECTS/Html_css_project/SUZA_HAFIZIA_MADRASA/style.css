@@ -17,7 +17,7 @@ body {
   } */
   body{
     
-   margin: 0 100px;
+   /* margin: 0 100px; */
 
     font-family: "Mina", sans-serif;
     font-weight: 800;
@@ -25,7 +25,9 @@ body {
 
     color:tan;
 
-    background-color:rgb(190, 193, 193);
+    background-color:rgb(164, 168, 168);
+    /* background-image: url(./images/annie-spratt-h-LcVG8W1XY-unsplash.jpg);
+    background-size: cover; */
 
   }
 
@@ -205,13 +207,27 @@ nav {
 }
 .nav-li{
     padding: 5px;
-    color: t;
+    
+
 }
 .nav-li a{
     text-decoration: none;
     color: inherit;
 }
+.nav-li i{
+    font-size: 13px;
+    padding: 5px;
+
+
+}
+i[title='arrow']{
+    position: relative;
+
+
+}
+
 select[id='home']{
+
 
     color: tan;
     background-color:  rgb(2, 104, 104);
@@ -240,7 +256,9 @@ option[value='home']{
     width: 100%;
     min-height: 700px;
 
-    background-color: #afb0b0;;
+    background-color: #afb0b0;
+    background-image: url(./images/ashkan-forouzani-7blIFp0kFP4-unsplash.jpg);
+    background-size: cover;
 
 }
 
