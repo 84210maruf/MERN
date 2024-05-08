@@ -225,12 +225,24 @@ i[title='arrow']{
 
 
 }
+i[title='arrow-right']{
+    position: relative;
+    right: 24px;
+    bottom: 3px;
+    
+
+
+}
 
 select[id='home']{
+    position: relative;
+    z-index: 11;
 
 
     color: tan;
     background-color:  rgb(2, 104, 104);
+    background-color: unset;
+    
 
     width: 20px;
     border: none;
