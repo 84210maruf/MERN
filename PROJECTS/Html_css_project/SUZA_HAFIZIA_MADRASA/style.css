@@ -269,14 +269,17 @@ nav {
     position: relative;
     right: 50px;
 }
-.dropdownItems ul li:hover{
-    background-color: tan;
-    color: teal;
-}
 
 
 .nav-li:hover .dropdownItems{
     display: flex;  
+}
+.nav-li:hover{
+    color: whitesmoke;
+}
+.dropdownItems ul li:hover{
+    background-color: tan;
+    color: teal;
 }
 
 
@@ -349,6 +352,7 @@ nav {
     /* border: 2px solid teal; */
     width: 45%;
 
+    padding: 5px;
 
 }
 .one-sidebar-h3{
@@ -404,8 +408,90 @@ nav {
 }
 
 
+.one-sidebar-content{
+    /* border: 1px double tan; */
+    padding: 10px;
 
 
+    min-height: 500px;
+}
+.one-sidebar-content-items{
+    /* border: 2px dotted tomato; */
+
+    display:flex;
+
+    height: 50px;
+    padding: 15px 0;
+}
+.items-head{
+    /* border: 1px solid yellowgreen; */
+
+    width: 17%;
+    height: 50px;
+    
+    margin-right:5px;
+    text-align: center;
+    
+}
+.items-head-day{
+    font-size: 15px;
+    line-height: 5px;
+    color: whitesmoke;
+    border-radius: 10px 10px 0 0;
+
+
+    /* background-color: tomato; */
+    background-color: turquoise;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.items-head-month{
+    font-size: 13px;
+    line-height: 5px;
+    color: whitesmoke;
+    border-radius: 0 0 10px 10px;
+    
+    background-color: teal;
+    height: 50%;
+    
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items-title{
+    /* border: 1px solid yellow; */
+    padding-left: 10px;
+
+    width: 80%;
+
+    height: 50px;
+
+}
+.items-title p{
+    font-size: 15px;
+    line-height: 7px;
+    font-weight: normal;
+    color: whitesmoke;
+    letter-spacing: 1px;
+
+}
+.items-title p strong{
+    font-size: 15px;
+    line-height: 7px;
+    color: turquoise;
+
+}
+
+.one-sidebar-notices{
+    text-align: end;
+    color: whitesmoke;
+}
 
 
 
