@@ -171,7 +171,7 @@ header {
 /* Strait-line or dotted-line css */
 .strait-line{
 
-    height: 7px;
+    height: 5px;
     width: 100%;
     background-color: rgb(28, 73, 73);
 
@@ -299,9 +299,16 @@ nav {
     width: 100%;
     min-height: 700px;
 
-    background-color: #afb0b0;
-    background-image: url(./images/ashkan-forouzani-7blIFp0kFP4-unsplash.jpg);
+    background-color: rgb(144, 144, 144);
+    background-image: url(./images/ishan-seefromthesky-66Tu10CxYY0-unsplash.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-size: 200px; */
+
+     /* Add the blur effect */
+    /* filter: blur(1px); */
+  /* -webkit-filter: blur(8px); */
 
      /* flex use for wrap the container-one
     display: inline-flex; */
@@ -333,7 +340,7 @@ nav {
     
 }
 .container-one-image{
-    background-image: url(./images/sidik-kurniawan-hiFpJqA4FcE-unsplash.jpg);
+    background-image: url(./images/ashkan-forouzani-7blIFp0kFP4-unsplash.jpg);
     width: 100%;
     height: 70%;
 
@@ -394,8 +401,8 @@ nav {
     padding: 8px 20px;
     font-size: 15px;
     
-    color: teal;
-    border:1px solid #2e5f5f;
+    color: turquoise;
+    border:1px solid turquoise;
     border-radius: 3px;
 
 
@@ -404,7 +411,7 @@ nav {
 }
 .one-sidebar-category ul li:hover{
     color: whitesmoke;
-    background-color: teal;
+    background-color: turquoise;
 }
 
 
@@ -464,32 +471,44 @@ nav {
     align-items: center;
 }
 
+
+
 .items-title{
     /* border: 1px solid yellow; */
     padding-left: 10px;
 
     width: 80%;
+    height: 60px;
 
-    height: 50px;
 
 }
 .items-title p{
-    font-size: 15px;
-    line-height: 7px;
+    font-size: 11px;
+
     font-weight: normal;
     color: whitesmoke;
-    letter-spacing: 1px;
+    letter-spacing: .5px;
+
+    position: relative;
+    bottom: 10px;
 
 }
 .items-title p strong{
     font-size: 15px;
-    line-height: 7px;
+    /* line-height: 7px; */
+    letter-spacing: normal;
     color: turquoise;
+
+    position: relative;
+    bottom: 10px;
 
 }
 
 .one-sidebar-notices{
     text-align: end;
+    color: turquoise;
+}
+.one-sidebar-notices i{
     color: whitesmoke;
 }
 
