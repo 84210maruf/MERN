@@ -9,7 +9,7 @@ body{
     /* padding: 0; */
     /* margin: 0; */
     text-align: center;
-    background-color:darkgrey;
+    /* background-color:cornflowerblue; */
 }
 
 header{
@@ -32,30 +32,52 @@ main{
     padding: 25px;
 
     display: flex;
+    flex-flow: column;
 }
-span{
-    /* float: left; */
-    position:absolute;
-
-    left:15px;
-    top: 250px;
+.main-span{
+   position: absolute;
+   left: 20px;
+   top: 255px;
+   
 }
 
+section{
+    /* min-height: 100px; */
+    background-color: yellowgreen;
+    
+    margin: 5px;
+    padding: 15px;
+    
+    display: flex;
+    width: 95%;/* because of padding.. */
+    /* min-height: 500px; */
+}
+.section-span{
+   position: absolute;
+   left: 50px;
+   top: 275px;
+   
+}
 
 /* article start  */
 article{
     width: 60%;
-    min-height: 50px;
+    /* min-height: 50px; */
     background-color: brown;
-
-    padding:5px;
 }
-section{
-    min-height: 100px;
-    background-color: yellowgreen;
 
-    margin: 5px;
-    padding: 5px;
+.article-span{
+
+    position: absolute;
+    left: 60px;
+    top: 292px;
+
+    color: whitesmoke;
+}
+article > section{
+    min-height: 50px;
+    width: 90%;
+    margin: 20px;
 }
 /* End articale */
 
@@ -63,10 +85,21 @@ section{
 
 aside{
     width: 40%;
-    min-height: 100px;
+    /* min-height: 100px; */
     background-color: rgb(139, 31, 139);
     padding: 5px;
 }
+aside > section{
+    display: flex;
+    justify-content: center;
+    width:91%;
+}
+
+.aside-section-span{
+    position: relative;
+    right: 90px;
+    bottom: 10px;
+ }
 /* End main  */
 
 
