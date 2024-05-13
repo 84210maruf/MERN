@@ -1,0 +1,77 @@
+h1,h4{
+    text-align: center;
+    color: teal;
+}
+h4{
+    color: red;
+}
+body{
+    /* padding: 0; */
+    /* margin: 0; */
+    text-align: center;
+    background-color:darkgrey;
+}
+
+header{
+    min-height: 60px;
+    background-color: tomato;
+    padding: 5px;
+}
+nav{
+    min-height: 30px;
+    background-color: tan;
+    padding: 5px;
+}
+
+
+/* main start  */
+main{
+    min-height: 300px;
+    background-color: turquoise;
+
+    padding: 25px;
+
+    display: flex;
+}
+span{
+    /* float: left; */
+    position:absolute;
+
+    left:15px;
+    top: 250px;
+}
+
+
+/* article start  */
+article{
+    width: 60%;
+    min-height: 50px;
+    background-color: brown;
+
+    padding:5px;
+}
+section{
+    min-height: 100px;
+    background-color: yellowgreen;
+
+    margin: 5px;
+    padding: 5px;
+}
+/* End articale */
+
+
+
+aside{
+    width: 40%;
+    min-height: 100px;
+    background-color: rgb(139, 31, 139);
+    padding: 5px;
+}
+/* End main  */
+
+
+footer{
+    min-height: 30px;
+    background-color: teal;
+    padding: 10px;
+}
