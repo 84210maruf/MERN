@@ -1,0 +1,41 @@
+
+body{
+    text-align: center;
+}
+
+
+
+/* Display by-defult / static */
+
+#one{
+    /* display:flex; */
+    background-color: yellowgreen;
+}
+#one  span{
+    float: left;
+
+    background-color: tomato;
+}
+
+#one > div{
+
+    margin: 5px;
+    border: 2px solid teal;
+    width: 100px;
+    height: 100px;
+
+}
+#one > .two{
+    
+    background-color: tomato;
+    
+    
+
+    /*Shibling ignore this class*/
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
+    /* OR same here.. */
+    /* position: absolute; */
+    /* right: 0; */
+}

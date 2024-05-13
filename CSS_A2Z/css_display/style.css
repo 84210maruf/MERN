@@ -9,6 +9,7 @@ html {
 
 .border {
   border: 2px dashed gray;
+  background-color: turquoise;
 }
 
 strong {
@@ -32,6 +33,24 @@ h3 {
   color: orangered;
 }
 
+
+.inline-break{
+  display: block;
+  background-color: rgb(141, 8, 8);
+}
+
+.inline-one{
+  display: block;
+  background-color: rebeccapurple;
+}
+.inline-two{
+  display: inline;
+  background-color: chocolate;
+}
+.inline-three{
+  display: block;
+  background-color: blue;
+}
 
 
 
