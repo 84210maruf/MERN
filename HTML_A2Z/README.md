@@ -36,9 +36,9 @@ HTML:::::::::Semantic Element (Menaingful tag's)
 <footer>
 
 [1][h1]
-It is important to avoid using more than one <h1> element for one code sheet.
+It is important to avoid using more than one <h1></h1> element for one code sheet.
 [1-1]
-Having only one <h1> element on a web page is vital for Search Engine Optimization (SEO). It helps search engines understand what a web page is all about (the main idea of a web page).
+Having only one <h1></h1> element on a web page is vital for Search Engine Optimization (SEO). It helps search engines understand what a web page is all about (the main idea of a web page).
 
 [2][image]
 <figure>
