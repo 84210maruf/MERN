@@ -49,7 +49,7 @@ section{
     padding: 15px;
     
     display: flex;
-    width: 95%;/* because of padding.. */
+    width: 97%;/* because of padding.. */
     /* min-height: 500px; */
 }
 .section-span{
