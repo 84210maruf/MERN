@@ -1,0 +1,19 @@
+
+table{
+    
+    background-color: tomato;
+
+
+    border-collapse: collapse; /*collapse thr td borders*/
+}
+tr{
+    /* border not working with tr  */
+
+}
+td,th{
+    border: 2px solid teal;
+
+    padding: 5px;
+    
+    
+}
