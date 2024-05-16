@@ -1,0 +1,53 @@
+
+.dropdownMenu ul{
+    /*
+    display:flex;
+    OR
+    */
+    display: flex;
+    
+}
+ul li{
+    margin: 10px;
+    list-style: none;
+}
+
+.dropdownItems > ul{
+    display: none;
+}
+
+
+/* [ul > li] immediate li children, [ul li] all li chidren */
+.dropdownMenu ul li:hover .dropdownItems > ul{
+    display: flex;
+    position: absolute;
+
+    background-color: aquamarine;
+}
+
+/*Nested Drop Down*/
+
+.NestedDropdown > ul{
+    background-color: burlywood;
+    position: absolute;
+
+    padding: 5px;
+    margin-top: 10px;
+
+/*This ul item not see in display*/
+    display: none;
+}
+
+/* [ul > li] immediate li children in ul, [ul li] all li chidren in ul*/
+.dropdownItems ul li:hover .NestedDropdown > ul{
+
+    /*
+    display: inline;
+    display: flex;
+    display:block;
+
+    display:inline-block;
+    etc...
+    */
+    display: block;
+}

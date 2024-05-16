@@ -1,0 +1,93 @@
+
+
+/* Body.Child   .conainer */
+
+.container{
+    /*container all properties(child) middle align
+    
+    display: flex;
+    justify-content: center; */
+
+}
+
+.menu {
+
+    padding: 20px;
+    margin: 10px;
+    border-color: rgb(63, 238, 24);
+
+}
+
+.menu1 {
+    border: none;
+
+    padding: 10px;
+    margin: 10px;
+    border-color: rgb(63, 238, 24);
+
+}
+
+.menu2 {
+    appearance: none;
+
+    height: 50px;
+    width: 80px;
+    text-align: center;
+
+    border-color: rgb(63, 238, 24);
+
+}
+
+
+
+
+
+option[value='option'] {
+    color: red;
+    display: flex;
+    background-color: aquamarine;
+    font-size: 12px;
+
+    /* Height width padding margin 
+    not working in 'option' element   */
+    
+}
+            /* END OF  .container */
+
+
+
+
+
+          /* Body.child  .select-container */
+
+.select-container{
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-width: 250px;
+    height: 60px;
+
+}
+
+.select-box{
+    /* 
+    remove the arrow '⌄'
+    appearance: none; */
+    border: none;
+    padding: 10px;
+    background-color: blueviolet;
+
+    
+
+
+}
+.select-box option{
+
+background-color: rgb(177, 130, 220);
+}
+
+/* .select-container select{
+    background-color: aquamarine;
+    padding: 20px;
+}  */
