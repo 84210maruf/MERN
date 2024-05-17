@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+/* Re-use code start */
+
+.contact{
+    /* background-color: cadetblue; */
+    width: 300px;
+    
+}
+.contact > header{
+    background-color: rgb(255, 156, 138);
+    height: 100px;
+    width: 98%;
+
+    border-radius: 0 500px 100px;
+    border: .05rem solid tomato;
+    box-shadow: 5px 5px 10px 5px rgb(255, 126, 103);
+    
+    position: relative;
+    top: 15px;
+    z-index: 99;
+    
+}
+.contact > main{
+    
+    background-color:  rgb(255, 234, 230);
+    height: 300px;
+    padding: 5px;
+    border-radius: 2px;
+
+    /* box-shadow: 5px 5px 10px tomato; */
+    /* box-shadow: 5px 5px 15px tomato; */
+
+    position: relative;
+    z-index: 11;
+}
+
+.contact > main > form{
+    height: 100%;
+    width: 100%;
+
+
+    /* box-shadow: 5px 5px 10px 5px rgb(255, 126, 103); */
+    background-color: rgb(255, 220, 213);
+    
+}
+
+/* Re-use code start */
