@@ -48,7 +48,7 @@ body{
     align-items: center;
 }
 .logo > i{
-    color: rgb(246, 161, 146);
+    color: tomato;
     font-size: 30px;
     
 }
@@ -68,7 +68,7 @@ body{
     
     background-color:  rgb(255, 234, 230);
     /* height: 300px; */
-    padding: 5px;
+    /* padding: 5px; */
     border-radius: 2px;
 
     /* box-shadow: 5px 5px 10px tomato; */
@@ -145,17 +145,17 @@ textarea[name='massage']{
     font-weight: bold;
     color: rgb(255, 224, 219);
 
-    background-color: tomato;
+    background-color: rgb(255, 156, 138);
     border: none;
     border-radius: 2px;
-
+    
     position: relative;
     left: 65px;
 }
 
 .form-child > label > input[type="submit"]:hover{
-    background-color: rgb(255, 156, 138);
-    color:tomato;
+    color:white;
+    background-color: tomato;
 }
 
 /* Re-use code start */
