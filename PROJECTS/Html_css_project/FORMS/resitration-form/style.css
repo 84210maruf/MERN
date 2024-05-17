@@ -1,0 +1,97 @@
+body{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+section{
+    width: 350px;
+
+}
+
+header{
+    background-color: rgb(100, 173, 173);
+    border-radius: 2px 2px 0 0;
+    /* border: 1px solid teal; */
+    min-height: 80px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+main{
+    background-color: rgb(145, 213, 206);
+    min-height: 300px;
+    border-radius:0 0 2px 2px;
+
+    /* padding: 10px; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > article{
+    width: 80%;
+
+}
+main > article > form{
+
+}
+main > article > form >label{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+   
+}
+
+main > article > form >label>input{
+    display: block;
+    padding: 5px;
+    margin: 5px;
+
+    border: none;
+    border-radius: 2px;
+}
+main > article > form >label[for='checkbox']{
+    text-align: left;
+    text-align-last: center;
+    font-size: 13px;
+}
+main > article > form >label[for='submit']{
+    padding: 10px;
+}
+label[for='submit'] > input{
+    height: 35px;
+    width: 120px;
+
+    position: relative;
+    left: 120px;
+
+    border: none;
+    border-radius: 2px;
+    background-color:rgb(100, 173, 173);
+    color: rgb(201, 248, 248);
+    border: 1px solid rgb(64, 137, 137);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+label[for='submit'] > input:hover{
+    background-color: teal;
+    color: rgb(177, 255, 255);
+    
+}
