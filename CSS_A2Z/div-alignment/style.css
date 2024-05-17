@@ -117,7 +117,7 @@ body{
 
     display: flex;
     justify-content: space-around;
-    align-items:start;
+    align-items:first baseline;
 
 
 
