@@ -1,0 +1,96 @@
+body{
+    display: flex;
+    justify-content: center;
+
+    height: 600px;
+    align-items: center;
+}
+
+.login form{
+
+    background-color:rgb(231, 255, 243);
+    /* color: mediumseagreen; */
+
+
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    letter-spacing: 1px;
+    
+}
+.login form>header{
+    /* background-color: tan; */
+    text-align: center;
+
+    padding: 10px 0;
+}
+.login form>header h1{
+    color: aquamarine;
+}
+.login form>main{
+    /* background-color: teal; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+.login form>main>label{
+    /* background-color: tomato; */
+    width: 70%;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+main > label[for='inputbox']>input{
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+
+    border:none;
+    border-radius: 2px;
+    background-color: rgb(195, 220, 206);
+}
+main > label[for='checkbox'] a{
+    text-decoration: none;
+    color:rgb(105, 211, 176);
+}
+
+
+.login form>footer{
+
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;  
+}
+
+footer > label > input{
+    width: 100px;
+    height: 40px;
+
+    border: none;
+    border-radius: 2px;
+
+    color: rgb(65, 123, 94);
+    background-color: aquamarine;
+
+    font-weight: bold;
+}
+footer > label > input:hover{
+    background-color: rgb(0, 255, 170);
+    color:whitesmoke;
+}
+
+
+footer label[for='foot']{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+footer > label  a{
+    text-decoration: none;
+    color: rgb(105, 211, 176);
+}
