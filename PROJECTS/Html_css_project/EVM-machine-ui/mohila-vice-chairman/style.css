@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.evm {
+    /* border: 1px solid royalblue; */
+    width: 70%;
+    background-color: rgb(160, 160, 160);
+
+    border-radius: 2px;
+}
+
+.evm>header>h2 {
+    text-align: center;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.evm>main {
+    background-color: whitesmoke;
+    /* display: flex; */
+}
+
+main>section {
+    border: 1px solid rgb(42, 54, 98);
+
+    /* width: 70%; */
+    height: 70px;
+    display: flex;
+
+}
+
+
+section>.content {
+    background-color: whitesmoke;
+    width: 60%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content>img {
+    width: 100px;
+    height: 70px;
+}
+
+section>.aside {
+
+    width: 40%;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(160, 160, 160);
+
+}
+
+section>.aside>input {
+    width: 60%;
+    height: 50px;
+    /* margin: 5px; */
+
+    border-radius: 100px;
+
+    background-color: white;
+
+
+
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+
+footer>section {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.left>input {
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: green;
+}
+
+.right>input {
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: red;
+}
