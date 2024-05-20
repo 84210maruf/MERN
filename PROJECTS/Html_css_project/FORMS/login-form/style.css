@@ -54,6 +54,11 @@ main > label[for='inputbox']>input{
     border-radius: 2px;
     background-color: rgb(195, 220, 206);
 }
+label[for='inputbox']>input:focus{
+    background-color: cyan;
+    color:black;
+    font-size: 14px;
+}
 main > label[for='checkbox'] a{
     text-decoration: none;
     color:rgb(105, 211, 176);

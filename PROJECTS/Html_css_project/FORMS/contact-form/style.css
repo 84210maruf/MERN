@@ -129,12 +129,28 @@ form > .form-child{
     font-size: 13px;
 
 }
+
+.form-child > label > input:focus {
+    /* border: none; */
+    background-color: tomato;
+    color: greenyellow;
+    font-size: 14px;
+  }
+
+
+
 textarea[name='massage']{
     display: block;
     height: 100px;
     width: 98%;
     border: 0.1rem solid #f1cec7;
 }
+textarea[name='massage']:focus{
+    background-color: tomato;
+    color: greenyellow;
+    font-size: 14px;
+}
+
 
 .form-child > label > input[type="submit"]{
     width: 40%;

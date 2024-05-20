@@ -62,6 +62,9 @@ main > article > form >label>input{
     border: none;
     border-radius: 2px;
 }
+main > article > form >label>input:focus{
+    background-color: turquoise;
+}
 main > article > form >label[for='checkbox']{
     text-align: left;
     text-align-last: center;
