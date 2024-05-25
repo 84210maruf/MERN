@@ -5,14 +5,14 @@ body{
 }
 
 .images{
-    background-image: url(./flex-properties.jpeg);
+    background-image: url(./images/flex-properties.jpeg);
     height:600px ;
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
 }
 .container{
-    background-color: tomato;
+    background-color: rgb(182, 149, 149);
 
     display: grid;
     /* grid-gap: 5px; */
@@ -31,3 +31,5 @@ body{
 
 /* FLEX CONTAINER */
 
+.flex-container-one{}
+.flex-container-two{}
