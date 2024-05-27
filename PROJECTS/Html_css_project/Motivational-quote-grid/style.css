@@ -1,0 +1,72 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+
+    background-image: url('./images/nasa-gallacsy.jpg');
+    background-size: cover;
+    /* background-color: gainsboro; */
+}
+.grid-container {
+    /* background-color: #5e96ff; */
+    /* border: 5px double royalblue; */
+    font-size: 30px;
+    height: 300px;
+    width: 60%;
+
+    display: grid;
+    gap: 5px;
+    grid-template-columns:  1fr 1fr 1fr;
+}
+
+.grid-container>div{
+
+    letter-spacing: 1px;
+    padding: 5px;
+    border-radius: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.one{
+    grid-column: 1 /2;
+
+    background-color: rgb(73, 114, 190);
+    color: rgb(184, 200, 228);
+}
+.two{
+    grid-column: 2 /3;
+    /* grid-row: 2; */
+
+    background-color: rgb(73, 114, 190);
+    color: rgb(184, 200, 228);
+}
+.three{
+    grid-column: 2 / 3;
+    grid-row: 2;
+    background-color: mediumvioletred;
+    color: rgb(255, 202, 202);
+}
+.four{
+    grid-column: 2 / 3;
+    grid-row: 3;
+
+    background-color: rgb(192, 54, 29);
+    color: rgb(231, 188, 173);
+}
+.five{
+    grid-column: 3 / 4;
+    grid-row: 3;
+
+    background-color: rgb(192, 54, 29);
+    color: rgb(231, 188, 173);
+}
+.six{
+    grid-column: 2 / 3;
+    grid-row: 4;
+
+    background-color: mediumseagreen;
+    color: rgb(199, 255, 203);
+}
