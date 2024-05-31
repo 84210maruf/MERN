@@ -24,7 +24,7 @@ body {
 /* Start header  */
 
 header {
-    background-color: teal;
+    /* background-color: teal; */
 
     /* width 100% auto  */
     height: 560px;
@@ -44,7 +44,7 @@ header {
 }
 
 nav {
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
 
     width: 70%;
 
