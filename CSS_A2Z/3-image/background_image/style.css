@@ -1,0 +1,85 @@
+
+.br-classes{
+    width: 100%;
+    border-bottom: 2px dashed black;
+    margin: 10px 10px 10px 0px;
+}
+
+
+
+.image-1{
+    background-image:url('./images/IMG_6407.JPG');
+    height: 300px;
+    width: 100%;
+
+    background-size:contain;
+    background-repeat:no-repeat;
+
+    border-radius: 10px;
+    background-color: aquamarine;
+
+}
+.image-2{
+    background-image: url('./images/IMG_6407.JPG');
+    height: 300px;
+    width: 100%;
+
+    background-size: cover;
+}
+.image-3{
+    background-image: url('./images/IMG_6407.JPG');
+    height: 300px;
+    width: 100%;
+
+    background-size:100px;
+
+}
+.image-4{
+    background-image: url('./images/IMG_6407.JPG');
+    height: 300px;
+    width: 100%;
+
+    background-size:100px;
+    background-repeat: round;
+}
+.image-4-1{
+    background-image: url('./images/IMG_6407.JPG');
+    height: 300px;
+    width: 100%;
+
+    background-size:100px;
+    background-repeat: no-repeat;
+    
+}
+.image-5{
+    background-image: url('./images/IMG_6407.JPG');
+    height: 300px;
+    width: 100%;
+
+    background-size:100px;
+    background-repeat: repeat-x;
+}
+.image-6{
+    background-image: url('./images/IMG_6407.JPG');
+    height: 300px;
+    width: 100%;
+
+    background-size:100px;
+    background-repeat: repeat-y;
+    
+}
+
+.image-7{
+    background-image: url('./images/Capture.PNG');
+    height: 200px;
+    width: 150px;
+    background-size: contain;
+
+    transform: rotate(45deg);
+    /* margin-left: 40px; */
+
+
+
+    background-color: turquoise;
+    border-radius: 20px;
+}

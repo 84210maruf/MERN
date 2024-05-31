@@ -1,0 +1,39 @@
+h1,h2{text-align: center;}
+span{color: tomato;}
+
+
+
+.auto-fill-container{
+
+    background-color: mediumvioletred;
+
+    display:grid;
+    gap: 5px;
+
+    grid-template-columns: repeat(auto-fill, 100px);
+
+    grid-template-rows: repeat(2, 100px);
+}
+
+.auto-fill-container>div{
+
+    background-color: mediumspringgreen;
+}
+
+
+.auto-fill-minmax-container{
+
+    background-color: midnightblue;
+
+    display:grid;
+    gap: 5px;
+
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+    grid-template-rows: repeat(2, 100px);
+}
+
+.auto-fill-minmax-container>div{
+
+    background-color: maroon;
+}

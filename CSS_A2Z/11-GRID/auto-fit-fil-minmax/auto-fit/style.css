@@ -1,0 +1,36 @@
+h1{text-align: center;}
+
+.auto-fit-container{
+    
+    background-color: midnightblue;
+    
+    display: grid;
+    gap: 5px;
+    
+    grid-template-columns: repeat(auto-fit, 100px);
+    
+    grid-template-rows: repeat(2, 100px);
+}
+
+.auto-fit-container>div{
+    background-color: teal;
+}
+
+
+.auto-fit-with-minmax-container{
+
+    background-color: maroon;
+
+    display: grid;
+    gap: 5px;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    grid-template-rows: repeat(2, 100px);
+
+}
+
+.auto-fit-with-minmax-container>div{
+    background-color: tomato;
+}
+

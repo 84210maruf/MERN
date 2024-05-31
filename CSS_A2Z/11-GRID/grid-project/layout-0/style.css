@@ -1,0 +1,132 @@
+body{
+    margin:0 100px;
+}
+.grid-container>div{
+    border-radius: 2px;
+}
+
+.grid-container{
+
+
+    display: grid;
+
+    /* grid-gap: 5px; */
+    gap: 1px;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(20, 50px);
+
+}
+
+
+.item-1{
+
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+  
+    background-color: teal;
+    
+}
+.item-2{
+    grid-column-start: 1;
+    grid-column-end: 7;
+
+    grid-row-start: 3;
+    grid-row-end: 10;
+  
+    background-color: mediumslateblue;
+    
+}
+.item-3{
+    grid-column-start: 7;
+    grid-column-end: -1;
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+  
+    background-color: mediumvioletred;
+    
+}
+.item-4{
+    grid-column-start: 7;
+    grid-column-end: -1;
+
+    grid-row-start: 5;
+    grid-row-end: 6;
+    
+    background-color: mediumaquamarine;
+    
+}
+.item-5{
+    grid-column-start: 7;
+    grid-column-end: -1;
+
+    grid-row-start: 6;
+    grid-row-end: 7;
+  
+    background-color: tomato;
+    
+}
+.item-6{
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+    grid-row-start: 10;
+    grid-row-end: 12;
+  
+    background-color: rgb(20, 2, 57);
+    
+}
+.item-7{
+    grid-column-start: 7;
+    grid-column-end: -1;
+
+    grid-row-start: 12;
+    grid-row-end: 19;
+  
+    background-color: mediumslateblue;
+    
+}
+.item-8{
+    grid-column-start: 1;
+    grid-column-end: 7;
+
+    grid-row-start: 12;
+    grid-row-end: 14;
+  
+    background-color: mediumvioletred;
+    
+}
+.item-9{
+    grid-column-start: 1;
+    grid-column-end: 7;
+
+    grid-row-start: 14;
+    grid-row-end: 15;
+  
+    background-color: mediumaquamarine;
+    
+}
+.item-10{
+    grid-column-start: 1;
+    grid-column-end: 7;
+
+    grid-row-start: 15;
+    grid-row-end: 16;
+  
+    background-color: tomato;
+    
+}
+.item-11{
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+    grid-row-start: 19;
+    grid-row-end: -1;
+  
+    background-color:rgb(20, 2, 57);
+    
+}

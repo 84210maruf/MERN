@@ -1,0 +1,87 @@
+body{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.images{
+    background-image: url(./images/flex-properties.jpeg);
+    height:600px ;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container{
+    background-color: rgb(255, 187, 187);
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+.box{
+    height: 70px;
+    width: 70px;
+
+    background-color: teal;
+    border: .1rem solid tan;
+}
+
+
+
+
+/* FLEX CONTAINER */
+
+.flex-container-one{
+    background-color: tomato;
+
+    display: flex;
+
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /* flex-direction: row; */
+    flex-direction: row-reverse;
+
+
+
+    flex-wrap: wrap;
+}
+.flex-container-two{
+    background-color: tomato;
+
+    display: flex;
+
+    /* justify-content:start; */
+    /* justify-content: baseline; */
+
+    /* justify-content: center; */
+
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+
+    /* justify-content: end; */
+
+}
+
+.flex-container-three{
+    background-color: tomato;
+
+    display: flexbox;
+    align-content:center;
+}
+
+
+.flex-container-four{
+    background-color: tomato;
+
+    display: flex;
+    
+
+    align-items: normal;
+    /* align-items: baseline; */
+
+    align-items: center;
+
+    /* align-items: end; */
+}

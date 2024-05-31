@@ -1,0 +1,43 @@
+.box {
+
+
+  display: inline-block;
+
+
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: white;
+
+  /* 
+      not nasessary to use 
+      position in div 
+    */
+    
+  /* position: relative; */
+
+}
+
+#two {
+  /*By-defult position*/
+  /* position:static; */
+
+  /* position:relative; */
+
+  position: absolute;
+
+  /* position:fixed; */
+
+
+  /* position:sticky; */
+
+  /* z-index: 11; */
+
+  top: 30px;
+  left: 30px;
+
+  background: blue;
+}
+.one{
+
+}

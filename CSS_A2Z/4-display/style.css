@@ -1,0 +1,137 @@
+
+/* Fixed */
+
+html {
+  font-family: helvetica, arial, sans-serif;
+  letter-spacing: 1px;
+  padding-top: 10px;
+}
+
+.border {
+  border: 2px dashed gray;
+  background-color: turquoise;
+}
+
+strong {
+  color: orangered;
+}
+
+span {
+  color: cornflowerblue;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 50px;
+  color: orangered;
+}
+
+
+.inline-break{
+  display: block;
+  background-color: rgb(141, 8, 8);
+}
+
+.inline-one{
+  display: block;
+  background-color: rebeccapurple;
+}
+.inline-two{
+  display: inline;
+  background-color: chocolate;
+}
+.inline-three{
+  display: block;
+  background-color: blue;
+}
+
+
+
+
+/* ######### Display customize #################### */
+
+
+article {
+  background-color: red;
+}
+
+article span {
+  background-color: black;
+  color: white;
+  margin: 1px;
+}
+
+article,
+span {
+  padding: 10px;
+  border-radius: 7px;
+}
+
+article,
+div {
+  margin: 20px;
+}
+
+
+article {
+
+  /* precomposed values */
+  /* display: block; */
+  /* display: inline; */
+  /* display: inline-block; */
+  /* display: flex; */
+  /* display: inline-flex; */
+  /* display: grid; */
+  /* display: inline-grid; */
+  /* display: flow-root; */
+
+  /* box generation */
+  /* display: none; */
+  /* display: contents; */
+
+  /* multi-keyword syntax */
+  /* display: block flex; */
+  /* display: block flow; */
+  /* display: block flow-root; */
+  /* display: block grid; */
+  /* display: inline flex; */
+  /* display: inline flow; */
+  /* display: inline flow-root; */
+  /* display: inline grid; */
+
+
+  /* other values */
+
+  /* display: table; */
+  /* display: table-row;*/
+  /* all table elements have an equivalent CSS display value */
+  /* display: list-item; */
+
+
+  /* Global values */
+
+  /* display: inherit; */
+  /* display: initial; */
+  /* display: revert; */
+  /* display: revert-layer; */
+  /* display: unset; */
+}
+
+
+
+
+
+/* change language */
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+*{
+  font-family: 'Mina',sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}

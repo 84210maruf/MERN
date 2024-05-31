@@ -1,0 +1,364 @@
+h1,h2{text-align: center;}
+.images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.images div{
+    height: 350px;
+    width: 350px;
+    background-image: url(./grid-properties.png);
+    background-size: contain;
+    background-repeat: no-repeat;  
+    grid-row-start: 1;
+    grid-column-start:2;
+    align-items: center;
+}
+
+
+/* ################## start grid-column & row ########################## */
+
+.column-row {
+    height: 500px;
+
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*12 frame column*/
+
+    gap: 5px;
+
+
+    background: linear-gradient(to bottom, rgba(197, 222, 234, 1) 0%, rgba(138, 187, 215, 1) 31%, rgba(6, 109, 171, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+
+}
+
+.column-row  #item-0 {
+
+    background-color: #D7EAE5;
+
+    grid-column: 1 / 2;
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+    
+    grid-row: 1 / 2;
+    /* grid-row-start: 1;
+    grid-row-end: 2; */
+
+}
+
+.column-row  #item-1 {
+
+    background-color: #AF7AA5;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+}
+
+.column-row  #item-2 {
+
+    background-color: #97597A;
+    grid-row-start: 2;
+    grid-column-start: 1;
+
+    grid-row-end: 5;
+    grid-column-end: 3;
+
+}
+
+.column-row  #item-3 {
+
+    background-color: #C5BD96;
+    grid-row-start: 3;
+    grid-column-start: 3;
+
+    grid-row-end: 4;
+    grid-column-end: 4;
+
+}
+
+.column-row  #item-4 {
+
+    background-color: #BADB79;
+    grid-row-start: 2;
+    grid-column-start: 2;
+
+    grid-row-end: 3;
+    grid-column-end: 3;
+
+}
+
+.column-row  #item-5 {
+
+    background-color: #DB599A;
+    grid-row-start: 2;
+    grid-column-start: 5;
+
+    grid-row-end: 3;
+    grid-column-end: 6;
+
+}
+
+.column-row #item-6 {
+
+    background-color: #B79796;
+    grid-row-start: 1;
+    grid-column-start: 4;
+
+    grid-row-end: 2;
+    grid-column-end: 5;
+
+}
+
+.column-row #item-7 {
+
+    background-color: #BDDFD9;
+    grid-row-start: 3;
+    grid-column-start: 5;
+
+    grid-row-end: 4;
+    grid-column-end: 6;
+
+}
+
+.column-row #item-8 {
+
+    background-color: #000000;
+    grid-row-start: 2;
+    grid-column-start: 6;
+
+    grid-row-end: 3;
+    grid-column-end: 7;
+
+}
+
+.column-row #item-9 {
+
+    background-color: #5A7ADA;
+    grid-row-start: 1;
+    grid-column-start: 5;
+
+    grid-row-end: 3;
+    grid-column-end: 13;
+
+}
+
+.column-row #item-10 {
+
+    background-color: #86DD5D;
+    grid-row-start: 3;
+    grid-column-start: 6;
+
+    grid-row-end: 5;
+    grid-column-end: 8;
+
+}
+/* ############# end grid-column & row ########################## */
+
+
+
+/* ################# start grid-template-areas ######################### */
+.areas{
+    background-color: #5A7ADA;
+    height: 500px;
+
+    display: grid;
+
+    grid-template-areas: 
+        'h h h h' 
+        'a m m s' 
+        'a m m s' 
+        'a m m s' 
+        'a f f f';
+
+
+}
+.areas #item-0{
+    grid-area: h;
+    background-color: teal;
+
+}
+.areas #item-1{
+    grid-area: m;
+    background-color: rgb(202, 225, 225);
+}
+.areas #item-2{
+    grid-area: s;
+    background-color: rgb(38, 50, 50);
+}
+.areas #item-3{
+    grid-area: f;
+    background-color: rgb(19, 255, 255);
+}
+.areas #item-4{
+    grid-area: a;
+    background-color: rgb(88, 103, 103);
+
+}
+/* ################# end aria ######################### */
+
+
+/* ################# start justify ######################### */
+.justify{
+    background-color: #5A7ADA;
+
+    display: grid;
+
+    grid-gap: 5px;
+
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(5,100px);
+
+}
+.justify #item-0{
+    background-color: magenta;
+    
+    justify-self:start;
+}
+.justify #item-1{
+    background-color: maroon;
+    
+    justify-self:baseline;
+}
+.justify #item-2{
+    background-color: mediumaquamarine;
+    
+    justify-self: first baseline;
+}
+.justify #item-3{
+    background-color: mediumpurple;
+    
+    justify-self: center;
+}
+.justify #item-4{
+    background-color: mediumseagreen;
+    
+    justify-self: normal;
+}
+.justify #item-5{
+    background-color: mediumvioletred;
+    
+    justify-self: right;
+}
+.justify #item-6{
+    background-color: chartreuse;
+    
+    justify-self: end;
+}
+.justify #item-7{
+    background-color: coral;
+
+    justify-self: left;
+}
+.justify #item-8{
+    background-color: cadetblue;
+}
+.justify #item-9{
+    background-color: crimson;
+}
+.justify #item-10{
+    background-color: cornsilk;
+}
+/* ################# end justify ######################### */
+/* ################# start align ######################### */
+.align{
+    background-color: #5A7ADA;
+
+    display: grid;
+
+    grid-gap: 5px;
+
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(5,100px);
+
+}
+.align #item-0{
+    background-color: magenta;
+    
+    align-self:start;
+}
+.align #item-1{
+    background-color: maroon;
+    
+    align-self:baseline;
+}
+.align #item-2{
+    background-color: mediumaquamarine;
+    
+    align-self: first baseline;
+}
+.align #item-3{
+    background-color: mediumpurple;
+    
+    align-self: center;
+    /* justify-self: center; */
+}
+.align #item-4{
+    background-color: mediumseagreen;
+    
+    align-self: normal;
+}
+.align #item-5{
+    background-color: mediumvioletred;
+    
+    align-self: stretch;
+}
+.align #item-6{
+    background-color: chartreuse;
+    
+    align-self: end;
+}
+.align #item-7{
+    background-color: coral;
+
+    align-self: auto;
+}
+
+/* ################# end align ######################### */
+/* ################# start place ######################### */
+.place{
+    background-color: #5A7ADA;
+
+    display: grid;
+
+    grid-gap: 5px;
+
+    grid-template-columns: repeat(10, 150px);
+    /* grid-template-rows: repeat(5,100px); */
+    height: 100px;
+
+}
+.place #item-0{
+    background-color: #DB599A;
+    place-self: start;
+}
+.place #item-1{
+    background-color: #97597A;
+    place-self: center;
+}
+.place #item-2{
+    background-color: #97597A;
+    place-self:  center start;
+}
+.place #item-3{
+    background-color: #97597A;
+    place-self: center end;
+}
+.place #item-4{
+    background-color: #97597A;
+    place-self: center start;
+}
+.place #item-5{
+    background-color: #97597A;
+    place-self: center start;
+}
+.place #item-6{
+    background-color: #97597A;
+    place-self: center start;
+}
+/* ################# end grid-container-last ######################### */

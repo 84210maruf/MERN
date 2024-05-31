@@ -1,0 +1,91 @@
+
+/* MINMAX EXAMPLE */
+
+.minmax-container>div{
+    background-color: crimson;
+}
+
+.minmax-container{
+    background-color: cornflowerblue;
+
+    display: grid;
+    gap: 5px;
+
+    grid-template-columns: repeat(6,  minmax(/*minimum*/ 50px, /*maximum*/ 1fr));
+
+    /* no need for rows */
+    grid-template-rows: repeat(6, 100px);
+}
+
+
+
+
+
+
+
+/* AUTO-FIT EXAMPLE */
+
+.auto-fit-container>div{
+    background-color: teal;
+}
+
+.auto-fit-container{
+    background-color: cornflowerblue;
+
+    display: grid;
+    gap: 5px;
+
+    grid-template-columns: repeat(auto-fit,  minmax(70px, 100px));
+
+    /* no need for rows */
+    grid-template-rows: repeat(6, 100px);
+}
+
+
+
+
+
+
+
+
+/* AUTO-fill EXAMPLE */
+
+.auto-fill-container>div{
+    background-color: tomato;
+}
+
+.auto-fill-container{
+    background-color: cornflowerblue;
+
+    display: grid;
+    gap: 5px;
+
+    grid-template-columns: repeat(auto-fill,  minmax(70px, 1fr));
+
+    /* no need for rows */
+    grid-template-rows: repeat(6, 100px);
+}
+
+
+
+
+
+
+
+/* grid-auto-flow: EXAMPLE */
+
+.grid-auto-flow-container>div{
+    background-color: mediumspringgreen;
+}
+
+.grid-auto-flow-container{
+    background-color: cornflowerblue;
+
+    display: grid;
+    gap: 5px;
+
+    grid-template-columns: repeat(6,  minmax(/*minimum*/ 50px, /*maximum*/ 1fr));
+
+    /* no need for rows */
+    grid-template-rows: repeat(6, 100px);
+}

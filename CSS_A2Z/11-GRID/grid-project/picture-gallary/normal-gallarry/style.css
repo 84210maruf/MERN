@@ -1,0 +1,31 @@
+
+.picture-gallary{
+    
+
+    display: grid;
+
+    gap: 5px;
+
+    grid-template-columns: repeat(6, minmax(100px,1fr));
+
+
+}
+
+
+
+.small-pic{
+
+    width: 100px;
+    height: 100px;
+}
+.fat-pic{
+
+    width: 200px;
+    height: 100px;
+
+}
+.long-pic{
+    width: 200px;
+    height: 200px;
+
+}
