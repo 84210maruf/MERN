@@ -12,6 +12,8 @@ body {
     font-weight: 400;
     font-style: normal;
 
+    color: #161514;
+
     /* margin: 0; */
 }
 .buttons-primery{
@@ -26,7 +28,16 @@ body {
     border-radius: 3px;
 
 }
+*p{
+    color: rgb(94, 84, 80);
+    font-size: 16px;
+    letter-spacing: 5px;
+    font-weight: 400;
 
+    text-wrap: pretty;
+
+
+}
 
 
 
@@ -43,15 +54,15 @@ header {
     height: 560px;
 
     background-image: url('./resources/images/header_bg.png'),
-        url('./resources/images/developer.png');
+                      url('./resources/images/developer.png');
 
-    background-size: 650px,
-        65px;
+    background-size: contain,
+                     contain;
 
     background-repeat: no-repeat;
 
     background-position: bottom right,
-        5% 50%;
+                         5% 50%;
 
 
 }
@@ -130,11 +141,8 @@ header .header-content{
     font-size: 50px;
 }
 .profile p{
-    color: rgb(94, 84, 80);
-    font-size: 16px;
-    letter-spacing: .5px;
-    font-weight: 400;
-    text-wrap: balance;
+    /* some css difine in "*p{}" common css part  */
+   
 }
 .profile .links{
 
@@ -162,8 +170,98 @@ header .header-content{
 /* start main section  */
 
 main{
-    background-color: gray;
-    min-height: 500px;
-
+    /* background-color: gray; */
+    /* min-height: 500px; */
+    padding-top: 70px;
 
 }
+
+
+/* about me  */
+
+main .about-me{
+    background-color: #FFF8F3;
+    width: 80%;
+    height: 350px;
+
+    margin: 0 auto;
+
+    border-radius: 10px; 
+}
+.about-me .container{
+    width: 70%;
+    margin: 0 auto;
+}
+.about-me h3{
+    font-size: 30px;
+    font-weight: 700;
+
+    padding-top: 70px;
+    text-align: center;
+}
+.about-me p{
+    /* define style in common css */
+}
+.about-me .address{
+    display: flex;
+    justify-content: space-between;
+}
+.address p{
+    color: #706c6a;
+    font-size: 15px;
+    text-align: center;
+
+    position: relative;
+    top: 15px;
+}
+.address h5{
+    color: #595553;
+}
+
+/* what i do  */
+
+main .what-i-do{
+    /* background-color: #FFF8F3; */
+    width: 80%;
+    min-height: 400px;
+
+    margin: 0 auto;
+
+    border-radius: 10px; 
+}
+
+.what-i-do .container{
+    width: 70%;
+    margin: 0 auto;
+}
+.what-i-do h3{
+    font-size: 30px;
+    font-weight: 700;
+
+    padding-top: 100px;
+    text-align: center;
+}
+.what-i-do p{
+    /* define style in common css */
+}
+
+.what-i-do .box-container{
+    width: 90%;
+    margin: 50px auto;
+    padding-bottom: 50px;
+
+    display: flex;
+
+}
+.box-item{
+    margin: 10px;
+    padding: 20px;
+
+    background-color: white;
+    border-radius: 5px;
+
+    box-shadow: 5px 5px 10px 5px rgb(178, 162, 145);
+}
+.box-item img{width: 30px;}
+.box-item h5{}
+.box-item p{font-size: 12px;text-wrap: balance;} 
