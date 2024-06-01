@@ -26,13 +26,16 @@ body {
     font-size: 16px;
     border: none;
     border-radius: 3px;
+    
 
 }
 *p{
     color: rgb(94, 84, 80);
     font-size: 16px;
-    letter-spacing: 5px;
     font-weight: 400;
+    
+    letter-spacing: 5px;
+    /* word-spacing: 3px; */
 
     text-wrap: pretty;
 
@@ -201,6 +204,7 @@ main .about-me{
 }
 .about-me p{
     /* define style in common css */
+    text-align: center;
 }
 .about-me .address{
     display: flex;
@@ -243,6 +247,9 @@ main .what-i-do{
 }
 .what-i-do p{
     /* define style in common css */
+    word-spacing: 1px;
+    text-align: center;
+   
 }
 
 .what-i-do .box-container{
@@ -264,4 +271,61 @@ main .what-i-do{
 }
 .box-item img{width: 30px;}
 .box-item h5{}
-.box-item p{font-size: 12px;text-wrap: balance;} 
+.box-item p{
+    font-size: 12px;
+    text-wrap: balance;
+    text-align: justify;
+    word-spacing: normal;
+} 
+
+
+/* summary of resume */
+
+main .summary-of-resume{
+    /* background-color: tomato; */
+
+    width: 80%;
+    margin: 50px auto;
+
+}
+.summary-of-resume > h3{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.summary{
+    /* background-color: teal; */
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+}
+.education{
+    width: 50%;
+
+    /* line-height: 1px; */
+}
+.education article{
+
+}
+.education h3{color: #474747;}
+.education p{font-weight: 300;}
+
+
+.projects{
+    width: 50%;
+}
+.projects h3{
+    color: #474747;
+}
+.summary-of-resume .button-center{
+    text-align: center;
+    padding: 50px;
+}
+.button-center button{
+    width: 150px;
+}
+.button-center i{
+    padding: 10px;
+}
