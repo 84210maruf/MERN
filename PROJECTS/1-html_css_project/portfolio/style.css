@@ -329,3 +329,80 @@ main .summary-of-resume{
 .button-center i{
     padding: 10px;
 }
+
+.projects p{
+    font-size: 14px;
+    word-spacing: 1px;
+}
+
+
+
+/* footer section  */
+
+footer{
+    background-color: #FFF8F3;
+    min-height: 500px;
+}
+footer .container{
+
+    width: 80%;
+    margin: 0 auto;
+
+    padding-top: 50px;
+
+
+    display: flex;
+
+}
+.connect{
+
+    width: 50%;
+    margin-right: 50px;
+}
+.connect h3{
+    font-size: 30px;
+}
+.connect p{
+    padding: 20px 0;
+    font-size: 13px;
+    text-wrap: balance;
+    
+}
+.icons i{
+    padding: 5px;
+    color: #FD6E0A;
+    font-size: 25px;
+}
+
+.contact{
+
+    width: 50%;
+}
+.contact>div{
+    width: 60%;
+
+    margin: 0 auto;
+  
+}
+
+.contact h3{
+    font-size: 30px;
+}
+.contact #name,#email, #msg, #button{
+    width: 100%;
+    height: 40px;
+    
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+
+    padding-left: 10px;
+    margin: 5px 0;
+}
+.contact #msg{ height: 100px;}
+.contact #button{
+    margin-top: 50px;
+    background-color: #FD6E0A;
+    width: 100px;
+
+}
