@@ -1,4 +1,8 @@
 /* common css part  */
+body{
+    padding: 0;
+    margin: 0;
+}
 button{
     width: 100px;
     height: 40px;
@@ -48,7 +52,7 @@ nav > ul > li{
 }
 
 
-header .header-container{
+.header-container{
     background-color: rgb(52, 51, 51);
     width: 100%;
     height: 490px;
@@ -79,6 +83,8 @@ header .header-container{
 /* main section  */
 
 main{}
+
+/* about us  */
 .about-us{}
 .about-us h1{
     text-align: center;
@@ -116,3 +122,76 @@ main{}
     background-repeat: no-repeat;
 }
 
+
+/* our service */
+
+.our-service{
+
+    background-color: rgb(58, 58, 58);
+
+    background-image: url('./resources/images/background.png');
+    background-size: cover;
+
+}
+.our-service h1{
+    text-align: center;
+    font-size: 45px;
+    padding: 50px;
+}
+
+.box-container{
+    padding-bottom: 100px;
+
+    display: flex;
+    justify-content: space-around;
+
+}
+.box{
+
+    width: 250px;
+    padding: 20px 10px;
+
+    color: white;
+    background-color: black;
+
+    text-align: center;
+    border-radius: 15px;
+}
+
+.box img{
+    height:50px; width:50px;
+}
+
+.box h3{}
+
+.box p{}
+
+.box button{}
+
+
+/* footer section  */
+footer{
+    background-color: gray;
+
+    padding-bottom: 50px;
+    /* center all footer contents  */
+    text-align: center;
+}
+.footer-container{
+    padding: 50px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.one{width: 200px;}
+.two{width: 100px;}
+.three{width: 100px;}
+.four{width:200px}
+
+footer hr{
+    border-color: black;
+    width: 80%;
+
+}
+footer p{}
