@@ -156,3 +156,27 @@ Addjunction shiblling selector
 [id *= '1'] {
     background-color: brown;
 }
+
+
+
+/*#####################################################*/
+/*####### first-last-even-odd childs selectors ########*/
+/*####################################################*/
+table{
+    border-collapse: collapse;
+}
+td,th{
+    border: 2px solid maroon;
+    padding: 10px;
+}
+
+
+
+th:first-child{
+    background-color: mediumspringgreen;
+}
+td:last-child{
+    background-color: mediumvioletred;
+}
+td:nth-child(2n){color: cornflowerblue;}/*even childs*/
+td:nth-child(2n+1){color: chartreuse;}/*odd childs*/

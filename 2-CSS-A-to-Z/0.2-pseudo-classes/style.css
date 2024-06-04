@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+}
+
+/* ########################### */
+/* ##### :hover class ######### */
+/* ############################ */
+.hover-contener button:hover{
+    background-color: aquamarine;
+    width: 100px;height: 50px;
+}
+/* span is the button child  */
+.hover-contener button:hover span{
+    display: none;
+}
+
+
+/* ########################### */
+/* ##### :focus class ######### */
+/* ############################ */
+.focus-container input:focus{
+    height: 100px;width: 200px;
+    background-color: azure;
+}
+
+/* ########################### */
+/* ##### :visited class ######### */
+/* ############################ */
+.visited-container a:visited{
+    color: gray;
+}
+/* ########################### */
+/* ##### :before :after ######### */
+/* ############################ */
+.before-after p::before{
+    content: "--Happy happy--";
+}
+.before-after p::after{
+    content: "--year years--";
+}
