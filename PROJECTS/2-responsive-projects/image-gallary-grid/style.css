@@ -1,0 +1,46 @@
+
+.picture-gallary{
+
+    display: grid;
+
+    gap: 5px;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+
+
+    grid-auto-flow: dense;
+
+
+}
+
+.picture-gallary img{
+    width: 100%; 
+    height: 100%;
+
+    /* image inteligently fit in box  */
+    /* object-fit not need hare but its a demo */
+    object-fit: cover;
+}
+
+
+.small-pic{
+    
+}
+.fat-pic{
+
+    grid-column: auto / span 2;
+    /*OR grid-column: span 2; */
+    
+}
+.long-pic{
+    grid-row: auto / span 2;
+    /* OR grid-row: span 2; */
+}
+
+.big-pic{
+    grid-column: auto / span 2;
+    /*OR grid-column: span 2; */
+
+    grid-row: auto / span 2;
+    /* OR grid-row: span 2; */
+}

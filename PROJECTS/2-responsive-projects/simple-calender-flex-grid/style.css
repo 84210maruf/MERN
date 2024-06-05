@@ -1,0 +1,45 @@
+
+body
+{
+    display: flex;
+    justify-content: center;
+
+    height: 100vh;
+    align-items: center;
+}
+
+
+.calender-container{
+
+    width: 300px;
+
+    display: grid;
+
+    gap: 10px;
+
+    grid-template-columns: repeat(7,minmax(50px, 1fr));
+    grid-template-rows: repeat(6, 50px);
+}
+
+.week-day{
+    background-color: magenta;
+    font-size: 1.5rem;
+
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date{
+    background-color: aquamarine;
+    font-size: 1.1rem;
+
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
