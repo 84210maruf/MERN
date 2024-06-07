@@ -1,0 +1,947 @@
+/*imported files*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+
+/* common css */
+html {
+    font-size: 15px;
+}
+
+/*rem relative size*/
+
+
+body {
+
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    color: #161514;
+
+    /* margin: 0; */
+}
+
+.buttons-primery {
+    color: white;
+    background-color: #FD6E0A;
+
+    height: 40px;
+    width: 100px;
+
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+
+
+}
+
+*p {
+    color: rgb(94, 84, 80);
+    font-size: 1rem;
+    font-weight: 400;
+
+    letter-spacing: 5px;
+    /* word-spacing: 3px; */
+
+    text-wrap: pretty;
+
+
+}
+
+
+
+
+
+
+
+/* Start header section */
+
+header {
+    /* background-color: teal; */
+
+    /* width 100% auto  */
+    height: 557px;
+
+    background-image: url('./resources/images/header_bg.png'),
+        url('./resources/images/developer.png');
+
+    background-size: 700px,
+        contain;
+
+    background-repeat: no-repeat;
+
+    background-position: bottom right,
+        5% 50%;
+
+
+}
+
+nav {
+    /* background-color: blanchedalmond; */
+
+    width: 70%;
+
+    margin: 0 auto;
+    /* padding-top: 20px; */
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .top-name {
+    font-size: 2.3rem;
+    /* color:181818; */
+}
+
+.top-name span {
+    color: #FD6E0A;
+}
+
+nav .nav-options {
+    display: flex;
+    align-items: center;
+}
+
+.nav-options ul {
+    display: flex;
+}
+
+.nav-options li {
+
+    list-style: none;
+    font-size: 1.2rem;
+
+    padding: 10px 20px;
+}
+
+.nav-options a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-options button {
+    /* button class dicleare in common css section  */
+    margin-left: 20px;
+}
+
+
+
+header .header-content {
+
+
+    margin-left: 170px;
+    /* width: 70%; */
+
+    display: flex;
+    justify-content: space-between;
+
+    height: 422px;
+}
+
+.header-content .profile {
+    /* background-color: teal; */
+    margin: 20px 0 0 10px;
+    width: 550px;
+    height: 300px;
+}
+
+.profile h3 {
+    color: rgb(70, 60, 49);
+    font-size: 1.5rem;
+}
+
+.profile h1 {
+    font-size: 3.5rem;
+}
+
+.profile p {
+    /* some css difine in "*p{}" common css part  */
+
+}
+
+.profile .links {
+
+
+    padding: 10px 0;
+}
+
+.links button {
+    width: 150px;
+}
+
+.links button[title='contact'] {
+    width: 100px;
+}
+
+.links i {
+    padding-right: 10px;
+}
+
+.header-content img {
+    /* background-size: contain; */
+    width: 600px;
+}
+
+/* End header  */
+
+
+
+/* start main section  */
+
+main {
+    /* background-color: gray; */
+    /* min-height: 500px; */
+    padding-top: 70px;
+
+}
+
+
+/* about me  */
+
+main .about-me {
+    background-color: #FFF8F3;
+    width: 80%;
+    height: 350px;
+
+    margin: 0 auto;
+
+    border-radius: 10px;
+}
+
+.about-me .container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.about-me h3 {
+    font-size: 2rem;
+    font-weight: 700;
+
+    padding-top: 70px;
+    text-align: center;
+}
+
+.about-me p {
+    /* define style in common css */
+    text-align: center;
+}
+
+.about-me .address {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address p {
+    color: #706c6a;
+    font-size: 1rem;
+    text-align: center;
+
+    position: relative;
+    top: 15px;
+}
+
+.address h5 {
+    color: #595553;
+}
+
+/* what i do  */
+
+main .what-i-do {
+    /* background-color: #FFF8F3; */
+    width: 80%;
+    min-height: 400px;
+
+    margin: 0 auto;
+
+    border-radius: 10px;
+}
+
+.what-i-do .container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.what-i-do h3 {
+    font-size: 2rem;
+    font-weight: 700;
+
+    padding-top: 100px;
+    text-align: center;
+}
+
+.what-i-do p {
+    /* define style in common css */
+    word-spacing: 1px;
+    text-align: center;
+
+}
+
+.what-i-do .box-container {
+
+    margin: 50px auto;
+    padding-bottom: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.box-item {
+    width: 170px;
+
+    margin: 10px;
+    padding: 20px;
+
+    background-color: white;
+    border-radius: 5px;
+
+    box-shadow: 5px 5px 10px 5px rgb(178, 162, 145);
+}
+
+.box-item img {
+    width: 30px;
+}
+
+.box-item h5 {}
+
+.box-item p {
+    font-size: 0.8rem;
+    text-wrap: balance;
+    text-align: justify;
+    word-spacing: normal;
+}
+
+
+/* summary of resume */
+
+main .summary-of-resume {
+    /* background-color: tomato; */
+
+    width: 80%;
+    margin: 50px auto;
+
+}
+
+.summary-of-resume>h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.summary {
+    /* background-color: teal; */
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.education {
+    width: 50%;
+
+    /* line-height: 1px; */
+}
+
+.education article {}
+
+.education h3 {
+    color: #474747;
+}
+
+.education p {
+    font-weight: 300;
+}
+
+
+.projects {
+    width: 50%;
+}
+
+.projects h3 {
+    color: #474747;
+}
+
+.summary-of-resume .button-center {
+    text-align: center;
+    padding: 50px;
+}
+
+.button-center button {
+    width: 150px;
+}
+
+.button-center i {
+    padding: 10px;
+}
+
+.projects p {
+    font-size: 0.8rem;
+    word-spacing: 1px;
+}
+
+
+
+/* footer section  */
+
+footer {
+    background-color: #FFF8F3;
+    min-height: 500px;
+}
+
+footer .container {
+
+    width: 80%;
+    margin: 0 auto;
+
+    padding-top: 50px;
+
+
+    display: flex;
+
+}
+
+.connect {
+
+    width: 50%;
+    margin-right: 50px;
+}
+
+.connect h3 {
+    font-size: 2rem;
+}
+
+.connect p {
+    padding: 20px 0;
+    font-size: 0.9rem;
+    text-wrap: balance;
+
+}
+
+.icons i {
+    padding: 5px;
+    color: #FD6E0A;
+    font-size: 2rem;
+}
+
+.contact {
+
+    width: 50%;
+}
+
+.contact>div {
+    width: 60%;
+
+    margin: 0 auto;
+
+}
+
+.contact h3 {
+    font-size: 2rem;
+}
+
+.contact #name,
+#email,
+#msg,
+#button {
+    width: 100%;
+    height: 40px;
+
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+
+    padding-left: 10px;
+    margin: 5px 0;
+}
+
+.contact #msg {
+    height: 100px;
+}
+
+.contact #button {
+    margin-top: 50px;
+    background-color: #FD6E0A;
+    width: 100px;
+
+}
+
+
+@media screen and (min-width:972px) and (max-width:1200px) {
+
+    html {
+        /* font-size: 14px; */
+        /* background-color: rebeccapurple; */
+    }
+
+    header {
+        height: 535px;
+        background-size: 600px,
+            contain;
+    }
+
+    header .header-content {
+
+        height: 400px;
+        padding-right: 10px;
+        margin-left: 142px;
+    }
+
+    .header-content .profile {
+        /* background-color: teal; */
+        margin: 20px 0 0 10px;
+        width: 550px;
+        height: 300px;
+    }
+
+    .profile h3 {
+        color: rgb(70, 60, 49);
+        font-size: 1.5rem;
+    }
+
+    .profile h1 {
+        font-size: 2.9rem;
+    }
+
+    .header-content img {
+        /* background-size: contain; */
+        width: 470px;
+    }
+
+
+    .what-i-do .box-container {
+        width: 100%;
+        margin: 50px auto;
+        padding-bottom: 50px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .box-item {
+        width: 200px;
+
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:971px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    *h1 {
+        font-size: 5px;
+    }
+
+    header {
+        height: 470px;
+
+        background-size: 500px,
+            contain;
+    }
+
+    nav .top-name {
+        font-size: 2rem;
+        /* color:181818; */
+    }
+
+    header .header-content {
+        width: 85%;
+        margin-left: 110px;
+        /* width: 70%; */
+
+        display: flex;
+        /* justify-content: space-around; */
+
+        height: 422px;
+    }
+
+    .profile {}
+
+    .profile h3 {
+        font-size: 1.3rem;
+    }
+
+    .profile h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content img {
+        width: 360px;
+        height: 360px;
+    }
+
+
+    .about-me .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .address p {
+        color: #706c6a;
+        font-size: 1rem;
+        text-align: unset;
+
+        position: relative;
+        top: 15px;
+    }
+
+
+    .what-i-do .box-container {
+        width: 100%;
+        margin: 50px auto;
+        padding-bottom: 50px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .box-item {
+        width: 200px;
+    }
+
+
+}
+
+@media screen and (min-width:576px) and (max-width:768px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .buttons-primery {
+
+        height: 35px;
+        width: 100px;
+
+    }
+
+
+
+
+
+
+    header {
+        height: 425px;
+
+        background-size: 400px,
+            45px;
+        background-position: bottom right, 3% 30%;
+    }
+
+    nav .top-name {
+        font-size: 2rem;
+        /* color:181818; */
+    }
+
+    header .header-content {
+        width: 85%;
+        margin-left: 70px;
+        /* width: 70%; */
+
+        display: flex;
+        /* justify-content: space-around; */
+
+        height: 320px;
+    }
+
+    .profile {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .profile h3 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .profile h1 {
+        font-size: 2rem;
+    }
+
+    .profile .links {
+        display: flex;
+    }
+
+    .links button {
+        width: 100px;
+        margin-right: 5px;
+    }
+
+    .links button[title='contact'] {
+        width: 80px;
+    }
+
+    .header-content img {
+        width: 305px;
+        height: 330px;
+    }
+
+
+
+    /* about-me  */
+
+    .about-me .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .address p {
+        font-weight: bolder;
+        text-align: unset;
+    }
+
+    .what-i-do .box-container {
+        width: 100%;
+        margin: 50px auto;
+        padding-bottom: 50px;
+
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+
+    }
+
+    .box-item {
+        width: 160px;
+    }
+
+
+    .icons i {
+        font-size: 1.6rem;
+    }
+
+    .contact>div {
+        width: 100%;
+
+        margin: 0 auto;
+
+    }
+
+    .contact #name,
+    #email,
+    #msg,
+    #button {
+        width: 100%;
+        height: 30px;
+
+        border: none;
+        border-radius: 3px;
+        font-size: 1rem;
+
+        padding-left: 10px;
+        margin: 5px 0;
+    }
+
+    .contact #msg {
+        height: 100px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width:575px) {
+
+    /* common css */
+    html {
+        font-size: 12px;
+    }
+
+    /*rem relative size*/
+
+
+    body {
+
+
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+
+        color: #161514;
+
+        /* margin: 0; */
+    }
+
+    .buttons-primery {
+        color: white;
+        background-color: #FD6E0A;
+
+        height: 40px;
+        width: 100px;
+
+        font-size: 1rem;
+        border: none;
+        border-radius: 3px;
+
+
+    }
+
+    *p {
+        color: rgb(94, 84, 80);
+        font-size: 1rem;
+        font-weight: 400;
+
+        letter-spacing: 5px;
+        /* word-spacing: 3px; */
+
+        text-wrap: pretty;
+
+
+    }
+
+
+
+
+
+
+
+    /* Start header section */
+
+    header {
+        /* background-color: teal; */
+
+        /* width 100% auto  */
+        height: 557px;
+
+        background-image: url('./resources/images/header_bg.png'),
+            url('./resources/images/developer.png');
+
+        background-size: 700px,
+            contain;
+
+        background-repeat: no-repeat;
+
+        background-position: bottom right,
+            5% 50%;
+
+
+    }
+
+    nav {
+        /* background-color: blanchedalmond; */
+
+        width: 70%;
+
+        margin: 0 auto;
+        /* padding-top: 20px; */
+
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .top-name {
+        font-size: 2.3rem;
+        /* color:181818; */
+    }
+
+    .top-name span {
+        color: #FD6E0A;
+    }
+
+    nav .nav-options {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-options ul {
+        display: flex;
+    }
+
+    .nav-options li {
+
+        list-style: none;
+        font-size: 1.2rem;
+
+        padding: 10px 20px;
+    }
+
+    .nav-options a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .nav-options button {
+        /* button class dicleare in common css section  */
+        margin-left: 20px;
+    }
+
+
+
+    header .header-content {
+
+
+        margin-left: 170px;
+        /* width: 70%; */
+
+        display: flex;
+        justify-content: space-between;
+
+        height: 422px;
+    }
+
+    .header-content .profile {
+        /* background-color: teal; */
+        margin: 20px 0 0 10px;
+        width: 550px;
+        height: 300px;
+    }
+
+    .profile h3 {
+        color: rgb(70, 60, 49);
+        font-size: 1.5rem;
+    }
+
+    .profile h1 {
+        font-size: 3.5rem;
+    }
+
+    .profile p {
+        /* some css difine in "*p{}" common css part  */
+
+    }
+
+    .profile .links {
+
+
+        padding: 10px 0;
+    }
+
+    .links button {
+        width: 150px;
+    }
+
+    .links button[title='contact'] {
+        width: 100px;
+    }
+
+    .links i {
+        padding-right: 10px;
+    }
+
+    .header-content img {
+        /* background-size: contain; */
+        width: 600px;
+    }
+
+    /* End header  */
+
+
+}
