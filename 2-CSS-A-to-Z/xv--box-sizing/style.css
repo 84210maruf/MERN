@@ -1,0 +1,42 @@
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+
+
+.div1 {
+
+    width: 300px;
+    height: 100px;
+
+    padding: 50px;
+    border: 10px solid blue;
+
+    box-sizing: border-box;
+  }
+  
+  .div2 {
+    
+    width: 300px;
+    height: 100px;  
+
+    padding: 50px;
+    border: 10px solid red;
+
+    /* border-box er ulta */
+    box-sizing: content-box;
+
+  }
+  p{
+    background-color: aquamarine;
+    
+    
+    width: 300px;
+    height: 100px;  
+
+    padding: 50px;
+    border: 10px solid rgb(93, 80, 80);
+
+    box-sizing:border-box;
+  }
