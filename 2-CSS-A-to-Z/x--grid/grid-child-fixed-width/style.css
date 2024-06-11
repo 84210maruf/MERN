@@ -1,0 +1,27 @@
+h1{text-align: center;}
+
+
+section{
+    background-color: tomato;
+    
+    display: grid;
+    gap: 5px;
+
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+
+menu{
+    background-color: mediumvioletred;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    height: 100px;
+    width: 500px;
+}
+aside{
+    background-color: magenta;
+    grid-column: 1 / -1;
+    grid-row: 2 /3;
+
+}
