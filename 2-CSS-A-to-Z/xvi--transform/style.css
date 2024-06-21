@@ -1,0 +1,53 @@
+h1{text-align: center;}
+
+.one{
+    border: 3px double mediumvioletred;
+    height: 300px;
+}
+#one{
+    height: 100px;
+    width: 100px;
+    background-color: mediumvioletred;
+
+
+    transform: translate(50px, 100px);
+}
+.two{
+    border: 3px double mediumvioletred;
+    height: 300px;
+}
+#two{
+    height: 100px;
+    width: 100px;
+    background-color: mediumvioletred;
+    margin: 50px;
+
+
+    transform: rotate(60deg);
+}
+.three{
+    border: 3px double mediumvioletred;
+    height: 300px;
+}
+#three{
+    height: 100px;
+    width: 100px;
+    background-color: mediumvioletred;
+    margin: 100px;
+
+
+    transform: scale(1.5);
+}
+.four{
+    border: 3px double mediumvioletred;
+    height: 300px;
+}
+#four{
+    height: 100px;
+    width: 100px;
+    background-color: mediumvioletred;
+    margin: 100px;
+
+
+    transform: skew(50deg, 10deg);
+}
