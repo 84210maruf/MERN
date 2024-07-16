@@ -70,7 +70,7 @@ div > div > p{
     color: green;
 }
 div > div > h3{
-    color: green;
+    color: blue;
 }
 
 li:first-of-type + li{
