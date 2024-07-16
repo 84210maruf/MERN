@@ -83,7 +83,7 @@ div {
 article {
 
   /* precomposed values */
-  /* display: block; */
+  display: block;
   /* display: inline; */
   /* display: inline-block; */
   /* display: flex; */
