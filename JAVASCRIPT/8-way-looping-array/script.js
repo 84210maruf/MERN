@@ -7,6 +7,7 @@ console.log(a)
 console.log('++++-------------+ for loop +-------------++++')
 for(index; index < a.length; index++){
     console.log(a[index])
+    document.getElementById("demo_two").innerHTML = a
 }
 
 
@@ -60,12 +61,29 @@ var every_return = a.every(under_five)
 console.log(typeof(every_return))
 
 
-console.log('++++-------------+ every func +-------------++++')
+console.log('++++-------------+ filter +-------------++++')
 
-
-function newFunc(v,i,arr){
-    return v < 18
+function newFunc(value,index,arr){
+    return value > 50
 }
 
-var over18 = a.filter(newFunc)
-console.log(over18)
+var over50 = a.filter(newFunc)
+
+var index = 0
+while(index < over50.length){
+    console.log(over50[index])
+
+    index++
+}
+
+console.log('++++-------------+ reduce func +-------------++++')
+
+function sumFunc(total,value,index,arr){
+
+    return total + value
+}
+
+var sum = a.reduce(sumFunc)
+console.log(sum)
+document.getElementById('demo_one').innerHTML = "the sum is " + sum
+console.log('++++-------------+ every func +-------------++++')
