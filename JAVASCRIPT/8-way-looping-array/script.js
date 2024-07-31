@@ -58,3 +58,14 @@ if(a.every(under_five)){
 }
 var every_return = a.every(under_five)
 console.log(typeof(every_return))
+
+
+console.log('++++-------------+ every func +-------------++++')
+
+
+function newFunc(v,i,arr){
+    return v < 18
+}
+
+var over18 = a.filter(newFunc)
+console.log(over18)
