@@ -86,4 +86,10 @@ function sumFunc(total,value,index,arr){
 var sum = a.reduce(sumFunc)
 console.log(sum)
 document.getElementById('demo_one').innerHTML = "the sum is " + sum
-console.log('++++-------------+ every func +-------------++++')
+
+
+console.log('++++-------------+ PRACTICE SESSION +-------------++++')
+
+for(index = 0; index < a.length; index++){
+    document.getElementById("demo_five").innerHTML = a[index]
+}
