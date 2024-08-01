@@ -7,7 +7,7 @@ console.log(a)
 console.log('++++-------------+ for loop +-------------++++')
 for(index; index < a.length; index++){
     console.log(a[index])
-    document.getElementById("demo_two").innerHTML = a
+    // document.getElementById("demo_two").innerHTML = a
 }
 
 
@@ -85,11 +85,13 @@ function sumFunc(total,value,index,arr){
 
 var sum = a.reduce(sumFunc)
 console.log(sum)
-document.getElementById('demo_one').innerHTML = "the sum is " + sum
 
 
 console.log('++++-------------+ PRACTICE SESSION +-------------++++')
-
-for(index = 0; index < a.length; index++){
-    document.getElementById("demo_five").innerHTML = a[index]
+var index = 0
+var s = ['one','two','three','four','five','six','seven','eight','nine','ten']
+for(index; index < a.length; index++){
+    document.getElementById(s[index]).innerHTML = a[index]
 }
+document.getElementById("ten").innerHTML = index
+
