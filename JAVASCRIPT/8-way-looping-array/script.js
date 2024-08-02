@@ -88,10 +88,10 @@ console.log(sum)
 
 
 console.log('++++-------------+ PRACTICE SESSION +-------------++++')
-var index = 0
+var index = a.length - 1
+var n = 0
 var s = ['one','two','three','four','five','six','seven','eight','nine','ten']
-for(index; index < a.length; index++){
-    document.getElementById(s[index]).innerHTML = a[index]
+for(index; index >= 0; index--){
+    document.getElementById(s[n]).innerHTML = "<H1 style='color:blue'>" + a[index] + "<H1>"
+    n++
 }
-document.getElementById("ten").innerHTML = index
-
