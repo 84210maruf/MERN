@@ -3,3 +3,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
+div{
+    padding: 10px;
+}
