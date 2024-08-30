@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="text-center text-xl">flex</p>
+    <div class="flex bg-blue-100">
+        <div class="flex-none size-16 border-2 rounded border-gray-500">01</div>
+        <div class="flex-1 size-16 border-2 rounded border-gray-500">02</div>
+        <div class="flex-1 size-16 border-2 rounded border-gray-500">03</div>
+    </div>
+    <p class="text-center text-xl">flex grow</p>
+    <div class="flex bg-blue-100">
+        <div class="size-16 border-2 rounded border-gray-500">01</div>
+        <div class="grow size-16 border-2 rounded border-gray-500">02</div>
+        <div class="hover:grow size-16 border-2 rounded border-gray-500">03</div>
+    </div>
+    <p class="text-center text-xl">flex shrink</p>
+    <div class="flex bg-blue-100">
+        <div class="size-16 border-2 rounded border-gray-500">01</div>
+        <div class="size-16 border-2 rounded border-gray-500">02</div>
+        <div class="size-16 border-2 rounded border-gray-500">03</div>
+    </div>
+    <p class="text-center text-xl">flex order</p>
+    <div class="flex bg-blue-100">
+        <div class="-order-1 size-16 border-2 rounded border-gray-500">01</div>
+        <div class="-order-2 size-16 border-2 rounded border-gray-500">02</div>
+        <div class="-order-3 size-16 border-2 rounded border-gray-500">03</div>
+        <div class=" size-16 border-2 rounded border-gray-500">04</div>
+        <div class=" size-16 border-2 rounded border-gray-500">05</div>
+        <div class="order-first size-16 border-2 rounded border-gray-500">06</div>
+    </div>
+    
+</body>
+</html>
