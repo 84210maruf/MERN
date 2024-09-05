@@ -16,7 +16,7 @@
     <fieldset id="button" class="m-10 p-4 border-2 border-green-200 space-x-1 space-y-1">
 
         <legend>btn</legend>
-        
+
         <button class="btn"> btn</button>
         <button class="btn btn-primary"> btn</button>
         <button class="btn btn-info btn-circle"> btn</button>
@@ -96,10 +96,83 @@
 
     </fieldset>
 
-    <fieldset id="buttons" class="m-10 p-4 border-2 border-green-200">
+    <fieldset id="drop-down" class="m-10 p-4 border-2 border-green-200">
         <legend>tailwind componants</legend>
 
+
+        <details class="dropdown">
+            <summary class="btn m-1">open or close</summary>
+
+            <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+
+                <li>
+                    <details class="mb-2">
+                        <summary class="">
+                            <span class="">Nested item 1</span>
+                        </summary>
+                        <ul class="bg-white p-4">
+                            <li class="text-gray-800"><a href="#">Content for Nested Dropdown 1</a></li>
+                            <li class="text-gray-800">Content for Nested Dropdown 1</li>
+                            <li class="text-gray-800">
+                                <details class="mb-2">
+                                    <summary class="">
+                                        <span class="">Nested item 1</span>
+                                    </summary>
+                                    <ul class="bg-white p-4">
+                                        <li class="text-gray-800"><a href="#">Content for Nested Dropdown 1</a></li>
+                                        <li class="text-gray-800">Content for Nested Dropdown 1</li>
+                                        <li class="text-gray-800">Content for Nested Dropdown 1</li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </details>
+        <details class="dropdown dropdown-end">
+            <summary class="btn m-1">open or close</summary>
+            <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+            </ul>
+        </details>
+        <details class="dropdown dropdown-top">
+            <summary class="btn m-1">open or close</summary>
+            <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+            </ul>
+        </details>
+        <details class="dropdown dropdown">
+            <summary class="btn m-1">open or close</summary>
+            <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+            </ul>
+        </details>
+        <details class="dropdown dropdown-left">
+            <summary class="btn m-1">open or close</summary>
+            <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+            </ul>
+        </details>
+        <details class="dropdown dropdown-right">
+            <summary class="btn m-1">open or close</summary>
+            <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+            </ul>
+        </details>
+
+        <hr class="border-green-200 m-4">
+
+
+
     </fieldset>
+
     <fieldset id="buttons" class="m-10 p-4 border-2 border-green-200">
         <legend>tailwind componants</legend>
 
