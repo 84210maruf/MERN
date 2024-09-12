@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+.work-sans {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.txtcenter{
+  text-align: center;
+}

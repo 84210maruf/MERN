@@ -1,0 +1,12 @@
+1. npm update [npm install -g npm@latest]
+2. create app with react + vite [npm create vite@latest my-react-app -- --template react]
+3. [cd my-react-app]
+4. node module install [npm install]
+5. run project server [npm run dev]
+
+--------follow react+vite instraction for using tailwind and daisyui----------
+6. install tailwind [npm install -D tailwindcss postcss autoprefixer,& npx tailwindcss init]
+
+7. install Daisy ui [npm i -D daisyui@latest]
+8. configure tailwind.cofig.js
+9.  

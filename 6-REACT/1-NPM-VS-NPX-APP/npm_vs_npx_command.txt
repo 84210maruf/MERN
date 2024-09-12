@@ -1,0 +1,20 @@
+
+    #####################################################
+    ## NPM and NPX Both are same for create react app. ## 
+    ## Only diffrent is NPX ensure the NPM is Updated. ## 
+    #####################################################
+
+----------------------NPM (Node Package Manager)--------------------
+CMD:
+1. npm init react-app my-app
+2. cd my-app
+3. npm start
+
+
+---------------------- NPX (Node Package Exicute)--------------------
+
+CDM:
+1. npm install -g npm@latest       ----[before create app just updated with NPM. That's the only diffrent NPM & NPX ]
+2. npx create-react-app my-app
+3. cd my-app
+4. npm start

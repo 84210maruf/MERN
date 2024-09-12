@@ -1,0 +1,14 @@
+{
+  "name": "node_module",
+  "version": "1.0.0",
+  "description": "start a node project(maruf)",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
