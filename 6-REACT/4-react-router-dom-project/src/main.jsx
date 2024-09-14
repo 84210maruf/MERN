@@ -10,6 +10,13 @@ import Layout from "./Components/Layout/Layout";
 import Body from "./Components/Body/Body";
 import Products from "./Components/products/Products";
 import Product from "./Components/products/Product"
+import Shoping_cart from "./Components/pages/Shoping_cart";
+import Whish_list from "./Components/pages/Whish_list";
+import Register from "./Components/pages/Register";
+import Login from "./Components/pages/Login";
+import Men from "./Components/pages/Men";
+import Women from "./Components/pages/Women";
+import Kids from "./Components/pages/Kids";
 
 
 
@@ -31,6 +38,7 @@ const router = createBrowserRouter([
       </Layout>
     )
   },
+
   {
     path: "/product",
     element: (
@@ -39,6 +47,71 @@ const router = createBrowserRouter([
       </Layout>
     )
   },
+
+
+
+
+  {
+    path: "/shoping-cart",
+    element: (
+      <Layout>
+        <Whish_list />
+      </Layout>
+    )
+  },
+
+  {
+    path: "/whish-list",
+    element: (
+      <Layout>
+        <Shoping_cart />
+      </Layout>
+    )
+  },
+
+  {
+    path: "/login",
+    element: (
+      <Layout>
+        <Login />
+      </Layout>
+    )
+  },
+
+  {
+    path: "/register",
+    element: (
+      <Layout>
+        <Register />
+      </Layout>
+    )
+  },
+  
+  {
+    path: "/men",
+    element: (
+      <Layout>
+        <Men />
+      </Layout>
+    )
+  },
+  {
+    path: "/women",
+    element: (
+      <Layout>
+        <Women />
+      </Layout>
+    )
+  },
+  {
+    path: "/kids",
+    element: (
+      <Layout>
+        <Kids />
+      </Layout>
+    )
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

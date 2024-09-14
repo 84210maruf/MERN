@@ -3,12 +3,12 @@ import React from 'react'
 const Footer = () => {
     return (
         <footer>
-            <div className="md:flex md:p-4 bg-base-200 gap-x-4 space-y-1 text-gray-500">
+            <div className="md:flex md:p-4 gap-x-4 space-y-1 bg-sky-50 text-gray-500">
                 <div className="md:size-[50%] space-y-1">
                     <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
                         <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
-                        <div className="collapse-title text-xl font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
-                        <div className="collapse-content bg-base-100 peer-checked:bg-base-300">
+                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
+                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
                             <hr className="py-1" />
                             <p>The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth,
                                 happiness, loyalty, and long-lasting connections  </p>
@@ -16,8 +16,8 @@ const Footer = () => {
                     </div>
                     <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
                         <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
-                        <div className="collapse-title text-xl font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
-                        <div className="collapse-content bg-base-100 peer-checked:bg-base-300">
+                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
+                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
                             <hr className="py-1" />
                             <p>The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth,
                                 happiness, loyalty, and long-lasting connections  </p>
@@ -25,8 +25,8 @@ const Footer = () => {
                     </div>
                     <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
                         <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
-                        <div className="collapse-title text-xl font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
-                        <div className="collapse-content bg-base-100 peer-checked:bg-base-300">
+                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
+                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
                             <hr className="py-1" />
                             <p>The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth,
                                 happiness, loyalty, and long-lasting connections  </p>
@@ -34,9 +34,9 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="hidden md:card bg-base-100 image-full size-[50%] shadow-xl">
+                <div className="hidden md:card bg-base-100 image-full size-[50%]  shadow-xl">
                     <figure>
-                        <img
+                        <img className='w-full h-full'
                             src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
                             alt="Shoes" />
                     </figure>
@@ -50,10 +50,10 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-base-300 text-lg p-10">
+            <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-base-300 text-md p-10">
 
                 <nav className=''>
-                    <h6 className="footer-title text-info">Services</h6>
+                    <h6 className="footer-title text-info text-lg">Services</h6>
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
                     <a className="link link-hover">Marketing</a>
@@ -61,21 +61,21 @@ const Footer = () => {
 
                 </nav>
                 <nav className=''>
-                    <h6 className="footer-title text-info">Company</h6>
+                    <h6 className="footer-title text-info text-lg">Company</h6>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press kit</a>
                 </nav>
                 <nav>
-                    <h6 className="footer-title text-info">Legal</h6>
+                    <h6 className="footer-title text-info text-lg">Legal</h6>
                     <a className="link link-hover">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
             </div>
 
-            <div className="sm:hidden footer justify-items-center bg-base-300 text-lg p-10">
+            <div className="sm:hidden footer justify-items-center bg-base-300 text-md p-10">
                 <nav className='w-full shadow-sm'>
 
                     <div className="collapse collapse-plus rounded-[3px] bg-base-300">
@@ -119,8 +119,7 @@ const Footer = () => {
                 </nav>
             </div>
 
-
-
+            <hr className='border-white'/>
 
             <div className="footer bg-base-300 flex items-center justify-around p-4">
                 <aside className="grid-flow-col items-center">

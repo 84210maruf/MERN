@@ -1,9 +1,11 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 function Header() {
 
     return (
         <nav className="bg-base-100">
+
             <div className="navbar md:flex justify-between p-0 sm:p-2">
 
                 <div className="navbar-start md:hidden">
@@ -30,15 +32,31 @@ function Header() {
                         <ul tabindex="0"
                             className="menu menu-md dropdown-content top-14 bg-gray-50 rounded-b z-[11] shadow-sm min-w-72">
 
-                            <h1 className="text-lg font-semibold mx-auto py-2">Home</h1>
+                            <Link to={"/"} className="text-lg font-semibold mx-auto py-2">Home</Link>
 
                             {/* <!-- nested drop-down  --> */}
                             <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
                          duration-300">
+                                <Link to={"/products"}
+                                    className="mb-1 bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                    <div className="font-semibold" >Collections</div>
+                                </Link>
+                            </li>
+                            {/* <!-- nested drop-down  --> */}
+                            <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
+                         duration-300">
+                                <Link to={"/products"}
+                                    className="mb-1 bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                    <div className="font-semibold" >Winter</div>
+                                </Link>
+                            </li>
+                            {/* <!-- nested drop-down  --> */}
+                            <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
+                         duration-300">
                                 <details className="mb-1">
                                     <summary
                                         className="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
-                                        <a href="#" className="font-semibold">Collections</a>
+                                        <Link to={"/products"} className="font-semibold" >Men</Link>
                                     </summary>
                                     <ul className="">
                                         <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm"><a
@@ -52,7 +70,7 @@ function Header() {
                                 <details className="mb-1">
                                     <summary
                                         className="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
-                                        <a href="#" className="font-semibold">Men</a>
+                                        <Link to={"/products"} className="font-semibold" >Women</Link>
                                     </summary>
                                     <ul className="">
                                         <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm"><a
@@ -66,7 +84,7 @@ function Header() {
                                 <details className="mb-1">
                                     <summary
                                         className="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
-                                        <a href="#" className="font-semibold">Women</a>
+                                        <Link to={"/products"} className="font-semibold" >Kid's</Link>
                                     </summary>
                                     <ul className="">
                                         <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm"><a
@@ -77,30 +95,11 @@ function Header() {
                             {/* <!-- nested drop-down  --> */}
                             <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
                          duration-300">
-                                <details className="mb-1">
-                                    <summary
-                                        className="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
-                                        <a href="#" className="font-semibold">Kids</a>
-                                    </summary>
-                                    <ul className="">
-                                        <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm"><a
-                                            href="#">Winter Collections</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            {/* <!-- nested drop-down  --> */}
-                            <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
-                         duration-300">
-                                <details className="mb-1">
-                                    <summary
-                                        className="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
-                                        <a href="#" className="font-semibold">Minaz-Dream(Brand)</a>
-                                    </summary>
-                                    <ul className="">
-                                        <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm"><a
-                                            href="#">Winter Collections</a></li>
-                                    </ul>
-                                </details>
+                           
+                                <a href="https://www.yeallow.net"
+                                    className="mb-1 bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                    <div className="font-semibold" >Minaz-Dream(Brand)</div>
+                                </a>
                             </li>
 
 
@@ -114,7 +113,7 @@ function Header() {
                             <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                     </div>
-                    <a className="btn btn-ghost text-xl cursor-pointer hover:bg-sky-200">daisyUI</a>
+                    <Link to={"/"} className="btn btn-ghost text-xl cursor-pointer hover:bg-sky-200">daisyUI</Link>
                 </div>
 
                 <div className="navbar-end sm:hidden mr-2">
@@ -161,7 +160,7 @@ function Header() {
                             className=" w-full p-3 ps-10 text-sm text-gray-900 outline-none rounded-lg bg-gray-50  ring-2 focus:ring-4 ring-gray-100 ring-offset-2 ring-offset-gray-200"
                             placeholder="Searching" required />
                         <button type="submit"
-                            className="text-white absolute end-1 bottom-1 bg-sky-500 hover:bg-info hover:shadow-sm font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
+                            className="text-white absolute end-1 bottom-1 bg-blue-500 hover:bg-blue-600 hover:shadow-sm font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
                     </div>
                 </form>
             </div>
@@ -177,7 +176,7 @@ function Header() {
                         <circle cx="10.5" cy="18.5" r="1.5" />
                         <circle cx="17.5" cy="18.5" r="1.5" />
                     </svg>
-                    <span>Shopping Cart</span>
+                    <Link to={"/shoping-cart"}>Shopping Cart</Link>
                 </a>
 
                 <a className="flex pl-3 no-underline hover:text-black" href="#">
@@ -188,7 +187,7 @@ function Header() {
                         <circle cx="10.5" cy="18.5" r="1.5" />
                         <circle cx="17.5" cy="18.5" r="1.5" />
                     </svg>
-                    <span>Whish List</span>
+                    <Link to={"/whish-list"}>Whish List</Link>
                 </a>
 
                 <a className="flex pl-3 no-underline hover:text-gray-500 text-black" href="#">
@@ -198,20 +197,23 @@ function Header() {
                         <path
                             d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z" />
                     </svg>
-                    <span>SignIn & Register</span>
+                    <Link to={"/login"}>SignIn O</Link>
+                    <Link to={"/register"}>R Register</Link>
                 </a>
             </div>
 
 
             <div className="hidden md:flex justify-center items-center cursor-pointer bg-sky-50">
-   
+
+                <Link to={"/products"} className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
+                    Collections</Link>
                 <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
-                    Collections</div>
+                    Winter</div>
 
 
                 <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm  py-4 mx-[1px] min-w-32">
                     <details>
-                        <summary>Men</summary>
+                        <summary><Link to={"/men"}>Men</Link></summary>
                         <ul className="absolute z-[12]">
                             <li><a>Submenu 1</a></li>
                             <li><a>Submenu 2</a></li>
@@ -229,7 +231,7 @@ function Header() {
                 </div>
                 <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
                     <details>
-                        <summary>Women</summary>
+                        <summary><Link to={"/women"}>Women</Link></summary>
                         <ul className="absolute z-[12]">
                             <li><a>Submenu 1</a></li>
                             <li><a>Submenu 2</a></li>
@@ -247,7 +249,7 @@ function Header() {
                 </div>
                 <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
                     <details>
-                        <summary>Kids</summary>
+                        <summary><Link to={"/kids"}>Kid's</Link></summary>
                         <ul className="absolute z-[12]">
                             <li><a>Submenu 1</a></li>
                             <li><a>Submenu 2</a></li>
@@ -265,7 +267,7 @@ function Header() {
                 </div>
 
                 <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
-                    Minaz-Dream</div>
+                    <a href="https://www.yellowclothing.net/">Minaz-Dream</a></div>
             </div>
         </nav>
     )
