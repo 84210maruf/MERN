@@ -12,7 +12,7 @@ function Catagorys() {
             </div>
 
             <div className="w-full h-fit grid grid-cols-3 md:grid-cols-4 gap-1 mx-2 sm:mx-4">
-                <a href="#">
+                <a href="products">
                     <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                         alt="Product" class="h-44 md:h-60  w-full object-fit rounded" />
                 </a>

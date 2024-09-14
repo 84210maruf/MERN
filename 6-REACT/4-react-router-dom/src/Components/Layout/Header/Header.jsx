@@ -3,10 +3,10 @@ import React from "react"
 function Header() {
 
     return (
-        <nav className="">
+        <nav className="bg-base-100">
             <div className="navbar md:flex justify-between p-0 sm:p-2">
 
-                <div className="navbar-start sm:hidden">
+                <div className="navbar-start md:hidden">
                     <div className="dropdown dropdown-start">
                         <div tabindex="0" className="">
                             <label className="btn btn-ghost hover:bg-gray-100 hover:shadow-md swap swap-rotate">
@@ -38,20 +38,67 @@ function Header() {
                                 <details className="mb-1">
                                     <summary
                                         className="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
-                                        <a href="#" className="font-semibold">About</a>
+                                        <a href="#" className="font-semibold">Collections</a>
                                     </summary>
                                     <ul className="">
-                                        <li className="bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
-                                            href="#">content-1</a></li>
-                                        <li className=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
-                                            href="#">content-2</a></li>
-                                        <li className=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
-                                            href="#">content-3</a></li>
-                                        <li className=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
-                                            href="#">content-4</a></li>
-                                        <li className=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
-                                            href="#">content-5</a></li>
-
+                                        <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">Winter Collections</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            {/* <!-- nested drop-down  --> */}
+                            <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
+                         duration-300">
+                                <details className="mb-1">
+                                    <summary
+                                        className="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                        <a href="#" className="font-semibold">Men</a>
+                                    </summary>
+                                    <ul className="">
+                                        <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">Winter Collections</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            {/* <!-- nested drop-down  --> */}
+                            <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
+                         duration-300">
+                                <details className="mb-1">
+                                    <summary
+                                        className="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                        <a href="#" className="font-semibold">Women</a>
+                                    </summary>
+                                    <ul className="">
+                                        <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">Winter Collections</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            {/* <!-- nested drop-down  --> */}
+                            <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
+                         duration-300">
+                                <details className="mb-1">
+                                    <summary
+                                        className="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                        <a href="#" className="font-semibold">Kids</a>
+                                    </summary>
+                                    <ul className="">
+                                        <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">Winter Collections</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            {/* <!-- nested drop-down  --> */}
+                            <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
+                         duration-300">
+                                <details className="mb-1">
+                                    <summary
+                                        className="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                        <a href="#" className="font-semibold">Minaz-Dream(Brand)</a>
+                                    </summary>
+                                    <ul className="">
+                                        <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">Winter Collections</a></li>
                                     </ul>
                                 </details>
                             </li>
@@ -67,7 +114,7 @@ function Header() {
                             <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                     </div>
-                    <a className="btn btn-ghost text-xl cursor-pointer">daisyUI</a>
+                    <a className="btn btn-ghost text-xl cursor-pointer hover:bg-sky-200">daisyUI</a>
                 </div>
 
                 <div className="navbar-end sm:hidden mr-2">
@@ -156,30 +203,15 @@ function Header() {
             </div>
 
 
-            <div className="hidden sm:flex justify-center items-center cursor-pointer bg-gray-50">
-                <div className="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">Home</div>
+            <div className="hidden md:flex justify-center items-center cursor-pointer bg-sky-50">
+   
+                <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
+                    Collections</div>
 
-                <div className="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">
+
+                <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm  py-4 mx-[1px] min-w-32">
                     <details>
-                        <summary>Home</summary>
-                        <ul className="absolute z-[12] w-full bg-gray-700 left-0">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                            <li>
-                                <details>
-                                    <summary>Parent</summary>
-                                    <ul>
-                                        <li><a>item 1</a></li>
-                                        <li><a>item 2</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                        </ul>
-                    </details>
-                </div>
-                <div className="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">
-                    <details>
-                        <summary>Home</summary>
+                        <summary>Men</summary>
                         <ul className="absolute z-[12]">
                             <li><a>Submenu 1</a></li>
                             <li><a>Submenu 2</a></li>
@@ -195,9 +227,9 @@ function Header() {
                         </ul>
                     </details>
                 </div>
-                <div className="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">
+                <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
                     <details>
-                        <summary>Home</summary>
+                        <summary>Women</summary>
                         <ul className="absolute z-[12]">
                             <li><a>Submenu 1</a></li>
                             <li><a>Submenu 2</a></li>
@@ -213,9 +245,9 @@ function Header() {
                         </ul>
                     </details>
                 </div>
-                <div className="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">
+                <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
                     <details>
-                        <summary>Home</summary>
+                        <summary>Kids</summary>
                         <ul className="absolute z-[12]">
                             <li><a>Submenu 1</a></li>
                             <li><a>Submenu 2</a></li>
@@ -232,7 +264,8 @@ function Header() {
                     </details>
                 </div>
 
-                <div className="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">Home</div>
+                <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
+                    Minaz-Dream</div>
             </div>
         </nav>
     )
