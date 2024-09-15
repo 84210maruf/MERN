@@ -1,4 +1,5 @@
 import React from 'react'
+import winterFashionImg from '../../../assets/nimble-made-N0ke5zChVBU-unsplash.jpg'
 import '../../../App.css'
 
 function Catagorys() {
@@ -12,38 +13,87 @@ function Catagorys() {
             </div>
 
             <div className="w-full h-fit grid grid-cols-3 md:grid-cols-4 gap-1 mx-2 sm:mx-4">
-                <a href="products">
-                    <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" />
+                <a href="products" style={{
+                    backgroundImage: `url(${winterFashionImg})`,
+                    backgroundSize: `cover`,
+                    backgroundRepeat: `no-repeat`,
+                    backgroundPosition: `center`
+                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
+                    {/* <img src={winterFashionImg}
+                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
                 </a>
-                <a href="#">
-                    <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" />
+                <a href="products" style={{
+                    backgroundImage: `url(${winterFashionImg})`,
+                    backgroundSize: `cover`,
+                    backgroundRepeat: `no-repeat`,
+                    backgroundPosition: `center`
+                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
+                    {/* <img src={winterFashionImg}
+                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
                 </a>
-                <a href="#">
-                    <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" />
+                <a href="products" style={{
+                    backgroundImage: `url(${winterFashionImg})`,
+                    backgroundSize: `cover`,
+                    backgroundRepeat: `no-repeat`,
+                    backgroundPosition: `center`
+                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
+                    {/* <img src={winterFashionImg}
+                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
                 </a>
-                <a href="#">
-                    <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" />
+                <a href="products" style={{
+                    backgroundImage: `url(${winterFashionImg})`,
+                    backgroundSize: `cover`,
+                    backgroundRepeat: `no-repeat`,
+                    backgroundPosition: `center`
+                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
+                    {/* <img src={winterFashionImg}
+                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
                 </a>
-                <a href="#">
-                    <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" />
+                <a href="products" style={{
+                    backgroundImage: `url(${winterFashionImg})`,
+                    backgroundSize: `cover`,
+                    backgroundRepeat: `no-repeat`,
+                    backgroundPosition: `center`
+                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
+                    {/* <img src={winterFashionImg}
+                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
                 </a>
-                <a href="#">
-                    <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" />
+                <a href="products" style={{
+                    backgroundImage: `url(${winterFashionImg})`,
+                    backgroundSize: `cover`,
+                    backgroundRepeat: `no-repeat`,
+                    backgroundPosition: `center`
+                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
+                    {/* <img src={winterFashionImg}
+                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
                 </a>
-                <a href="#">
-                    <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" />
+                <a href="products" style={{
+                    backgroundImage: `url(${winterFashionImg})`,
+                    backgroundSize: `cover`,
+                    backgroundRepeat: `no-repeat`,
+                    backgroundPosition: `center`
+                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
+                    {/* <img src={winterFashionImg}
+                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
                 </a>
-                <a href="#">
-                    <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" />
+                <a href="products" style={{
+                    backgroundImage: `url(${winterFashionImg})`,
+                    backgroundSize: `cover`,
+                    backgroundRepeat: `no-repeat`,
+                    backgroundPosition: `center`
+                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
+                    {/* <img src={winterFashionImg}
+                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
                 </a>
+                
             </div>
 
             <div className=" flex flex-col items-center border-y-[1px] my-4 py-2">

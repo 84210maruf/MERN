@@ -1,55 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
         <footer>
-            <div className="md:flex md:p-4 gap-x-4 space-y-1 bg-sky-50 text-gray-500">
-                <div className="md:size-[50%] space-y-1">
-                    <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
-                        <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
-                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
-                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
-                            <hr className="py-1" />
-                            <p>The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth,
-                                happiness, loyalty, and long-lasting connections  </p>
-                        </div>
-                    </div>
-                    <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
-                        <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
-                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
-                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
-                            <hr className="py-1" />
-                            <p>The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth,
-                                happiness, loyalty, and long-lasting connections  </p>
-                        </div>
-                    </div>
-                    <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
-                        <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
-                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
-                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
-                            <hr className="py-1" />
-                            <p>The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth,
-                                happiness, loyalty, and long-lasting connections  </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="hidden md:card bg-base-100 image-full size-[50%]  shadow-xl">
-                    <figure>
-                        <img className='w-full h-full'
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-base-300 text-md p-10">
 
                 <nav className=''>
@@ -62,8 +16,8 @@ const Footer = () => {
                 </nav>
                 <nav className=''>
                     <h6 className="footer-title text-info text-lg">Company</h6>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
+                    <Link to={"/about-us"} className="link link-hover">About us</Link>
+                    <Link to={"/contact-us"} className="link link-hover">Contact us</Link>
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press kit</a>
                 </nav>
@@ -98,8 +52,8 @@ const Footer = () => {
                         <div className="collapse-title font-medium footer-title text-info">Company</div>
                         <div className="collapse-content">
                             <hr className="py-1" />
-                            <p><a className="link link-hover">About us</a></p>
-                            <p><a className="link link-hover">Contact</a></p>
+                            <p><Link to={"/about-us"} className="link link-hover">About us</Link></p>
+                            <p><Link to={"/contact-us"} className="link link-hover">Contact us</Link></p>
                             <p><a className="link link-hover">Jobs</a></p>
                             <p><a className="link link-hover">Press kit</a></p>
                         </div>

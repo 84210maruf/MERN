@@ -45,7 +45,7 @@ function Header() {
                             {/* <!-- nested drop-down  --> */}
                             <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
                          duration-300">
-                                <Link to={"/products"}
+                                <Link to={"/winter"}
                                     className="mb-1 bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
                                     <div className="font-semibold" >Winter</div>
                                 </Link>
@@ -207,8 +207,8 @@ function Header() {
 
                 <Link to={"/products"} className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
                     Collections</Link>
-                <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
-                    Winter</div>
+                <Link to={"/winter"} className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
+                    Winter</Link>
 
 
                 <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm  py-4 mx-[1px] min-w-32">

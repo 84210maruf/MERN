@@ -17,6 +17,9 @@ import Login from "./Components/pages/Login";
 import Men from "./Components/pages/Men";
 import Women from "./Components/pages/Women";
 import Kids from "./Components/pages/Kids";
+import Winter from "./Components/pages/Winter";
+import AboutUs from "./Components/pages/AboutUs";
+import ContactUs from "./Components/pages/ContactUs";
 
 
 
@@ -48,7 +51,38 @@ const router = createBrowserRouter([
     )
   },
 
-
+  {
+    path: "/men",
+    element: (
+      <Layout>
+        <Men />
+      </Layout>
+    )
+  },
+  {
+    path: "/women",
+    element: (
+      <Layout>
+        <Women />
+      </Layout>
+    )
+  },
+  {
+    path: "/kids",
+    element: (
+      <Layout>
+        <Kids />
+      </Layout>
+    )
+  },
+  {
+    path: "/winter",
+    element: (
+      <Layout>
+        <Winter />
+      </Layout>
+    )
+  },
 
 
   {
@@ -86,28 +120,19 @@ const router = createBrowserRouter([
       </Layout>
     )
   },
-  
   {
-    path: "/men",
+    path: "/about-us",
     element: (
       <Layout>
-        <Men />
+        <AboutUs />
       </Layout>
     )
   },
   {
-    path: "/women",
+    path: "/contact-us",
     element: (
       <Layout>
-        <Women />
-      </Layout>
-    )
-  },
-  {
-    path: "/kids",
-    element: (
-      <Layout>
-        <Kids />
+        <ContactUs />
       </Layout>
     )
   },
