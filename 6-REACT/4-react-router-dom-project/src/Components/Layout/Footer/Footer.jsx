@@ -8,7 +8,7 @@ const Footer = () => {
 
                 <nav className=''>
                     <h6 className="footer-title text-info text-lg">Services</h6>
-                    <a className="link link-hover">Branding</a>
+                    <Link to={"/branding"} className="link link-hover">Branding</Link>
                     <a className="link link-hover">Design</a>
                     <a className="link link-hover">Marketing</a>
                     <a className="link link-hover">Advertisement</a>
@@ -23,9 +23,9 @@ const Footer = () => {
                 </nav>
                 <nav>
                     <h6 className="footer-title text-info text-lg">Legal</h6>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <Link to={"/terms-conditions"} className="link link-hover">Terms of use</Link>
+                    <Link to={"/terms-conditions"} className="link link-hover">Privacy policy</Link>
+                    <Link to={"/terms-conditions"} className="link link-hover">Cookie policy</Link>
                 </nav>
             </div>
 
@@ -37,7 +37,7 @@ const Footer = () => {
                         <div className="collapse-title font-medium footer-title text-info">Services</div>
                         <div className="collapse-content">
                             <hr className="py-1" />
-                            <p><a className="link link-hover">Branding</a></p>
+                            <p><Link to={"/branding"} className="link link-hover">Branding</Link></p>
                             <p><a className="link link-hover">Design</a></p>
                             <p><a className="link link-hover">Marketing</a></p>
                             <p><a className="link link-hover">Advertisement</a></p>
@@ -65,15 +65,16 @@ const Footer = () => {
                         <div className="collapse-title font-medium footer-title text-info ">Legal</div>
                         <div className="collapse-content">
                             <hr className="py-1" />
-                            <p><a className="link link-hover">Terms of use</a></p>
-                            <p><a className="link link-hover">Privacy policy</a></p>
-                            <p><a className="link link-hover">Cookie policy</a></p>
+
+                            <p><Link to={"/terms-conditions"} className="link link-hover">Terms of use</Link></p>
+                            <p><Link to={"/terms-conditions"} className="link link-hover">Privacy policy</Link></p>
+                            <p><Link to={"/terms-conditions"} className="link link-hover">Cookie policy</Link></p>
                         </div>
                     </div>
                 </nav>
             </div>
 
-            <hr className='border-white'/>
+            <hr className='border-white' />
 
             <div className="footer bg-base-300 flex items-center justify-around p-4">
                 <aside className="grid-flow-col items-center">

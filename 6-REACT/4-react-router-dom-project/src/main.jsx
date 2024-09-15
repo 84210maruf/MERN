@@ -20,6 +20,8 @@ import Kids from "./Components/pages/Kids";
 import Winter from "./Components/pages/Winter";
 import AboutUs from "./Components/pages/AboutUs";
 import ContactUs from "./Components/pages/ContactUs";
+import Branding_company from "./Components/pages/Branding_company";
+import Terms_comditions from "./Components/pages/Terms_comditions";
 
 
 
@@ -89,7 +91,7 @@ const router = createBrowserRouter([
     path: "/shoping-cart",
     element: (
       <Layout>
-        <Whish_list />
+        <Shoping_cart />
       </Layout>
     )
   },
@@ -98,7 +100,7 @@ const router = createBrowserRouter([
     path: "/whish-list",
     element: (
       <Layout>
-        <Shoping_cart />
+        <Whish_list />
       </Layout>
     )
   },
@@ -134,6 +136,20 @@ const router = createBrowserRouter([
       <Layout>
         <ContactUs />
       </Layout>
+    )
+  },
+  {
+    path: "/branding",
+    element: (
+      <Layout>
+        <Branding_company />
+      </Layout>
+    )
+  },
+  {
+    path: "/terms-conditions",
+    element: (
+      <Terms_comditions />
     )
   },
 

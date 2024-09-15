@@ -8,7 +8,7 @@ function Header() {
 
             <div className="navbar md:flex justify-between p-0 sm:p-2">
 
-                <div className="navbar-start md:hidden">
+                <div className="navbar-start sm:hidden">
                     <div className="dropdown dropdown-start">
                         <div tabindex="0" className="">
                             <label className="btn btn-ghost hover:bg-gray-100 hover:shadow-md swap swap-rotate">
@@ -95,7 +95,7 @@ function Header() {
                             {/* <!-- nested drop-down  --> */}
                             <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
                          duration-300">
-                           
+
                                 <a href="https://www.yeallow.net"
                                     className="mb-1 bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
                                     <div className="font-semibold" >Minaz-Dream(Brand)</div>
@@ -113,7 +113,7 @@ function Header() {
                             <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                     </div>
-                    <Link to={"/"} className="btn btn-ghost text-xl cursor-pointer hover:bg-sky-200">daisyUI</Link>
+                    <Link to={"/"} className="btn btn-ghost text-xl cursor-pointer hover:bg-sky-200">JACKET-POINT</Link>
                 </div>
 
                 <div className="navbar-end sm:hidden mr-2">
@@ -125,7 +125,7 @@ function Header() {
                         </svg>
                     </button>
 
-                    <a className="flex no-underline hover:text-black" href="#">
+                    <Link to={"/shoping-cart"} className="flex no-underline hover:text-black" href="#">
                         <svg className="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24">
                             <path
@@ -133,16 +133,16 @@ function Header() {
                             <circle cx="10.5" cy="18.5" r="1.5" />
                             <circle cx="17.5" cy="18.5" r="1.5" />
                         </svg>
-                    </a>
+                    </Link>
 
-                    <a className="flex px-2 sm:hidden no-underline hover:text-black" href="#">
+                    <Link to={"/login"} className="flex px-2 sm:hidden no-underline hover:text-black" href="#">
                         <svg className="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24">
                             <circle fill="none" cx="12" cy="7" r="3" />
                             <path
                                 d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z" />
                         </svg>
-                    </a>
+                    </Link>
 
                 </div>
 
@@ -157,10 +157,24 @@ function Header() {
 
                         </div>
                         <input type="search" id="default-search"
-                            className=" w-full p-3 ps-10 text-sm text-gray-900 outline-none rounded-lg bg-gray-50  ring-2 focus:ring-4 ring-gray-100 ring-offset-2 ring-offset-gray-200"
+                            className=" w-full px-3 py-[10px] ps-10 text-sm text-gray-900 outline-none rounded-md bg-gray-50  ring-1 focus:ring-2 ring-sky-100 ring-offset-2 ring-offset-sky-50"
                             placeholder="Searching" required />
-                        <button type="submit"
-                            className="text-white absolute end-1 bottom-1 bg-blue-500 hover:bg-blue-600 hover:shadow-sm font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
+
+                        <div className="absolute end-[2px] top-0">
+                            <a
+                                className="group relative inline-block overflow-hidden border border-sky-600 px-6 py-[7px] focus:outline-none"
+                                href="#"
+                            >
+                                <span
+                                    className="absolute inset-y-0 left-0 w-[2px] bg-sky-600 transition-all group-hover:w-full group-active:bg-sky-500"
+                                ></span>
+
+                                <span
+                                    className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                                >
+                                    search
+                                </span>
+                            </a></div>
                     </div>
                 </form>
             </div>
@@ -203,71 +217,96 @@ function Header() {
             </div>
 
 
-            <div className="hidden md:flex justify-center items-center cursor-pointer bg-sky-50">
+            <div className="hidden sm:flex justify-center items-center cursor-pointer bg-sky-50">
 
-                <Link to={"/products"} className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
-                    Collections</Link>
-                <Link to={"/winter"} className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
-                    Winter</Link>
+                {/* <Link to={"/winter"} className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-28">
+                    Winter</Link> */}
+                <div><Link to={"/products"}
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    href="#"
+                >
+                    <span
+                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                    ></span>
 
+                    <span
+                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                    >
+                        Collections
+                    </span>
+                </Link></div>
+                <div><Link to={"/winter"}
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    href="#"
+                >
+                    <span
+                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                    ></span>
 
-                <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm  py-4 mx-[1px] min-w-32">
-                    <details>
-                        <summary><Link to={"/men"}>Men</Link></summary>
-                        <ul className="absolute z-[12]">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                            <li>
-                                <details open>
-                                    <summary>Parent</summary>
-                                    <ul>
-                                        <li><a>item 1</a></li>
-                                        <li><a>item 2</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                        </ul>
-                    </details>
-                </div>
-                <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
-                    <details>
-                        <summary><Link to={"/women"}>Women</Link></summary>
-                        <ul className="absolute z-[12]">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                            <li>
-                                <details open>
-                                    <summary>Parent</summary>
-                                    <ul>
-                                        <li><a>item 1</a></li>
-                                        <li><a>item 2</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                        </ul>
-                    </details>
-                </div>
-                <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
-                    <details>
-                        <summary><Link to={"/kids"}>Kid's</Link></summary>
-                        <ul className="absolute z-[12]">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                            <li>
-                                <details open>
-                                    <summary>Parent</summary>
-                                    <ul>
-                                        <li><a>item 1</a></li>
-                                        <li><a>item 2</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                        </ul>
-                    </details>
-                </div>
+                    <span
+                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                    >
+                        Winter
+                    </span>
+                </Link></div>
+                <div><Link to={"/men"}
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    href="#"
+                >
+                    <span
+                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                    ></span>
 
-                <div className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-32">
-                    <a href="https://www.yellowclothing.net/">Minaz-Dream</a></div>
+                    <span
+                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                    >
+                        Men
+                    </span>
+                </Link></div>
+                <div><Link to={"/women"}
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    href="#"
+                >
+                    <span
+                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                    ></span>
+
+                    <span
+                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                    >
+                        Women
+                    </span>
+                </Link></div>
+                <div><Link to={"/kids"}
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    href="#"
+                >
+                    <span
+                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                    ></span>
+
+                    <span
+                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                    >
+                        Kid's
+                    </span>
+                </Link></div>
+                <div><a 
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    href="https://www.yellowclothing.net/"
+                >
+                    <span
+                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                    ></span>
+
+                    <span
+                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                    >
+                        Minaz-Dream
+                    </span>
+                </a></div>
+
+               
             </div>
         </nav>
     )
