@@ -23,6 +23,7 @@ import ContactUs from "./Components/pages/ContactUs";
 import Branding_company from "./Components/pages/Branding_company";
 import Terms_comditions from "./Components/pages/Terms_comditions";
 import Category_products from "./Components/products/Category_products";
+import Payment from "./Components/pages/Payment";
 
 
 
@@ -110,6 +111,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <Whish_list />
+      </Layout>
+    )
+  },
+  {
+    path: "/payment",
+    element: (
+      <Layout>
+        <Payment />
       </Layout>
     )
   },

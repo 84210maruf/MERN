@@ -250,7 +250,7 @@ function Shoping_cart() {
                   </dl>
                 </div>
 
-                <a href="#" className="flex w-full items-center justify-center rounded-lg px-5 py-2.5 text-md text-sky-50 hover:text-white font-medium bg-gradient-to-tr from-blue-600 to-sky-400 hover: focus:outline-none focus:ring-2 focus:ring-blue-600">Proceed to Checkout</a>
+                <Link to={"/payment"} className="flex w-full items-center justify-center rounded-lg px-5 py-2.5 text-md text-sky-50 hover:text-white font-medium bg-gradient-to-tr from-blue-600 to-sky-900 hover: focus:outline-none focus:ring-2 focus:ring-blue-600">Proceed to Checkout</Link>
 
                 <div className="flex items-center justify-center gap-2">
                   <span className="text-sm font-normal text-gray-500 dark:text-gray-400"> or </span>
