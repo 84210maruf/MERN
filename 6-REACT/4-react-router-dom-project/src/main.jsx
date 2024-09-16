@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: "/products",
+    path: "/products", //ui name collections
     element: (
       <Layout>
         <Products />

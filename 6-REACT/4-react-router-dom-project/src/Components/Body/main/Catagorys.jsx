@@ -14,17 +14,18 @@ function Catagorys() {
             </div>
 
             <div className="w-full h-fit grid grid-cols-3 md:grid-cols-4 gap-1 mx-2 sm:mx-4">
-                <Link to={"category-products"} style={{
+                
+                <Link to={"/category-products"} style={{
                     backgroundImage: `url(${winterFashionImg})`,
                     backgroundSize: `cover`,
                     backgroundRepeat: `no-repeat`,
                     backgroundPosition: `center`
                 }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
-                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashions</h1>
+                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
                     {/* <img src={winterFashionImg}
                         alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
                 </Link>
-                <a href="category-products" style={{
+                <Link to={"/category-products"} style={{
                     backgroundImage: `url(${winterFashionImg})`,
                     backgroundSize: `cover`,
                     backgroundRepeat: `no-repeat`,
@@ -33,8 +34,8 @@ function Catagorys() {
                     <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
                     {/* <img src={winterFashionImg}
                         alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </a>
-                <a href="category-products" style={{
+                </Link>
+                <Link to={"/category-products"} style={{
                     backgroundImage: `url(${winterFashionImg})`,
                     backgroundSize: `cover`,
                     backgroundRepeat: `no-repeat`,
@@ -43,8 +44,8 @@ function Catagorys() {
                     <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
                     {/* <img src={winterFashionImg}
                         alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </a>
-                <a href="category-products" style={{
+                </Link>
+                <Link to={"/category-products"} style={{
                     backgroundImage: `url(${winterFashionImg})`,
                     backgroundSize: `cover`,
                     backgroundRepeat: `no-repeat`,
@@ -53,8 +54,8 @@ function Catagorys() {
                     <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
                     {/* <img src={winterFashionImg}
                         alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </a>
-                <a href="category-products" style={{
+                </Link>
+                <Link to={"/category-products"} style={{
                     backgroundImage: `url(${winterFashionImg})`,
                     backgroundSize: `cover`,
                     backgroundRepeat: `no-repeat`,
@@ -63,8 +64,8 @@ function Catagorys() {
                     <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
                     {/* <img src={winterFashionImg}
                         alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </a>
-                <a href="category-products" style={{
+                </Link>
+                <Link to={"/category-products"} style={{
                     backgroundImage: `url(${winterFashionImg})`,
                     backgroundSize: `cover`,
                     backgroundRepeat: `no-repeat`,
@@ -73,8 +74,8 @@ function Catagorys() {
                     <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
                     {/* <img src={winterFashionImg}
                         alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </a>
-                <a href="category-products" style={{
+                </Link>
+                <Link to={"/category-products"} style={{
                     backgroundImage: `url(${winterFashionImg})`,
                     backgroundSize: `cover`,
                     backgroundRepeat: `no-repeat`,
@@ -83,8 +84,8 @@ function Catagorys() {
                     <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
                     {/* <img src={winterFashionImg}
                         alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </a>
-                <a href="category-products" style={{
+                </Link>
+                <Link to={"/category-products"} style={{
                     backgroundImage: `url(${winterFashionImg})`,
                     backgroundSize: `cover`,
                     backgroundRepeat: `no-repeat`,
@@ -93,7 +94,7 @@ function Catagorys() {
                     <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
                     {/* <img src={winterFashionImg}
                         alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </a>
+                </Link>
                 
             </div>
 
