@@ -157,7 +157,7 @@ function Header() {
 
                         </div>
                         <input type="search" id="default-search"
-                            className=" w-full px-3 py-[10px] ps-10 text-sm text-gray-900 outline-none rounded-md bg-gray-50  ring-1 focus:ring-2 ring-sky-100 ring-offset-2 ring-offset-sky-50"
+                            className=" w-full px-3 py-[10px] ps-10 text-sm text-gray-900 outline-none rounded-md bg-sky-50  ring-1 focus:ring-2 ring-sky-100 ring-offset-2 ring-offset-sky-50"
                             placeholder="Searching" required />
 
                         <div className="absolute end-[2px] top-0">
@@ -235,6 +235,7 @@ function Header() {
                         Collections
                     </span>
                 </Link></div>
+
                 <div><Link to={"/winter"}
                     className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
                     href="#"
@@ -249,6 +250,7 @@ function Header() {
                         Winter
                     </span>
                 </Link></div>
+                
                 <div><Link to={"/men"}
                     className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
                     href="#"
@@ -291,7 +293,7 @@ function Header() {
                         Kid's
                     </span>
                 </Link></div>
-                <div><a 
+                <div><a
                     className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
                     href="https://www.yellowclothing.net/"
                 >
@@ -306,7 +308,7 @@ function Header() {
                     </span>
                 </a></div>
 
-               
+
             </div>
         </nav>
     )

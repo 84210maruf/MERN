@@ -1,15 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-
-function Products() {
+function Category_products() {
   return (
-
     <div className='bg-sky-50'>
 
       <div class="py-6">
         <fieldset class="border-t-2 mx-2 border-gray-600 rounded-xl">
-          <legend class="px-6 text-2xl text-center">Collections</legend>
+          <legend class="px-6 text-2xl text-center">Categories</legend>
         </fieldset>
       </div>
 
@@ -324,4 +321,4 @@ function Products() {
   )
 }
 
-export default Products
+export default Category_products

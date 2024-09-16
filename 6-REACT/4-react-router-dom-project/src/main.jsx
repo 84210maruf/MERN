@@ -22,6 +22,7 @@ import AboutUs from "./Components/pages/AboutUs";
 import ContactUs from "./Components/pages/ContactUs";
 import Branding_company from "./Components/pages/Branding_company";
 import Terms_comditions from "./Components/pages/Terms_comditions";
+import Category_products from "./Components/products/Category_products";
 
 
 
@@ -40,6 +41,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <Products />
+      </Layout>
+    )
+  },
+  {
+    path: "/category-products",
+    element: (
+      <Layout>
+        <Category_products />
       </Layout>
     )
   },

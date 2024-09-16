@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <footer>
-            <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-base-300 text-md p-10">
+            <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-sky-100 text-md p-10">
 
                 <nav className=''>
                     <h6 className="footer-title text-info text-lg">Services</h6>
@@ -29,12 +29,12 @@ const Footer = () => {
                 </nav>
             </div>
 
-            <div className="sm:hidden footer justify-items-center bg-base-300 text-md p-10">
+            <div className="sm:hidden footer justify-items-center bg-sky-200 text-md p-10">
                 <nav className='w-full shadow-sm'>
 
-                    <div className="collapse collapse-plus rounded-[3px] bg-base-300">
+                    <div className="collapse collapse-plus rounded-[3px] bg-sky-50">
                         <input type="radio" name="my-accordion-4" checked="checked" />
-                        <div className="collapse-title font-medium footer-title text-info">Services</div>
+                        <div className="collapse-title font-medium footer-title text-sky-900">Services</div>
                         <div className="collapse-content">
                             <hr className="py-1" />
                             <p><Link to={"/branding"} className="link link-hover">Branding</Link></p>
@@ -47,9 +47,9 @@ const Footer = () => {
                 </nav>
                 <nav className='w-full shadow-sm'>
 
-                    <div className="collapse collapse-plus rounded-[3px] bg-base-300">
+                    <div className="collapse collapse-plus rounded-[3px] bg-sky-50">
                         <input type="radio" name="my-accordion-4" checked="checked" />
-                        <div className="collapse-title font-medium footer-title text-info">Company</div>
+                        <div className="collapse-title font-medium footer-title text-sky-900">Company</div>
                         <div className="collapse-content">
                             <hr className="py-1" />
                             <p><Link to={"/about-us"} className="link link-hover">About us</Link></p>
@@ -60,9 +60,9 @@ const Footer = () => {
                     </div>
                 </nav>
                 <nav className='w-full shadow-sm'>
-                    <div className="collapse collapse-plus rounded-[3px] bg-base-300">
+                    <div className="collapse collapse-plus rounded-[3px] bg-sky-100">
                         <input type="radio" name="my-accordion-4" checked="checked" />
-                        <div className="collapse-title font-medium footer-title text-info ">Legal</div>
+                        <div className="collapse-title font-medium footer-title text-sky-950 ">Legal</div>
                         <div className="collapse-content">
                             <hr className="py-1" />
 
@@ -76,9 +76,9 @@ const Footer = () => {
 
             <hr className='border-white' />
 
-            <div className="footer bg-base-300 flex items-center justify-around p-4">
+            <div className="footer bg-sky-200 flex items-center justify-around p-4">
                 <aside className="grid-flow-col items-center">
-                    <div className="text-sky-400">
+                    <div className="text-sky-900">
                         <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                             fill-rule="evenodd" clip-rule="evenodd" className="fill-current">
                             <path
