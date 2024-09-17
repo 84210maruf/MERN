@@ -58,9 +58,11 @@ function Product() {
             <div class="mt-4 text-sm">
               <label for="size" class="block text-gray-700 font-semibold">Size</label>
               <select id="size" class="block w-full mt-2 p-2 border border-gray-300 rounded-lg">
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
+                <option>SM</option>
+                <option>M</option>
+                <option>L</option>
+                <option>Xl</option>
+                <option>XXL</option>
               </select>
             </div>
 
@@ -75,7 +77,7 @@ function Product() {
 
             <div class="mt-4 text-sm">
               <label for="quantity" class="block text-gray-700 font-semibold">Quantity</label>
-              <input id="quantity" type="number" min="1" value="1" class="block w-full mt-2 p-2 border border-gray-300 rounded-lg" />
+              <input id="quantity" type="number" min="1" placeholder='1' class="block w-full mt-2 p-2 border border-gray-300 rounded-lg" />
             </div>
 
             <Link to={"/shoping-cart"} >
