@@ -180,7 +180,7 @@ function Header() {
             </div>
 
 
-            <div className="hidden sm:flex items-center justify-end text-xs md:text-sm lg:text-lg">
+            <div className="hidden sm:flex items-center justify-end text-xs md:text-sm">
 
                 <a className="flex no-underline hover:text-black" href="#">
                     <svg className="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -221,8 +221,22 @@ function Header() {
 
                 {/* <Link to={"/winter"} className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-28">
                     Winter</Link> */}
+                <div><Link to={"/"}
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
+                    href="#"
+                >
+                    <span
+                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                    ></span>
+
+                    <span
+                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                    >
+                        Home
+                    </span>
+                </Link></div>
                 <div><Link to={"/products"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
                     href="#"
                 >
                     <span
@@ -237,7 +251,7 @@ function Header() {
                 </Link></div>
 
                 <div><Link to={"/winter"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
                     href="#"
                 >
                     <span
@@ -252,7 +266,7 @@ function Header() {
                 </Link></div>
                 
                 <div><Link to={"/men"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
                     href="#"
                 >
                     <span
@@ -266,7 +280,7 @@ function Header() {
                     </span>
                 </Link></div>
                 <div><Link to={"/women"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
                     href="#"
                 >
                     <span
@@ -280,7 +294,7 @@ function Header() {
                     </span>
                 </Link></div>
                 <div><Link to={"/kids"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
                     href="#"
                 >
                     <span
@@ -294,7 +308,7 @@ function Header() {
                     </span>
                 </Link></div>
                 <div><a
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-3"
+                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
                     href="https://www.yellowclothing.net/"
                 >
                     <span

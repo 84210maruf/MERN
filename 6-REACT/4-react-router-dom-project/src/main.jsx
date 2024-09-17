@@ -24,6 +24,7 @@ import Branding_company from "./Components/pages/Branding_company";
 import Terms_comditions from "./Components/pages/Terms_comditions";
 import Category_products from "./Components/products/Category_products";
 import Payment from "./Components/pages/Payment";
+import Thankyou from "./Components/pages/Thankyou";
 
 
 
@@ -120,6 +121,14 @@ const router = createBrowserRouter([
       <Layout>
         <Payment />
       </Layout>
+    )
+  },
+  {
+    path: "/thank-you",
+    element: (
+      
+      <Thankyou />
+
     )
   },
 
