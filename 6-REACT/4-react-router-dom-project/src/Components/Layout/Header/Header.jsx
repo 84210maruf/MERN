@@ -1,10 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Logo from "./../../../assets/Website Logo.png"
 
 function Header() {
 
     return (
-        <nav className="bg-base-100">
+        <nav className="bg-gray-50">
 
             <div className="navbar md:flex justify-between p-0 sm:p-2">
 
@@ -107,14 +108,24 @@ function Header() {
                     </div>
                 </div>
 
+
+
                 <div className=" navbar-center">
                     <div className="avatar">
-                        <div className="w-12 sm:w-20 mask mask-hexagon">
-                            <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                        </div>
+                        
+                            <Link to={"/category-products"} style={{
+                                backgroundImage: `url(${Logo})`,
+                                backgroundSize: `cover`,
+                                backgroundRepeat: `no-repeat`,
+                                backgroundPosition: `center`
+                            }}
+                             className="h-10 sm:h-12 md:h-14 lg:h-20 w-44 sm:w-48 md:w-60 lg:w-80 cursor-pointer hover:bg-sky-50">
+                            </Link>
                     </div>
-                    <Link to={"/"} className="btn btn-ghost text-xl cursor-pointer hover:bg-sky-200">JACKET-POINT</Link>
+                    {/* <Link to={"/"} className="btn btn-ghost text-xl cursor-pointer hover:bg-sky-200">JACKET-POINT</Link> */}
                 </div>
+
+
 
                 <div className="navbar-end sm:hidden mr-2">
                     <button className="btn btn-ghost btn-circle">
@@ -264,7 +275,7 @@ function Header() {
                         Winter
                     </span>
                 </Link></div>
-                
+
                 <div><Link to={"/men"}
                     className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
                     href="#"

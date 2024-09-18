@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.useState{
+    background-color: aquamarine;
+    height: 200px;
+}
+.useEffect{
+    background-color: dodgerblue;
+    height: 200px;
+}
+.useContext{
+    background-color: coral;
+    height: 200px;
+}
