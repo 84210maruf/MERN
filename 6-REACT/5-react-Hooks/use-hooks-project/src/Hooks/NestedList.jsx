@@ -23,7 +23,7 @@ function NestedList() {
 
   return (
     <div>
-      <h3 onClick={()=>setKey(1)}>Nested List Items</h3>
+      <h3 onClick={()=>setKey(1)}>Nested List Items with map</h3>
       <ul>
         {Recipes.map((item, index) =>
           <li key={index}>
