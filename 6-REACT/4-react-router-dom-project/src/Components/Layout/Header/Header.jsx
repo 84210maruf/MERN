@@ -112,15 +112,15 @@ function Header() {
 
                 <div className=" navbar-center">
                     <div className="avatar">
-                        
-                            <Link to={"/category-products"} style={{
-                                backgroundImage: `url(${Logo})`,
-                                backgroundSize: `cover`,
-                                backgroundRepeat: `no-repeat`,
-                                backgroundPosition: `center`
-                            }}
-                             className="h-10 sm:h-12 md:h-14 lg:h-20 w-44 sm:w-48 md:w-60 lg:w-80 cursor-pointer hover:bg-sky-50">
-                            </Link>
+
+                        <Link to={"/"} style={{
+                            backgroundImage: `url(${Logo})`,
+                            backgroundSize: `cover`,
+                            backgroundRepeat: `no-repeat`,
+                            backgroundPosition: `center`
+                        }}
+                            className="h-10 sm:h-14 lg:h-20 w-44 sm:w-60 lg:w-80 cursor-pointer hover:bg-sky-50">
+                        </Link>
                     </div>
                     {/* <Link to={"/"} className="btn btn-ghost text-xl cursor-pointer hover:bg-sky-200">JACKET-POINT</Link> */}
                 </div>
@@ -232,41 +232,44 @@ function Header() {
 
                 {/* <Link to={"/winter"} className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-28">
                     Winter</Link> */}
-                <div><Link to={"/"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
-                    href="#"
-                >
-                    <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
-                    ></span>
-
-                    <span
-                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                <div className="mr-[2px]">
+                    <Link to={"/"}
+                        className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
+                        href="#"
                     >
-                        Home
-                    </span>
-                </Link></div>
-                <div><Link to={"/products"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
-                    href="#"
-                >
-                    <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
-                    ></span>
+                        <span
+                            className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        ></span>
 
-                    <span
-                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                        <span
+                            className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                        >
+                            Home
+                        </span>
+                    </Link></div>
+                <div className="mr-[2px]">
+                    <Link to={"/products"}
+                        className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
+                        href="#"
                     >
-                        Collections
-                    </span>
-                </Link></div>
+                        <span
+                            className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-600 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        ></span>
 
-                <div><Link to={"/winter"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
+                        <span
+                            className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                        >
+                            Collections
+                        </span>
+                    </Link></div>
+
+                <div className="mr-[2px]">
+                    <Link to={"/winter"}
+                    className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-600  transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
@@ -276,12 +279,13 @@ function Header() {
                     </span>
                 </Link></div>
 
-                <div><Link to={"/men"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
+                <div className="mr-[2px]">
+                    <Link to={"/men"}
+                    className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-600 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
@@ -290,12 +294,13 @@ function Header() {
                         Men
                     </span>
                 </Link></div>
-                <div><Link to={"/women"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
+                <div className="mr-[2px]">
+                    <Link to={"/women"}
+                    className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
@@ -304,12 +309,13 @@ function Header() {
                         Women
                     </span>
                 </Link></div>
-                <div><Link to={"/kids"}
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
+                <div className="mr-[2px]">
+                    <Link to={"/kids"}
+                    className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-600 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
@@ -318,12 +324,13 @@ function Header() {
                         Kid's
                     </span>
                 </Link></div>
-                <div><a
-                    className="group relative inline-block overflow-hidden border border-sky-600 px-4 lg:px-8 py-2"
+                <div className="mr-[2px]">
+                    <a
+                    className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                     href="https://www.yellowclothing.net/"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span

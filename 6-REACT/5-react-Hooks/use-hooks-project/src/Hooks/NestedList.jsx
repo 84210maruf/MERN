@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import { Recipes } from '../assets/Data'
 
 function NestedList() {
+
+  const [key,setKey] = useState(null);
+
+  console.log(typeof(key) +" "+ key)
 
   const Recipes = [{
       id: 'greek-salad',
@@ -19,7 +23,7 @@ function NestedList() {
 
   return (
     <div>
-      <h3>Nested List Items</h3>
+      <h3 onClick={()=>setKey(1)}>Nested List Items</h3>
       <ul>
         {Recipes.map((item, index) =>
           <li key={index}>
