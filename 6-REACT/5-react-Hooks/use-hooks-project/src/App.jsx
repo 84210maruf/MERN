@@ -1,9 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import UseStateHook from './Hooks/UseStateHook';
+import UseStateHook from './Hooks/useStateHook';
 import UseEffectHook from './Hooks/useEffectHook';
 import UseContextHook from './Hooks/useContextHook';
+import NestedList from './Hooks/NestedList';
 
 
 createRoot(document.getElementById("root")).render(
@@ -12,6 +13,7 @@ createRoot(document.getElementById("root")).render(
        <UseStateHook />
        <UseEffectHook />
        <UseContextHook />
+       <NestedList />
 
     </StrictMode>
 )
