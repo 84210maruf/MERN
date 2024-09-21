@@ -2,7 +2,8 @@
 export const initialState = {
 
     basket: [],
-    user: null
+    user: null,
+    count: 1
 };
 // Selector
 export const getBasketTotal = (basket) => (basket?.reduce((amount, item) => (item.price + amount) - item.discount, 0));
@@ -11,9 +12,6 @@ export const getBasketPriceTotal = (basket) => (basket?.reduce((amount, item) =>
 
 
 const reducer = (state, action) => {
-    let a = ["1", "1", "2", "3", "3", "1"];
-    let unique = a.filter((item, i, ar) => ar.indexOf(item) === i);
-    console.log(unique);
 
     console.log('action in reducer : ', state);
     // eslint-disable-next-line default-case
@@ -71,6 +69,12 @@ const reducer = (state, action) => {
                 ...state,
                 basket: [],
             };
+
+        case 'increment':
+            return { ...state, count: state.count + 1 };
+
+        case 'decrement':
+            return { ...state, count: state.count - 1 };
 
         default:
             return state;

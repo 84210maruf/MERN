@@ -10,8 +10,13 @@ function Shoping_cart() {
 
   const shipingCost = 60;
 
+
+
+
+
   return (
     <div>
+      <h1>Count: </h1>
 
       <section className="bg-sky-50 py-8 antialiased dark:bg-gray-900 md:py-16">
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
