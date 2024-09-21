@@ -2,8 +2,7 @@
 export const initialState = {
 
     basket: [],
-    user: null,
-    count: 1
+    user: null
 };
 // Selector
 export const getBasketTotal = (basket) => (basket?.reduce((amount, item) => (item.price + amount) - item.discount, 0));
