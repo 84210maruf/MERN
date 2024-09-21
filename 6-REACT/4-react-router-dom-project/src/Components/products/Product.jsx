@@ -2,7 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import winterFashionImg from './../../assets/nimble-made-N0ke5zChVBU-unsplash.jpg'
 
+
 function Product() {
+
+
+
   return (
     <div>
 
@@ -81,7 +85,7 @@ function Product() {
             </div>
 
             <Link to={"/shoping-cart"} >
-              <button class="w-full mt-4 bg-gradient-to-tr from-blue-600 to-sky-900 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">Add to Cart</button>
+              <button class="w-full mt-4 bg-gradient-to-tr from-blue-600 to-sky-900 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">Buy Now</button>
             </Link>
 
           </div>

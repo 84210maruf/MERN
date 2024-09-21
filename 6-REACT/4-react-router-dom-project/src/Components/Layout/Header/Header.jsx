@@ -5,7 +5,7 @@ import Logo from "./../../../assets/Website Logo.png"
 function Header() {
 
     return (
-        <nav className="bg-gray-50">
+        <nav className="bg-sky-50">
 
             <div className="navbar md:flex justify-between p-0 sm:p-2">
 
@@ -97,10 +97,10 @@ function Header() {
                             <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
                          duration-300">
 
-                                <a href="https://www.yeallow.net"
+                                <Link to={"/minaz-dream"}
                                     className="mb-1 bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
                                     <div className="font-semibold" >Minaz-Dream(Brand)</div>
-                                </a>
+                                </Link>
                             </li>
 
 
@@ -325,9 +325,9 @@ function Header() {
                     </span>
                 </Link></div>
                 <div className="mr-[2px]">
-                    <a
+                    <Link
                     className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
-                    href="https://www.yellowclothing.net/"
+                    to={"/minaz-dream"}
                 >
                     <span
                         className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
@@ -338,7 +338,7 @@ function Header() {
                     >
                         Minaz-Dream
                     </span>
-                </a></div>
+                </Link></div>
 
 
             </div>

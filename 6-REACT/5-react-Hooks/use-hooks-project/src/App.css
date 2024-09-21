@@ -4,7 +4,7 @@
 
 h3{text-align: center;}
 
-.useState{
+.useState,.useRaducer{
     background-color: aquamarine;
     min-height: 200px;
 }

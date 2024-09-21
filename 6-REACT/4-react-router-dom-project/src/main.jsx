@@ -1,9 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
+import { StateProvider } from "./StateProvider";
+import reducer, {initialState} from "./reducer";
 
 import "./App.css"
 import Layout from "./Components/Layout/Layout";
@@ -25,6 +29,7 @@ import Terms_comditions from "./Components/pages/Terms_comditions";
 import Category_products from "./Components/products/Category_products";
 import Payment from "./Components/pages/Payment";
 import Thankyou from "./Components/pages/Thankyou";
+import MinazDream from "./Components/pages/MinazDream";
 
 
 
@@ -96,6 +101,14 @@ const router = createBrowserRouter([
       </Layout>
     )
   },
+  {
+    path: "/minaz-dream",
+    element: (
+      <Layout>
+        <MinazDream />
+      </Layout>
+    )
+  },
 
 
   {
@@ -126,7 +139,7 @@ const router = createBrowserRouter([
   {
     path: "/thank-you",
     element: (
-      
+
       <Thankyou />
 
     )
@@ -184,6 +197,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <StateProvider initialState={initialState} reducer={reducer} >
+      <RouterProvider router={router} />
+    </StateProvider>
   </React.StrictMode>
 );

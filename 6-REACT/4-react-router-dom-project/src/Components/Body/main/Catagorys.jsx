@@ -9,7 +9,7 @@ function Catagorys() {
 
             <div className="py-4">
                 <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
-                    <legend className="px-6 text-2xl text-center">TOP CATEGORIES</legend>
+                    <legend className="px-6 text-xl font-semibold text-center">TOP CATEGORIES</legend>
                 </fieldset>
             </div>
 
