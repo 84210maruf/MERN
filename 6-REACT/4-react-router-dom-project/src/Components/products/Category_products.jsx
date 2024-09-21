@@ -17,7 +17,7 @@ function Category_products() {
       type: "ADD_TO_BASKET",
       item: {
         id: 1,
-        title: "name",
+        title: "nb T-shirt",
         image: "image",
         price: 100,
         discount: 50,

@@ -19,7 +19,7 @@ function Products() {
       type: "ADD_TO_BASKET",
       item: {
         id: 1,
-        title: "name",
+        title: "rd shirt",
         image: "image",
         price: 100,
         discount: 50,

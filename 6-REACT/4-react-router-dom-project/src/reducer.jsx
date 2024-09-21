@@ -1,6 +1,6 @@
 
 export const initialState = {
-    
+
     basket: [],
     user: null
 };
@@ -11,15 +11,27 @@ export const getBasketPriceTotal = (basket) => (basket?.reduce((amount, item) =>
 
 
 const reducer = (state, action) => {
+    let a = ["1", "1", "2", "3", "3", "1"];
+    let unique = a.filter((item, i, ar) => ar.indexOf(item) === i);
+    console.log(unique);
 
-    console.log('action in reducer : ',action);
+    console.log('action in reducer : ', state);
     // eslint-disable-next-line default-case
     switch (action.type) {
-        
+
         case 'ADD_TO_BASKET':
+            // const index_ = state.basket.findIndex((basketItem) =>
+            //     basketItem.id === action.item.id);
+            // let newBasket_ = [...state.basket];
+
+            // if (index_ !== action.item.id) {
+            //     // at the position [index] remove 1 item
+            //     newBasket_= [...state.basket, action.item]
+            // }
+
             return {
                 ...state,
-                basket: [...state.basket, action.item],
+                basket: [...state.basket, action.item]
             };
 
         case 'REMOVE_FROM_BASKET':
@@ -30,7 +42,7 @@ const reducer = (state, action) => {
                     item.id !== action['item'].id)
             }*/
             // remove single item
-           const index = state.basket.findIndex((basketItem) => 
+            const index = state.basket.findIndex((basketItem) =>
                 basketItem.id === action.item.id);
 
             let newBasket = [...state.basket];
@@ -63,6 +75,6 @@ const reducer = (state, action) => {
         default:
             return state;
     }
-    
+
 };
 export default reducer;
