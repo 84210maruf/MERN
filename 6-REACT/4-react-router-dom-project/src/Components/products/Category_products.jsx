@@ -16,12 +16,13 @@ function Category_products() {
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
-        id: 1,
+        id: 2,
         title: "nb T-shirt",
         image: "image",
         price: 100,
         discount: 50,
         rating: 5,
+        count: 1
       },
     });
 

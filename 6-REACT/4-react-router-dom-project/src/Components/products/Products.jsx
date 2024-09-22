@@ -24,6 +24,7 @@ function Products() {
         price: 100,
         discount: 50,
         rating: 5,
+        count:1
       },
     });
   }

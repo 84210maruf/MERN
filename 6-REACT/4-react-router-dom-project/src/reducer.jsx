@@ -17,18 +17,17 @@ const reducer = (state, action) => {
     switch (action.type) {
 
         case 'ADD_TO_BASKET':
-            // const index_ = state.basket.findIndex((basketItem) =>
-            //     basketItem.id === action.item.id);
-            // let newBasket_ = [...state.basket];
+            
+            
 
-            // if (index_ !== action.item.id) {
-            //     // at the position [index] remove 1 item
-            //     newBasket_= [...state.basket, action.item]
-            // }
+            // var newBasket_= [...state.basket, action.item]
+
+
 
             return {
                 ...state,
                 basket: [...state.basket, action.item]
+                // basket: newBasket_
             };
 
         case 'REMOVE_FROM_BASKET':
@@ -70,7 +69,13 @@ const reducer = (state, action) => {
             };
 
         case 'increment':
-            return { ...state, count: state.count + 1 };
+            
+            // var newBasket__ = [...state.basket.map(item => item.count + 1)]
+
+            return {
+                ...state,
+                basket: [...state.basket]
+            };
 
         case 'decrement':
             return { ...state, count: state.count - 1 };
