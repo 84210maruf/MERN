@@ -1,35 +1,40 @@
 import React from 'react'
 
+import slider1 from './../../../assets/slide1.jpg'
+import slider2 from './../../../assets/slide2.jpg'
+import slider3 from './../../../assets/slide3.jpg'
+import slider4 from './../../../assets/slide4.jpg'
+
 function Carousel_div() {
     return (
         <div>
-            <div className="carousel w-full h-72">
+            <div className="carousel w-full h-72 md:h-80">
                 <div id="item1" className="carousel-item w-full">
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+                        src={slider1}
                         className="w-full" />
                 </div>
                 <div id="item2" className="carousel-item w-full">
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                        src={slider2}
                         className="w-full" />
                 </div>
                 <div id="item3" className="carousel-item w-full">
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                        src={slider3}
                         className="w-full" />
                 </div>
                 <div id="item4" className="carousel-item w-full">
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                        src={slider4}
                         className="w-full" />
                 </div>
             </div>
-            <div className="flex w-full justify-center gap-2 py-2">
-                <a href="#item1" className="btn btn-xs">1</a>
-                <a href="#item2" className="btn btn-xs">2</a>
-                <a href="#item3" className="btn btn-xs">3</a>
-                <a href="#item4" className="btn btn-xs">4</a>
+            <div className="flex w-full justify-center gap-4 pb-2">
+                <a href="#item1" className="btn btn-xs bg-sky-100 shadow-md">1</a>
+                <a href="#item2" className="btn btn-xs bg-sky-100 shadow-md">2</a>
+                <a href="#item3" className="btn btn-xs bg-sky-100 shadow-md">3</a>
+                <a href="#item4" className="btn btn-xs bg-sky-100 shadow-mdanimate-pulse">4</a>
             </div>
         </div>
     )

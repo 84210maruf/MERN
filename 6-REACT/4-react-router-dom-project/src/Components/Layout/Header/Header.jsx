@@ -173,15 +173,15 @@ function Header() {
 
                         <div className="absolute end-[2px] top-0">
                             <a
-                                className="group relative inline-block overflow-hidden border border-sky-600 px-6 py-[7px] focus:outline-none"
+                                className="group relative inline-block overflow-hidden border border-sky-200 bg-sky-200 px-6 py-[7px] focus:outline-none"
                                 href="#"
                             >
                                 <span
-                                    className="absolute inset-y-0 left-0 w-[2px] bg-sky-600 transition-all group-hover:w-full group-active:bg-sky-500"
+                                    className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:w-full group-active:bg-sky-500"
                                 ></span>
 
                                 <span
-                                    className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                                    className="relative text-sm tracking-wider font-medium text-sky-900 transition-colors group-hover:text-white"
                                 >
                                     search
                                 </span>
@@ -238,11 +238,11 @@ function Header() {
                         href="#"
                     >
                         <span
-                            className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                            className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"
                         ></span>
 
                         <span
-                            className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                            className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
                         >
                             Home
                         </span>
@@ -253,11 +253,11 @@ function Header() {
                         href="#"
                     >
                         <span
-                            className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-600 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                            className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
                         ></span>
 
                         <span
-                            className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                            className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
                         >
                             Collections
                         </span>
@@ -269,11 +269,11 @@ function Header() {
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-600  transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-300  transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
-                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                        className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
                     >
                         Winter
                     </span>
@@ -285,11 +285,11 @@ function Header() {
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-600 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
-                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                        className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
                     >
                         Men
                     </span>
@@ -300,11 +300,11 @@ function Header() {
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
-                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                        className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
                     >
                         Women
                     </span>
@@ -315,11 +315,11 @@ function Header() {
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-600 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
-                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                        className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
                     >
                         Kid's
                     </span>
@@ -330,11 +330,11 @@ function Header() {
                     to={"/minaz-dream"}
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
-                        className="relative text-sm font-medium text-sky-600 transition-colors group-hover:text-white"
+                        className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
                     >
                         Minaz-Dream
                     </span>
