@@ -5,9 +5,42 @@ export const initialState = {
     user: null
 };
 // Selector
-export const getBasketTotal = (basket) => (basket?.reduce((amount, item) => (item.price + amount) - item.discount, 0));
-export const getBasketDiscountTotal = (basket) => (basket?.reduce((amount, item) => item.discount + amount, 0));
-export const getBasketPriceTotal = (basket) => (basket?.reduce((amount, item) => item.price + amount, 0));
+// export const getTotal = (basket) => (basket?.reduce((amount, item) => (item.price + amount) - item.discount, 0));
+export const getTotal = (basket) => {
+    return basket?.reduce((amount, item) => {
+        const updatedPrice = (item.price * item.quantity) - (item.discount * item.quantity);
+        return amount + updatedPrice;
+    }, 0) || 0;
+};
+export const getBasketDiscountTotal = (basket) => (basket?.reduce((amount, item) => (item.discount * item.quantity) + amount, 0));
+export const getBasketPriceTotal = (basket) => (basket?.reduce((amount, item) => (item.price * item.quantity) + amount, 0));
+
+
+
+export const getItemPriceTotal = (basket, itemId) => {
+    const item = basket.find((item) => item.id === itemId);
+    if (item) {
+        return (item.price * item.quantity) || 0; // Return total price for the item, or 0 if not found
+    }
+    return 0; // Return 0 if the item is not found in the basket
+};
+export const getItemDiscountTotal = (basket, itemId) => {
+    const item = basket.find((item) => item.id === itemId);
+    if (item) {
+        return (item.discount * item.quantity) || 0; // Return total price for the item, or 0 if not found
+    }
+    return 0; // Return 0 if the item is not found in the basket
+};
+export const getItemTotal = (basket, itemId) => {
+    const item = basket.find((item) => item.id === itemId);
+    if (item) {
+        const totalPrice = (item.price * item.quantity) - (item.discount * item.quantity);
+        return totalPrice; // Return the total price for the item
+    }
+    return 0; // Return 0 if the item is not found in the basket
+};
+
+
 
 
 const reducer = (state, action) => {
@@ -17,17 +50,21 @@ const reducer = (state, action) => {
     switch (action.type) {
 
         case 'ADD_TO_BASKET':
-            
-            
 
-            // var newBasket_= [...state.basket, action.item]
 
+            // Check if the item already exists in the basket
+            const itemExists = state.basket.some(item => item.id === action.item.id);
+
+            if (itemExists) {
+                // If the item already exists, return the current state
+                return state;
+            }
 
 
             return {
                 ...state,
                 basket: [...state.basket, action.item]
-                // basket: newBasket_
+
             };
 
         case 'REMOVE_FROM_BASKET':
@@ -69,16 +106,25 @@ const reducer = (state, action) => {
             };
 
         case 'increment':
-            
-            // var newBasket__ = [...state.basket.map(item => item.count + 1)]
 
             return {
                 ...state,
-                basket: [...state.basket]
-            };
+                basket: state.basket.map(item =>
+                    item.id === action.id
+                        ? { ...item, quantity: item.quantity + 1 } // Increase quantity by 1
+                        : item
+                )
+            }
 
         case 'decrement':
-            return { ...state, count: state.count - 1 };
+            return {
+                ...state,
+                basket: state.basket.map(item =>
+                    item.id === action.id
+                        ? { ...item, quantity: Math.max(1, item.quantity - 1) } // Increase quantity by 1 with Prevent negative quantity
+                        : item
+                )
+            }
 
         default:
             return state;

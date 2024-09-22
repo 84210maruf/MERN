@@ -27,7 +27,7 @@ function ProductItem({addToBasket}) {
                 </div>
 
                 <div className=''>
-                  <Link to="/product"
+                  <Link to="/shoping-cart"
                     onClick={addToBasket}
                     className="w-full animate-bounce focus:animate-none hover:animate-none inline-flex justify-center text-md font-medium bg-gradient-to-tr from-sky-100 to-sky-600  px-4 py-2 rounded-lg tracking-widest text-sky-50">
                     <span className="ml-2">Buy Now</span>

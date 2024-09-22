@@ -11,21 +11,23 @@ function Products() {
 
   const [{ basket }, dispatch] = useStateValue();
 
+  const product = {
+    id: 2,
+    title: "rd shirt product 2",
+    image: "image",
+    price: 100,
+    discount: 50,
+    rating: 5,
+    quantity: 1
+  };
+
 
   const addToBasket = () => {
     // Push the item into the data Layer
 
     dispatch({
       type: "ADD_TO_BASKET",
-      item: {
-        id: 1,
-        title: "rd shirt",
-        image: "image",
-        price: 100,
-        discount: 50,
-        rating: 5,
-        count:1
-      },
+      item: product
     });
   }
 

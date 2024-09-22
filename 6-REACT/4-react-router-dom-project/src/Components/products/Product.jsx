@@ -1,9 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import winterFashionImg from './../../assets/nimble-made-N0ke5zChVBU-unsplash.jpg'
+import { useStateValue } from '../../StateProvider';
 
 
 function Product() {
+
+  const [{ basket }, dispatch] = useStateValue();
+
+  const product = {
+    id: 1,
+    title: "rd shirt",
+    image: "image",
+    price: 100,
+    discount: 50,
+    rating: 5,
+    quantity: 1
+  }
+
+
+  const addToBasket = () => {
+    // Push the item into the data Layer
+
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: product
+    });
+  }
 
 
 
@@ -81,10 +104,24 @@ function Product() {
 
             <div class="mt-4 text-sm">
               <label for="quantity" class="block text-gray-700 font-semibold">Quantity</label>
-              <input id="quantity" type="number" min="1" placeholder='1' class="block w-full mt-2 p-2 border border-gray-300 rounded-lg" />
+
+              <div className="flex items-center">
+                <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
+                  </svg>
+                </button>
+                <input type="text" id="counter-input" data-input-counter className="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0 dark:text-white" placeholder="" value={1} required />
+                <button type="button" id="increment-button" data-input-counter-increment="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                  <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+                  </svg>
+                </button>
+              </div>
+
             </div>
 
-            <Link to={"/shoping-cart"} >
+            <Link to={"/shoping-cart"} onClick={addToBasket} >
               <button class="w-full mt-4 bg-gradient-to-tr from-blue-600 to-sky-900 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">Buy Now</button>
             </Link>
 
