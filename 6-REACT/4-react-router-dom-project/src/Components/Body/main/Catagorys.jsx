@@ -1,5 +1,5 @@
 import React from 'react'
-import winterFashionImg from '../../../assets/nimble-made-N0ke5zChVBU-unsplash.jpg'
+import winterFashionImg from '../../../assets/AboutPic.jpg'
 import '../../../App.css'
 import { Link } from 'react-router-dom'
 
