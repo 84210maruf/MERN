@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import { StateProvider } from "./StateProvider";
+import { StateProvider, ProductProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
 
 import "./App.css"
@@ -197,9 +197,13 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    {/* StateProvider provide busket universally */}
     <StateProvider initialState={initialState} reducer={reducer} >
-
-      <RouterProvider router={router} />
+      
+      {/* Provide product univarsally */}
+      <ProductProvider>
+        <RouterProvider router={router} />
+      </ProductProvider>
 
     </StateProvider>
   </React.StrictMode>

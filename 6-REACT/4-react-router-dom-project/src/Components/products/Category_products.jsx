@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useStateValue } from '../../StateProvider'
+import { useStateValue, useProductValue } from '../../StateProvider'
 import ProductItem from './ProductItem';
 
 
 
 
 function Category_products() {
+
+  const { products, loading, error } = useProductValue();
 
   const [{ basket }, dispatch] = useStateValue();
 
@@ -52,11 +54,10 @@ function Category_products() {
           <section id="Projects"
             className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
+            {products.map(item => 
+              <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+            )}
+
 
           </section>
         </article>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { useStateValue } from '../../StateProvider'
+import { useStateValue, useProductValue } from '../../StateProvider'
 import ProductItem from './ProductItem';
 
 
@@ -11,6 +11,10 @@ function Products() {
 
   const [{ basket }, dispatch] = useStateValue();
 
+  const { products, loading, error } = useProductValue();
+
+
+  //demo product for add to basket
   const product = {
     id: 2,
     title: "rd shirt product 2",
@@ -53,11 +57,14 @@ function Products() {
           <section id="Projects"
             className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
+            {/* <ProductItem addToBasket={addToBasket} />
             <ProductItem addToBasket={addToBasket} />
             <ProductItem addToBasket={addToBasket} />
             <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
+            <ProductItem addToBasket={addToBasket} /> */}
+            {products.map((item) =>
+              <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+            )}
 
           </section>
         </article>
@@ -69,12 +76,10 @@ function Products() {
         <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
           <section id="Projects"
             className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
-
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
+              
+            {products.map((item) =>
+              <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+            )}
 
           </section>
         </article>

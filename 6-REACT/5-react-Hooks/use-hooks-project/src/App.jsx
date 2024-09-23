@@ -6,6 +6,7 @@ import UseEffectHook from './Hooks/useEffectHook';
 import UseContextHook from './Hooks/ContextingUse/UseContextHook';
 import NestedList from './Hooks/NestedList';
 import UseRaducerHook from './Hooks/UseRaducerHook';
+import ProductList from './Hooks/FatchDataFromJson';
 
 
 createRoot(document.getElementById("root")).render(
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")).render(
        <UseContextHook />
        <NestedList />
        <UseRaducerHook />
+       <ProductList />
 
     </StrictMode>
 )
