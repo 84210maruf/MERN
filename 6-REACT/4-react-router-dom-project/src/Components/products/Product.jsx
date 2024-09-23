@@ -34,8 +34,8 @@ function Product() {
   return (
     <div>
 
-      <main class="py-8 bg-sky-50">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row">
+      <main class="py-10 bg-sky-50">
+        <div class="container space-x-4  mx-auto px-4 flex flex-col md:flex-row">
 
           <div class="md:w-1/2">
             <div class="relative">
@@ -79,7 +79,13 @@ function Product() {
 
           <div class="md:w-1/2 md:pl-8 mt-8 md:mt-0">
             <h1 class="text-xl font-bold text-gray-900">Product Name</h1>
-            <p class="text-lg text-gray-700 mt-2">99.99 Tk</p>
+
+            <div className='p-2 bg-yellow-200 rounded-2xl'>
+              <p className="text-md text-gray-700 font-semibold">Original Price : 99.99 Tk</p>
+
+              <p className="text-sm text-gray-600 cursor-auto  font-semibold">Discount : 50 Tk</p>
+            </div>
+
             <p class="text-sm text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac turpis ut felis efficitur dictum.</p>
 
 
@@ -105,7 +111,7 @@ function Product() {
 
 
             <Link to={"/shoping-cart"} onClick={addToBasket} >
-              <button class="w-full mt-10 animate-bounce  bg-gradient-to-tr from-sky-900 to-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">Buy Now</button>
+              <button class="w-full mt-10 animate-bounce  bg-gradient-to-tr from-sky-900 to-blue-500 text-white py-[10px] font-bold px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"><p className='animate-pulse tracking-widest'>Buy Now</p></button>
             </Link>
 
           </div>

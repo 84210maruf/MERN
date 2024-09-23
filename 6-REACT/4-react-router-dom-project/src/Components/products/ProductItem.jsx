@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import demoImg from './../../assets/slide4.jpg'
+
 
 function ProductItem({addToBasket}) {
   return (
@@ -11,9 +13,9 @@ function ProductItem({addToBasket}) {
           <div
             className="w-full h-fit shadow-md  duration-300 hover:scale-[1.02] md:hover:scale-105 hover:shadow-xl rounded">
             <Link to={"/product"}>
-              <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+              <img src={demoImg}
                 alt="Product" className="h-44 md:h-60  w-full object-fit rounded-t md:rounded-t-md" />
-              <div className="px-4 pt-1 w-full bg-gradient-to-tr from-sky-50 to-sky-600 rounded-b">
+              <div className="px-4 pt-1 w-full bg-gradient-to-tr from-yellow-300 to-sky-200 rounded-b">
                 <p className="text-sm text-black truncate block capitalize">Product Name</p>
                 <div className="flex items-center w-full mb-1">
                   <p className="text-lg font-semibold text-black cursor-auto">$149</p>
@@ -29,8 +31,8 @@ function ProductItem({addToBasket}) {
                 <div className=''>
                   <Link to="/shoping-cart"
                     onClick={addToBasket}
-                    className="w-full animate-bounce focus:animate-none hover:animate-none inline-flex justify-center text-md font-medium bg-gradient-to-tr from-sky-100 to-sky-600  px-4 py-2 rounded-lg tracking-widest text-sky-50">
-                    <span className="ml-2">Buy Now</span>
+                    className="w-full animate-bounce focus:animate-none hover:animate-none inline-flex justify-center text-md font-medium bg-gradient-to-tr from-yellow-100 to-sky-400  px-4 py-2 rounded-lg tracking-widest text-sky-50">
+                    <span className="ml-2 text-sky-600 hover:text-sky-50">Buy Now</span>
                   </Link>
                 </div>
 
