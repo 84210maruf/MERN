@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useContext } from 'react'
-import { UserContext, SuperUserContext } from './UseContextHook';
+import { UserContext } from './UseContextHook';
 
 
 function ChildComponant() {
 
 
-  const SuperUser = useContext(SuperUserContext);
-  const user = useContext(UserContext);
+  
+  const {user, superUser} = useContext(UserContext);
 
 
   return (
@@ -15,7 +15,7 @@ function ChildComponant() {
 
       The users is : {user.map((n)=><p>{n}</p>)}
       <hr />
-      And Super User is: {SuperUser}
+      And Super User is: {superUser}
 
     </div>
   )

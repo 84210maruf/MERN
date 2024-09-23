@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { StateProvider } from "./StateProvider";
-import reducer, {initialState} from "./reducer";
+import reducer, { initialState } from "./reducer";
 
 import "./App.css"
 import Layout from "./Components/Layout/Layout";
@@ -198,7 +198,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer={reducer} >
+
       <RouterProvider router={router} />
+
     </StateProvider>
   </React.StrictMode>
 );

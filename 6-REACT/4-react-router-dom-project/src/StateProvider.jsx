@@ -8,6 +8,7 @@ export const StateContext = createContext();
 
 
 
+
 // Warp & Provide the DataLayer
 export const StateProvider = ({ reducer, initialState, children}) => (
     <StateContext.Provider 

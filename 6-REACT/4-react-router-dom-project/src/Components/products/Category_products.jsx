@@ -46,8 +46,20 @@ function Category_products() {
         </fieldset>
       </div>
 
-      <ProductItem addToBasket={addToBasket} />
 
+
+        <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+          <section id="Projects"
+            className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+
+            <ProductItem addToBasket={addToBasket} />
+            <ProductItem addToBasket={addToBasket} />
+            <ProductItem addToBasket={addToBasket} />
+            <ProductItem addToBasket={addToBasket} />
+            <ProductItem addToBasket={addToBasket} />
+
+          </section>
+        </article>
 
 
     </div>

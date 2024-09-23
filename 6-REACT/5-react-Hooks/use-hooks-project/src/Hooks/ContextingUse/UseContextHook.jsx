@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react'
 import ChildComponant from './ChildComponant';
 
-export const SuperUserContext = createContext();
+// export const SuperUserContext = createContext();
 export const UserContext = createContext();
 
 
@@ -13,21 +13,19 @@ function UseContextHook() {
 
 
   return (
-    <SuperUserContext.Provider value={superUser}>
-      <UserContext.Provider value={user}>
+    <UserContext.Provider value={{user, superUser}}>
 
-        <div className='useContext'>
-          <h3>useContext...</h3>
-          <p>createContext hare..</p>
+      <div className='useContext'>
+        <h3>useContext...</h3>
+        <p>createContext hare..</p>
 
-          <button onClick={() => setUser(["Myself"])}>{user}</button>
+        <button onClick={() => setUser(["Myself"])}>{user}</button>
 
-          <ChildComponant />
+        <ChildComponant />
 
-        </div>
+      </div>
 
-      </UserContext.Provider>
-    </SuperUserContext.Provider>
+    </UserContext.Provider>
   )
 }
 
