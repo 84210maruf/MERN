@@ -1,5 +1,6 @@
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
+import { ScrollRestoration } from "react-router-dom";
 
 const Layout = ({ children }) => {
     return (
@@ -7,6 +8,9 @@ const Layout = ({ children }) => {
             <Header />
             {children}
             <Footer />
+
+            {/* this for scroll to top  */}
+            <ScrollRestoration />
         </div>
     );
 };

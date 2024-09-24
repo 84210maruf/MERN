@@ -140,7 +140,6 @@ function Product() {
         </div>
       </main>
 
-
     </div>
   )
 }

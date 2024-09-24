@@ -66,7 +66,7 @@ const Footer = () => {
                         <div className="collapse-content">
                             <hr className="py-1" />
 
-                            <p><Link to={"/terms-conditions"} className="link link-hover">Terms of use</Link></p>
+                            <p><Link to={"/terms-conditions"}  className="link link-hover">Terms of use</Link></p>
                             <p><Link to={"/terms-conditions"} className="link link-hover">Privacy policy</Link></p>
                             <p><Link to={"/terms-conditions"} className="link link-hover">Cookie policy</Link></p>
                         </div>

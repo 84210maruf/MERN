@@ -5,6 +5,7 @@ function Terms_comditions() {
     return (
 
         <div className="bg-sky-50">
+
             <Link to={"/"} className='btn btn-ghost hover:bg-sky-100 hover:shadow-md'>Back to home</Link>
 
             <div className="container mx-auto px-4 pb-8">
@@ -130,6 +131,7 @@ function Terms_comditions() {
                 </p>
             </div>
         </div>
+
     )
 }
 

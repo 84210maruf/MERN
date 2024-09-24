@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom/client";
 
 import {
   createBrowserRouter,
-  RouterProvider,
+  RouterProvider
 } from "react-router-dom";
 
 import { StateProvider, ProductProvider } from "./StateProvider";
@@ -30,6 +30,7 @@ import Category_products from "./Components/products/Category_products";
 import Payment from "./Components/pages/Payment";
 import Thankyou from "./Components/pages/Thankyou";
 import MinazDream from "./Components/pages/MinazDream";
+import Dashboard from "./Components/Dashboard";
 
 
 
@@ -190,6 +191,12 @@ const router = createBrowserRouter([
     path: "/terms-conditions",
     element: (
       <Terms_comditions />
+    )
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <Dashboard />
     )
   },
 
