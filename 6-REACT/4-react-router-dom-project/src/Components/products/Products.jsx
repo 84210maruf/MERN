@@ -51,41 +51,70 @@ function Products() {
       </div>
 
       <div>
-        <h1 className='mx-2 text-md text-sky-600 font-semibold'>Category name</h1>
 
+        <h1 className='mx-2 text-md text-sky-600 font-semibold'>Men</h1>
         <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
           <section id="Projects"
             className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
-            {/* <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} />
-            <ProductItem addToBasket={addToBasket} /> */}
-            {products.map((item) =>
-              <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
-            )}
+            {products
+              .filter(item => item.category === 'men')
+              .slice(0, 5) // Get only the first 5 products
+              .map(item => (
+                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+              ))}
+
+          </section>
+        </article>
+        <h1 className='mx-2 text-md text-sky-600 font-semibold'>Women</h1>
+        <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+          <section id="Projects"
+            className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+
+            {products
+              .filter(item => item.category === 'women')
+              .slice(0, 5) // Get only the first 5 products
+              .map(item => (
+                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+              ))}
+
+          </section>
+        </article>
+
+        <h1 className='mx-2 text-md text-sky-600 font-semibold'>Kids</h1>
+        <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+          <section id="Projects"
+            className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+
+            {products
+              .filter(item => item.category === 'kids')
+              .slice(0, 5) // Get only the first 5 products
+              .map(item => (
+                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+              ))}
+
+          </section>
+        </article>
+
+
+
+        <div className='mx-2 text-md text-sky-600 font-semibold'>Mina's Dream</div>
+        <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+          <section id="Projects"
+            className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+
+            {products
+              .filter(item => item.brand === 'minasDream')
+              .slice(0, 5) // Get only the first 5 products
+              .map(item => (
+                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+              ))}
+
 
           </section>
         </article>
 
       </div>
-      <div>
-        <h1 className='mx-2 text-md text-sky-600 font-semibold'>Category name</h1>
-
-        <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
-          <section id="Projects"
-            className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
-              
-            {products.map((item) =>
-              <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
-            )}
-
-          </section>
-        </article>
-
-      </div>
-
 
 
     </div>

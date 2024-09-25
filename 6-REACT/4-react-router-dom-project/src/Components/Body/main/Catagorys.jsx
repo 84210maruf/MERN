@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import winterFashionImg from '../../../assets/AboutPic.jpg'
 import '../../../App.css'
 import { Link } from 'react-router-dom'
+import { useProductValue } from '../../../StateProvider'
 
 function Catagorys() {
+
+    const { products, loading, error } = useProductValue();
+
+    // const uniqueCategories = [...new Set(products.map(item => item.category))];
+
+    // const [uniqueProducts, setUniqueProducts] = useState(['']);
+    // uniqueCategories.map(category => 
+    //     products.find(item => item.category === category))
+
+
+
     return (
         <div>
 
@@ -14,88 +26,81 @@ function Catagorys() {
             </div>
 
             <div className="w-full h-fit grid grid-cols-3 md:grid-cols-4 gap-1 mx-2 sm:mx-4">
-                
-                <Link to={"/category-products"} style={{
+
+                {/* <Link to={"/category-products"} style={{
                     backgroundImage: `url(${winterFashionImg})`,
                     backgroundSize: `cover`,
                     backgroundRepeat: `no-repeat`,
                     backgroundPosition: `center`
                 }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
                     <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
-                    {/* <img src={winterFashionImg}
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </Link>
-                <Link to={"/category-products"} style={{
-                    backgroundImage: `url(${winterFashionImg})`,
-                    backgroundSize: `cover`,
-                    backgroundRepeat: `no-repeat`,
-                    backgroundPosition: `center`
-                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
-                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
-                    {/* <img src={winterFashionImg}
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </Link>
-                <Link to={"/category-products"} style={{
-                    backgroundImage: `url(${winterFashionImg})`,
-                    backgroundSize: `cover`,
-                    backgroundRepeat: `no-repeat`,
-                    backgroundPosition: `center`
-                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
-                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
-                    {/* <img src={winterFashionImg}
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </Link>
-                <Link to={"/category-products"} style={{
-                    backgroundImage: `url(${winterFashionImg})`,
-                    backgroundSize: `cover`,
-                    backgroundRepeat: `no-repeat`,
-                    backgroundPosition: `center`
-                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
-                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
-                    {/* <img src={winterFashionImg}
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </Link>
-                <Link to={"/category-products"} style={{
-                    backgroundImage: `url(${winterFashionImg})`,
-                    backgroundSize: `cover`,
-                    backgroundRepeat: `no-repeat`,
-                    backgroundPosition: `center`
-                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
-                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
-                    {/* <img src={winterFashionImg}
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </Link>
-                <Link to={"/category-products"} style={{
-                    backgroundImage: `url(${winterFashionImg})`,
-                    backgroundSize: `cover`,
-                    backgroundRepeat: `no-repeat`,
-                    backgroundPosition: `center`
-                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
-                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
-                    {/* <img src={winterFashionImg}
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </Link>
-                <Link to={"/category-products"} style={{
-                    backgroundImage: `url(${winterFashionImg})`,
-                    backgroundSize: `cover`,
-                    backgroundRepeat: `no-repeat`,
-                    backgroundPosition: `center`
-                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
-                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
-                    {/* <img src={winterFashionImg}
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </Link>
-                <Link to={"/category-products"} style={{
-                    backgroundImage: `url(${winterFashionImg})`,
-                    backgroundSize: `cover`,
-                    backgroundRepeat: `no-repeat`,
-                    backgroundPosition: `center`
-                }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
-                    <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2'>Winter Fashion</h1>
-                    {/* <img src={winterFashionImg}
-                        alt="Product" class="h-44 md:h-60  w-full object-fit rounded" /> */}
-                </Link>
-                
+                </Link> */}
+
+                {products
+                    .filter(item => item.category === 'men')
+                    .slice(0, 1) // Get only the first 5 products
+                    .map(item => (
+                        <div key={item._id}>
+                            <Link to={"/category-products"} style={{
+                                backgroundImage: `url(${item.image[0]})`,
+                                backgroundSize: `cover`,
+                                backgroundRepeat: `no-repeat`,
+                                backgroundPosition: `center`
+                            }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                                <h1 className='md:text-lg tracking-wide md:tracking-widest text-white font-semibold p-2 animate-bounce tracking-widest shadow'>{item.category}</h1>
+                            </Link>
+                        </div>
+
+                    ))}
+                {products
+                    .filter(item => item.category === 'women')
+                    .slice(0, 1) // Get only the first 5 products
+                    .map(item => (
+                        <div key={item._id}>
+                            <Link to={`/category-products`} style={{
+                                backgroundImage: `url(${item.image[0]})`,
+                                backgroundSize: `cover`,
+                                backgroundRepeat: `no-repeat`,
+                                backgroundPosition: `center`
+                            }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded '>
+                                <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest shadow'>{item.category}</h1>
+                            </Link>
+                        </div>
+
+                    ))}
+                {products
+                    .filter(item => item.category === 'kids')
+                    .slice(0, 1) // Get only the first 5 products
+                    .map(item => (
+                        <div key={item._id}>
+                            <Link to={"/category-products"} style={{
+                                backgroundImage: `url(${item.image[0]})`,
+                                backgroundSize: `cover`,
+                                backgroundRepeat: `no-repeat`,
+                                backgroundPosition: `center`
+                            }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                                <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest shadow'>{item.category}</h1>
+                            </Link>
+                        </div>
+
+                    ))}
+                {products
+                    .filter(item => item.category === 'accessories')
+                    .slice(0, 1) // Get only the first 5 products
+                    .map(item => (
+                        <div key={item._id}>
+                            <Link to={"/category-products"} style={{
+                                backgroundImage: `url(${item.image[0]})`,
+                                backgroundSize: `cover`,
+                                backgroundRepeat: `no-repeat`,
+                                backgroundPosition: `center`
+                            }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded'>
+                                <h1 className='md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest shadow'>{item.category}</h1>
+                            </Link>
+                        </div>
+
+                    ))}
+
             </div>
 
             <div className=" flex flex-col items-center border-y-[1px] my-4 py-2">
@@ -107,7 +112,10 @@ function Catagorys() {
                 </div>
             </div>
 
+
+
         </div>
+
     )
 }
 
