@@ -144,5 +144,97 @@
         ],
         "ratings": 4.5,
         "brand": "minasDream"
+    },
+    {
+        "_id": 6,
+        "title": "Bata shocks",
+        "collection": "Dell 2024  New arrival",
+        "category": "minas dream",
+        "subCategory": "shock",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+        "image": [
+            "slide2.jpg",
+            "https://i.ibb.co/jTMbP5r/nextamazon1.jpg",
+            "https://i.ibb.co/jTMbP5r/nextamazon1.jpg",
+            "https://i.ibb.co/jTMbP5r/nextamazon1.jpg"
+        ],
+        "discount":110,
+        "price": 10.99,
+        "color": [
+            "Neon",
+            "White",
+            "Green"
+        ],
+        "ratings": 4.5,
+        "brand": "minasDream"
+    },
+
+    {
+        "_id": 7,
+        "title": "Bata shocks",
+        "collection": "Dell 2024  New arrival",
+        "category": "minas shop",
+        "subCategory": "shock",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+        "image": [
+            "slide2.jpg",
+            "https://i.ibb.co/jTMbP5r/nextamazon1.jpg",
+            "https://i.ibb.co/jTMbP5r/nextamazon1.jpg",
+            "https://i.ibb.co/jTMbP5r/nextamazon1.jpg"
+        ],
+        "discount":110,
+        "price": 10.99,
+        "color": [
+            "Neon",
+            "White",
+            "Green"
+        ],
+        "ratings": 4.5,
+        "brand": "minasDream"
+    },
+
+    {
+        "_id": 8,
+        "title": "Bata shocks",
+        "collection": "Dell 2024  New arrival",
+        "category": "WINTER",
+        "subCategory": "shock",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+        "image": [
+            "slide2.jpg",
+            "https://i.ibb.co/jTMbP5r/nextamazon1.jpg",
+            "https://i.ibb.co/jTMbP5r/nextamazon1.jpg",
+            "https://i.ibb.co/jTMbP5r/nextamazon1.jpg"
+        ],
+        "discount":110,
+        "price": 10.99,
+        "color": [
+            "Neon",
+            "White",
+            "Green"
+        ],
+        "ratings": 4.5,
+        "brand": "minasDream"
     }
 ]

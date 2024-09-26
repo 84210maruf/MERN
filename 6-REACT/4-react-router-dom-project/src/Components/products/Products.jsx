@@ -39,12 +39,20 @@ function Products() {
 
 
 
+  const uniqueCategories = [...new Set(products.map(item => item.category))];
+  console.log(uniqueCategories);
+
+  // // const [uniqueProducts, setUniqueProducts] = useState(['']);
+  // console.log(uniqueCategories.map(category =>
+  //   products.find(item => item.category === category)))
+
+
 
   return (
 
     <div className='bg-sky-50'>
 
-      <div className="py-6">
+      <div className="py-2">
         <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
           <legend className="px-6 text-2xl text-center">Collections</legend>
         </fieldset>
@@ -52,8 +60,8 @@ function Products() {
 
       <div>
 
-        <h1 className='mx-2 text-md text-sky-600 font-semibold'>Men</h1>
-        <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+        <h1 className=' mx-4 text-md text-sky-600 font-semibold'>Men</h1>
+        <article id="container" className="w-full py-6 px-2 md:px-4 flex justify-center">
           <section id="Projects"
             className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
