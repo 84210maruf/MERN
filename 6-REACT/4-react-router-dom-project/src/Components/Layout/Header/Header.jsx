@@ -238,7 +238,7 @@ function Header() {
                         href="#"
                     >
                         <span
-                            className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"
+                            className="absolute inset-x-0 top-0 h-0 bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"
                         ></span>
 
                         <span
@@ -253,7 +253,7 @@ function Header() {
                         href="#"
                     >
                         <span
-                            className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                            className="absolute inset-x-0 top-0 h-0 bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
                         ></span>
 
                         <span
@@ -269,7 +269,7 @@ function Header() {
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-300  transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-0 bg-gradient-to-tr from-yellow-600 to-sky-300  transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
@@ -285,7 +285,7 @@ function Header() {
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-0 bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
@@ -300,7 +300,7 @@ function Header() {
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-0 bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
@@ -315,7 +315,7 @@ function Header() {
                     href="#"
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-0 bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span
@@ -330,7 +330,7 @@ function Header() {
                     to={"/minaz-dream"}
                 >
                     <span
-                        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"
+                        className="absolute inset-x-0 top-0 h-0 bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"
                     ></span>
 
                     <span

@@ -36,7 +36,8 @@ function Question_accordion() {
                 </div>
 
                 <div className="hidden md:flex bg-base-100 image-full size-[50%]  shadow-xl pt-0 mt-0">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/fwhgjk6zBfY?si=vx6qMUVQsVyaFoXU?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="100%" height="330" src="https://www.youtube.com/embed/sSLPytgnlbM?si=VvWRt7VyYkgzNz6q=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/sSLPytgnlbM?si=VvWRt7VyYkgzNz6q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
                 </div>
             </div>
 
