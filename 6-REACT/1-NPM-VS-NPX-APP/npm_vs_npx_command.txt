@@ -14,7 +14,7 @@ CMD:
 ---------------------- NPX (Node Package Exicute)--------------------
 
 CDM:
-1. npm install -g npm@latest       ----[before create app just updated with NPM. That's the only diffrent NPM & NPX ]
+1. npm install -g npm@latest       ----[before create app just updated with NPM. That's the only different NPM & NPX ]
 2. npx create-react-app my-app
 3. cd my-app
 4. npm start

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { useStateValue, useProductValue } from '../../StateProvider'
+import { useProductValue } from '../../StateProvider'
 import ProductItem from './ProductItem';
 
 
@@ -9,34 +9,8 @@ import ProductItem from './ProductItem';
 
 function Products() {
 
-  const [{ basket }, dispatch] = useStateValue();
 
   const { products, loading, error } = useProductValue();
-
-
-  //demo product for add to basket
-  const product = {
-    id: 2,
-    title: "rd shirt product 2",
-    image: "image",
-    price: 100,
-    discount: 50,
-    rating: 5,
-    quantity: 1
-  };
-
-
-  const addToBasket = () => {
-    // Push the item into the data Layer
-
-    dispatch({
-      type: "ADD_TO_BASKET",
-      item: product
-    });
-  }
-
-  // console.log(basket)
-
 
 
   const uniqueCategories = [...new Set(products.map(item => item.category))];
@@ -69,7 +43,7 @@ function Products() {
               .filter(item => item.category === 'men')
               .slice(0, 5) // Get only the first 5 products
               .map(item => (
-                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+                <ProductItem key={item._id} item={item} />
               ))}
 
           </section>
@@ -83,7 +57,7 @@ function Products() {
               .filter(item => item.category === 'women')
               .slice(0, 5) // Get only the first 5 products
               .map(item => (
-                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+                <ProductItem key={item._id} item={item} />
               ))}
 
           </section>
@@ -98,7 +72,7 @@ function Products() {
               .filter(item => item.category === 'kids')
               .slice(0, 5) // Get only the first 5 products
               .map(item => (
-                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+                <ProductItem key={item._id} item={item} />
               ))}
 
           </section>
@@ -115,7 +89,7 @@ function Products() {
               .filter(item => item.brand === 'minasDream')
               .slice(0, 5) // Get only the first 5 products
               .map(item => (
-                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+                <ProductItem key={item._id} item={item} />
               ))}
 
 

@@ -88,7 +88,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <h1>404 Not Found</h1> // Catch-all for unmatched routes
+    element: <h1>404 Not Found (define in main.js)</h1> // Catch-all for unmatched routes
   },
   {
     path: "/kids",

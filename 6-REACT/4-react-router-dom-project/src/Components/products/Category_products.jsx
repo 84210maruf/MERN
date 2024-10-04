@@ -14,27 +14,6 @@ function Category_products() {
   const { products, loading, error } = useProductValue();
   console.log(products)
 
-  const [{ basket }, dispatch] = useStateValue();
-
-  const product = {
-    id: 1,
-    title: "rd shirt product 1",
-    image: "image",
-    price: 100,
-    discount: 50,
-    rating: 5,
-    quantity: 1
-  };
-
-
-  const addToBasket = () => {
-    // Push the item into the data Layer
-
-    dispatch({
-      type: "ADD_TO_BASKET",
-      item: product
-    })
-  }
 
 
   return (
@@ -52,7 +31,7 @@ function Category_products() {
 
           {products.map(item =>
 
-            item.category === 'women' && <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+            item.category === 'women' && <ProductItem key={item._id} item={item} />
           )}
           category_product page
 
