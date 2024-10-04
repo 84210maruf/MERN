@@ -6,5 +6,7 @@ Currently, two official plugins are available:
 
 # firebase setting-up 
 
+not add in main project
+
 npm install firebase
 npm install --save react-toastify
