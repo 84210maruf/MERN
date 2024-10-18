@@ -1,26 +1,64 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { useStateValue } from '../../StateProvider'
 import { getTotal, getBasketDiscountTotal, getBasketPriceTotal, getItemTotal, getItemPriceTotal, getItemDiscountTotal } from '../../reducer';
 
+import { auth, db } from './../../firebase'
+import { doc, getDoc } from 'firebase/firestore'
+
 function Shoping_cart() {
 
   const shipingCost = 60;
-  
+
   const [{ basket }, dispatch] = useStateValue();
 
+  const [userDetails, setUserDetails] = useState(null);
+  const navigate = useNavigate();
+
+  const fetchUserData = async () => {
+    auth.onAuthStateChanged(async (user) => {
+      console.log(user)
+      const docRef = doc(db, 'Users', user.uid)
+      const docSnap = await getDoc(docRef)
+      if (docSnap.exists()) {
+        setUserDetails(docSnap.data());
+        console.log(userDetails)
+      }
+    })
+  }
+
+  useEffect(() => {
+    fetchUserData();
+  }, [])
 
 
-
-
+  async function handleLogout() {
+    try{
+      await auth.signOut();
+      navigate('/login');
+    }catch(error){
+      console.error('error in logout:', error.message)
+    }
+  }
 
   return (
     <div>
-
       <section className="bg-sky-50 py-8 antialiased dark:bg-gray-900 md:py-16">
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Shopping Cart</h2>
+          <div className='flex justify-around'>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Shopping Cart</h2>
+
+            <div className='text-sm text-sky-500'>
+              {userDetails ? (
+                <>
+                  <p>Hallow  <b>{userDetails.name}</b></p>
+                  <p>gmail : <b>{userDetails.email}</b></p>
+                  <button className='btn btn-ghost btn-sm w-full' onClick={handleLogout}>logout</button>
+                </>
+              ) : (<p>Loading... or not to signIn</p>)}
+            </div>
+          </div>
 
           <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
             <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
@@ -64,7 +102,7 @@ function Shoping_cart() {
                               </button>
                             </div>
 
-                            <button  onClick={() => dispatch({ type: 'REMOVE_FROM_BASKET', item })} type="button" className="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
+                            <button onClick={() => dispatch({ type: 'REMOVE_FROM_BASKET', item })} type="button" className="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
                               <svg className="me-1.5 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
                               </svg>

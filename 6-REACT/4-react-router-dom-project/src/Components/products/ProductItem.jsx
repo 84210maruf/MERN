@@ -4,6 +4,7 @@ import { useStateValue } from '../../StateProvider';
 import demoImg from './../../assets/slide4.jpg'; // You might want to use this as a placeholder
 
 function ProductItem({ item }) {
+  
   if (!item) {
     return <div>Product not found.</div>;
   }

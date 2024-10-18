@@ -15,7 +15,6 @@ import Body from "./Components/Body/Body";
 import Products from "./Components/products/Products";
 import Product from "./Components/products/Product"
 import Shoping_cart from "./Components/pages/Shoping_cart";
-import Whish_list from "./Components/pages/Whish_list";
 import Register from "./Components/pages/Register";
 import Login from "./Components/pages/Login";
 import Men from "./Components/pages/Men";
@@ -126,14 +125,6 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/whish-list",
-    element: (
-      <Layout>
-        <Whish_list />
-      </Layout>
-    )
-  },
-  {
     path: "/payment",
     element: (
       <Layout>
@@ -167,6 +158,7 @@ const router = createBrowserRouter([
       </Layout>
     )
   },
+  
   {
     path: "/about-us",
     element: (

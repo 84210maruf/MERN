@@ -22,8 +22,8 @@ function Login() {
             });
 
             setTimeout(() => {
-                navigate('/');
-            }, 5000); // Redirect to your dashboard or home page
+                navigate('/shoping-cart');
+            }, 3000); // Redirect to your dashboard or home page
 
         } catch (error) {
             toast.error(error.message, {

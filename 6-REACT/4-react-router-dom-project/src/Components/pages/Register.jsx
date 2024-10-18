@@ -42,7 +42,7 @@ function Register() {
             // Redirect to login page after a short delay
             setTimeout(() => {
                 navigate('/login');
-            }, 5000); // 5 seconds delay
+            }, 3000); // 5 seconds delay
 
         } catch (error) {
             console.log(error.message);
