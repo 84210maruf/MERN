@@ -1,18 +1,18 @@
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import { ScrollRestoration } from "react-router-dom";
+import { ScrollRestoration, Outlet } from "react-router-dom";
 
-const Layout = ({ children }) => {
-    return (
-        <div>
-            <Header />
-            {children}
-            <Footer />
-
-            {/* this for scroll to top  */}
-            <ScrollRestoration />
-        </div>
-    );
+const Layout = () => {
+  return (
+    <div>
+      <Header />
+      {/* This is where the child routes will be rendered */}
+      <Outlet /> 
+      <Footer />
+      {/* Scroll restoration for better UX */}
+      <ScrollRestoration />
+    </div>
+  );
 };
 
 export default Layout;

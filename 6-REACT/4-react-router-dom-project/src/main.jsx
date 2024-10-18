@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-
 import {
   createBrowserRouter,
   RouterProvider
@@ -9,11 +8,11 @@ import {
 import { StateProvider, ProductProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
 
-import "./App.css"
+import "./App.css";
 import Layout from "./Components/Layout/Layout";
 import Body from "./Components/Body/Body";
 import Products from "./Components/products/Products";
-import Product from "./Components/products/Product"
+import Product from "./Components/products/Product";
 import Shoping_cart from "./Components/pages/Shoping_cart";
 import Register from "./Components/pages/Register";
 import Login from "./Components/pages/Login";
@@ -31,183 +30,45 @@ import Thankyou from "./Components/pages/Thankyou";
 import MinazDream from "./Components/pages/MinazDream";
 import Dashboard from "./Components/Dashboard";
 
-
-
-
+// Define routes with Layout applied globally
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <Layout>
-        <Body />
-      </Layout>
-    )
+    element: <Layout />, // Apply Layout globally
+    children: [
+      { path: "/", element: <Body /> },  // Main route ("/") uses <Body />
+      { path: "/products", element: <Products /> }, // Route "/products"
+      { path: "/category-products", element: <Category_products /> }, // Route "/category-products"
+      { path: "/product", element: <Product /> }, // Route "/product"
+      { path: "/men", element: <Men /> }, // Route "/men"
+      { path: "/women", element: <Women /> }, // Route "/women"
+      { path: "/kids", element: <Kids /> }, // Route "/kids"
+      { path: "/winter", element: <Winter /> }, // Route "/winter"
+      { path: "/minaz-dream", element: <MinazDream /> }, // Route "/minaz-dream"
+      { path: "/shoping-cart", element: <Shoping_cart /> }, // Route "/shoping-cart"
+      { path: "/payment", element: <Payment /> }, // Route "/payment"
+      { path: "/thank-you", element: <Thankyou /> }, // Route "/thank-you"
+      { path: "/login", element: <Login /> }, // Route "/login"
+      { path: "/register", element: <Register /> }, // Route "/register"
+      { path: "/about-us", element: <AboutUs /> }, // Route "/about-us"
+      { path: "/contact-us", element: <ContactUs /> }, // Route "/contact-us"
+      { path: "/branding", element: <Branding_company /> }, // Route "/branding"
+   
+      
+      
+    ]
   },
-  {
-    path: "/products", //ui name collections
-    element: (
-      <Layout>
-        <Products />
-      </Layout>
-    )
-  },
-  {
-    path: "/category-products",
-    element: (
-      <Layout>
-        <Category_products />
-      </Layout>
-    )
-  },
-
-  {
-    path: "/product",
-    element: (
-      <Layout>
-        <Product />
-      </Layout>
-    )
-  },
-
-  {
-    path: "/men",
-    element: (
-      <Layout>
-        <Men />
-      </Layout>
-    )
-  },
-  {
-    path: "/women",
-    element: (
-      <Layout>
-        <Women />
-      </Layout>
-    )
-  },
-  {
-    path: "*",
-    element: <h1>404 Not Found (define in main.js)</h1> // Catch-all for unmatched routes
-  },
-  {
-    path: "/kids",
-    element: (
-      <Layout>
-        <Kids />
-      </Layout>
-    )
-  },
-  {
-    path: "/winter",
-    element: (
-      <Layout>
-        <Winter />
-      </Layout>
-    )
-  },
-  {
-    path: "/minaz-dream",
-    element: (
-      <Layout>
-        <MinazDream />
-      </Layout>
-    )
-  },
-
-
-  {
-    path: "/shoping-cart",
-    element: (
-      <Layout>
-        <Shoping_cart />
-      </Layout>
-    )
-  },
-
-  {
-    path: "/payment",
-    element: (
-      <Layout>
-        <Payment />
-      </Layout>
-    )
-  },
-  {
-    path: "/thank-you",
-    element: (
-
-      <Thankyou />
-
-    )
-  },
-
-  {
-    path: "/login",
-    element: (
-      <Layout>
-        <Login />
-      </Layout>
-    )
-  },
-
-  {
-    path: "/register",
-    element: (
-      <Layout>
-        <Register />
-      </Layout>
-    )
-  },
-  
-  {
-    path: "/about-us",
-    element: (
-      <Layout>
-        <AboutUs />
-      </Layout>
-    )
-  },
-  {
-    path: "/contact-us",
-    element: (
-      <Layout>
-        <ContactUs />
-      </Layout>
-    )
-  },
-  {
-    path: "/branding",
-    element: (
-      <Layout>
-        <Branding_company />
-      </Layout>
-    )
-  },
-  {
-    path: "/terms-conditions",
-    element: (
-      <Terms_comditions />
-    )
-  },
-  {
-    path: "/dashboard",
-    element: (
-      <Dashboard />
-    )
-  },
-
+  { path: "/terms-conditions", element: <Terms_comditions /> },
+  { path: "/dashboard", element: <Dashboard /> }, // Route "/dashboard"
+  { path: "*", element: <h1>404 Not Found</h1> }, // Catch-all route for 404
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* StateProvider provide busket universally */}
-    <StateProvider initialState={initialState} reducer={reducer} >
-      
-      {/* Provide product univarsally */}
+    <StateProvider initialState={initialState} reducer={reducer}>
       <ProductProvider>
         <RouterProvider router={router} />
       </ProductProvider>
-
     </StateProvider>
   </React.StrictMode>
 );
