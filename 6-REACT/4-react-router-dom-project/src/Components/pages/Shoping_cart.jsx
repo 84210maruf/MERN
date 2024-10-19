@@ -11,36 +11,37 @@ function Shoping_cart() {
 
   const shipingCost = 60;
 
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  // console.log('userrrrrrrs :' + user.email)
 
-  const [userDetails, setUserDetails] = useState(null);
-  const navigate = useNavigate();
+  // const [userDetails, setUserDetails] = useState(null);
+  // const navigate = useNavigate();
 
-  const fetchUserData = async () => {
-    auth.onAuthStateChanged(async (user) => {
-      console.log(user)
-      const docRef = doc(db, 'Users', user.uid)
-      const docSnap = await getDoc(docRef)
-      if (docSnap.exists()) {
-        setUserDetails(docSnap.data());
-        console.log(userDetails)
-      }
-    })
-  }
+  // const fetchUserData = async () => {
+  //   auth.onAuthStateChanged(async (user) => {
+  //     console.log(user)
+  //     const docRef = doc(db, 'Users', user.uid)
+  //     const docSnap = await getDoc(docRef)
+  //     if (docSnap.exists()) {
+  //       setUserDetails(docSnap.data());
+  //       console.log(userDetails)
+  //     }
+  //   })
+  // }
 
-  useEffect(() => {
-    fetchUserData();
-  }, [])
+  // useEffect(() => {
+  //   fetchUserData();
+  // }, [])
 
 
-  async function handleLogout() {
-    try {
-      await auth.signOut();
-      navigate('/login');
-    } catch (error) {
-      console.error('error in logout:', error.message)
-    }
-  }
+  // async function handleLogout() {
+  //   try {
+  //     await auth.signOut();
+  //     navigate('/login');
+  //   } catch (error) {
+  //     console.error('error in logout:', error.message)
+  //   }
+  // }
 
   return (
     <div>
@@ -51,11 +52,11 @@ function Shoping_cart() {
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Shopping Cart</h2>
 
             <div className='text-sm text-sky-500'>
-              {userDetails ? (
+              {user ? (
                 <>
-                  <p>Hallow  <b>{userDetails.name}</b></p>
-                  <p>gmail : <b>{userDetails.email}</b></p>
-                  <button className='btn btn-ghost btn-sm w-full' onClick={handleLogout}>logout</button>
+                  <p>Hallow  <b>{user.name}</b></p>
+                  <p>gmail : <b>{user.email}</b></p>
+                  {/* <button className='btn btn-ghost btn-sm w-full' onClick={handleLogout}>logout</button> */}
                 </>
               ) : (<p>Loading... or not to signIn</p>)}
             </div>
