@@ -29,6 +29,7 @@ function Product() {
       item: {
         _id: product._id,
         title: product.title,
+        description: product.description,
         image: product.image,
         price: product.price,  // Make sure price is included here
         discount: product.discount,  // If relevant
@@ -38,13 +39,14 @@ function Product() {
   };
 
 
+  
 
   return (
     <div>
 
       <main class="py-10 bg-sky-50">
         <div class="container space-x-4  mx-auto px-4 flex flex-col md:flex-row">
-
+          {/* 
           <div class="md:w-1/2">
             <div class="relative">
 
@@ -82,11 +84,42 @@ function Product() {
               </div>
 
             </div>
+          </div> */}
+          <div className="md:w-1/2">
+            <div className="relative">
+              {/* Main Image */}
+              <div
+                style={{
+                  backgroundImage: `url(${DemoImg || 'fallback_image_url'})`, // Fallback for the main image
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                }}
+                className="w-full h-72 object-cover rounded-lg shadow-lg"
+              ></div>
+
+              {/* Thumbnails */}
+              <div className="flex justify-center space-x-5 mt-4">
+                {product.image.slice(1).map((img, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundImage: `url(${img || 'fallback_image_url'})`, // Fallback for thumbnails
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                    }}
+                    className="w-28 h-20 object-cover rounded-md shadow-md"
+                  ></div>
+                ))}
+              </div>
+            </div>
           </div>
 
 
+
           <div class="md:w-1/2 md:pl-8 mt-8 md:mt-0">
-            <h1 class="text-xl font-bold text-gray-900">Product Name {product._id}</h1>
+            <h1 class="text-xl font-bold text-gray-900">[ {product.title} ]</h1>
 
             <div className='p-2 bg-yellow-200 rounded-2xl'>
               <p className="text-md text-gray-700 font-semibold">Original Price : {product.price} Tk</p>
@@ -94,7 +127,7 @@ function Product() {
               <p className="text-sm text-gray-600 cursor-auto  font-semibold">Discount : {product.discount} Tk</p>
             </div>
 
-            <p class="text-sm text-gray-600 mt-4">{product.title}</p>
+            <p class="text-sm text-gray-600 mt-4">{product.description}</p>
 
 
             <div class="mt-4 text-sm">
@@ -104,14 +137,22 @@ function Product() {
               </select>
             </div>
 
-            <div class="mt-4 text-sm">
-              <label for="color" class="block text-gray-700 font-semibold">Color</label>
-              <div class="flex space-x-4 mt-2">
-                <button class="w-8 h-8 rounded-full border border-gray-300 bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-600"></button>
-                <button class="w-8 h-8 rounded-full border border-gray-300 bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600"></button>
-                {product.color.map((item) => <button class="w-8 h-8 rounded-full border border-gray-300 bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-600">{item}</button>)}
+            <div className="mt-4 text-sm">
+              <label htmlFor="color" className="block text-gray-700 font-semibold">
+                Color
+              </label>
+              <div className="flex space-x-4 mt-2">
+
+                {product.color.map((item, index) => (
+                  <button
+                    key={index}
+                    className={`w-8 h-8 rounded-full border border-gray-300 focus:outline-none focus:ring-2`}
+                    style={{ backgroundColor: item }}
+                  ></button>
+                ))}
               </div>
             </div>
+
 
 
             <Link to={"/shoping-cart"} onClick={addToBasket} >
