@@ -7,18 +7,6 @@ import { doc, getDoc } from 'firebase/firestore'
 const AuthHandler = () => {
     const [, dispatch] = useStateValue(); // Get dispatch function from StateProvider
 
-    //   const navigate = useNavigate();
-
-
-    // auth.onAuthStateChanged(async (user) => {
-    //     console.log(user)
-    //     const docRef = doc(db, 'Users', user.uid)
-    //     const docSnap = await getDoc(docRef)
-    //     if (docSnap.exists()) {
-    //         setUserDetails(docSnap.data());
-    //         console.log(userDetailss)
-    //     }
-    // })
 
     useEffect(() => {
         // Firebase listener to detect auth changes

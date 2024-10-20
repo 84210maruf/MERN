@@ -31,7 +31,7 @@ function Category_products() {
 
           {products.map(item =>
 
-            item.category === 'women' && <ProductItem key={item._id} item={item} />
+            item.category === 'kids' && <ProductItem key={item._id} item={item} />
           )}
           category_product page
 

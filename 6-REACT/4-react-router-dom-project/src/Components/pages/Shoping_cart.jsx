@@ -12,36 +12,7 @@ function Shoping_cart() {
   const shipingCost = 60;
 
   const [{ basket, user }, dispatch] = useStateValue();
-  // console.log('userrrrrrrs :' + user.email)
-
-  // const [userDetails, setUserDetails] = useState(null);
-  // const navigate = useNavigate();
-
-  // const fetchUserData = async () => {
-  //   auth.onAuthStateChanged(async (user) => {
-  //     console.log(user)
-  //     const docRef = doc(db, 'Users', user.uid)
-  //     const docSnap = await getDoc(docRef)
-  //     if (docSnap.exists()) {
-  //       setUserDetails(docSnap.data());
-  //       console.log(userDetails)
-  //     }
-  //   })
-  // }
-
-  // useEffect(() => {
-  //   fetchUserData();
-  // }, [])
-
-
-  // async function handleLogout() {
-  //   try {
-  //     await auth.signOut();
-  //     navigate('/login');
-  //   } catch (error) {
-  //     console.error('error in logout:', error.message)
-  //   }
-  // }
+ 
 
   return (
     <div>

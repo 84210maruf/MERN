@@ -11,7 +11,7 @@ function Products() {
 
 
   const { products, loading, error } = useProductValue();
-
+  console.log(products)
 
   const uniqueCategories = [...new Set(products.map(item => item.category))];
   console.log(uniqueCategories);

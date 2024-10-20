@@ -10,6 +10,7 @@ function ProductItem({ item }) {
   }
 
   const {
+    _id = 0,
     title = 'No title available',
     image = [demoImg], // Use demoImg as a fallback
     price = 0,
@@ -28,7 +29,7 @@ function ProductItem({ item }) {
 
   return (
     <div className="w-full h-fit shadow-md duration-300 hover:scale-[1.02] md:hover:scale-105 hover:shadow-xl rounded">
-      <Link to={`/product`}>
+      <Link to={`/product/${_id}`}>
         <img 
           src={image[0] || demoImg} // Fallback image
           alt={title} // More descriptive alt text

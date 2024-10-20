@@ -1,33 +1,41 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import winterFashionImg from './../../assets/nimble-made-N0ke5zChVBU-unsplash.jpg'
-import DemoImg from './../../assets/AboutPic.jpg'
-import { useStateValue } from '../../StateProvider';
+import DemoImg from './../../../public/slide1.jpg'
+import { useStateValue, useProductValue } from '../../StateProvider';
 
 
 function Product() {
 
-  const [{ basket }, dispatch] = useStateValue();
+  const { id } = useParams(); // Get the product ID from the URL
+  const { products, loading, error } = useProductValue(); // Get products from the context
+  const [, dispatch] = useStateValue(); // Get dispatch from global state
 
-  const product = {
-    id: 1,
-    title: "rd shirt",
-    image: "image",
-    price: 100,
-    discount: 50,
-    rating: 5,
-    quantity: 1
+  // Handle loading or error state
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
+  // Find the product by ID (parse ID to number if necessary)
+  const product = products.find(item => item._id === parseInt(id));
+
+  if (!product) {
+    return <div>Product not found</div>; // Handle the case where the product is not found
   }
-
 
   const addToBasket = () => {
-    // Push the item into the data Layer
-
+    // Push the item into the data layer
     dispatch({
       type: "ADD_TO_BASKET",
-      item: product
+      item: {
+        _id: product._id,
+        title: product.title,
+        image: product.image,
+        price: product.price,  // Make sure price is included here
+        discount: product.discount,  // If relevant
+        quantity: 1 // Or whatever logic you need for quantity
+      }
     });
-  }
+  };
 
 
 
@@ -50,21 +58,21 @@ function Product() {
 
               <div className='flex justify-center space-x-5 mt-4'>
                 <div style={{
-                  backgroundImage: `url(${winterFashionImg})`,
+                  backgroundImage: `url(${product.image[1]})`,
                   backgroundSize: `cover`,
                   backgroundRepeat: `no-repeat`,
                   backgroundPosition: `center`
                 }} className='w-28 h-20 object-cover rounded-md shadow-md'>
                 </div>
                 <div style={{
-                  backgroundImage: `url(${winterFashionImg})`,
+                  backgroundImage: `url(${product.image[2]})`,
                   backgroundSize: `cover`,
                   backgroundRepeat: `no-repeat`,
                   backgroundPosition: `center`
                 }} className='w-28 h-20 object-cover rounded-md shadow-md'>
                 </div>
                 <div style={{
-                  backgroundImage: `url(${winterFashionImg})`,
+                  backgroundImage: `url(${product.image[3]})`,
                   backgroundSize: `cover`,
                   backgroundRepeat: `no-repeat`,
                   backgroundPosition: `center`
@@ -78,25 +86,21 @@ function Product() {
 
 
           <div class="md:w-1/2 md:pl-8 mt-8 md:mt-0">
-            <h1 class="text-xl font-bold text-gray-900">Product Name</h1>
+            <h1 class="text-xl font-bold text-gray-900">Product Name {product._id}</h1>
 
             <div className='p-2 bg-yellow-200 rounded-2xl'>
-              <p className="text-md text-gray-700 font-semibold">Original Price : 99.99 Tk</p>
+              <p className="text-md text-gray-700 font-semibold">Original Price : {product.price} Tk</p>
 
-              <p className="text-sm text-gray-600 cursor-auto  font-semibold">Discount : 50 Tk</p>
+              <p className="text-sm text-gray-600 cursor-auto  font-semibold">Discount : {product.discount} Tk</p>
             </div>
 
-            <p class="text-sm text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac turpis ut felis efficitur dictum.</p>
+            <p class="text-sm text-gray-600 mt-4">{product.title}</p>
 
 
             <div class="mt-4 text-sm">
               <label for="size" class="block text-gray-700 font-semibold">Size</label>
               <select id="size" class="block w-full mt-2 p-2 border border-gray-300 rounded-lg">
-                <option>SM</option>
-                <option>M</option>
-                <option>L</option>
-                <option>Xl</option>
-                <option>XXL</option>
+                {product.size.map((item) => <option>{item}</option>)}
               </select>
             </div>
 
@@ -105,7 +109,7 @@ function Product() {
               <div class="flex space-x-4 mt-2">
                 <button class="w-8 h-8 rounded-full border border-gray-300 bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-600"></button>
                 <button class="w-8 h-8 rounded-full border border-gray-300 bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600"></button>
-                <button class="w-8 h-8 rounded-full border border-gray-300 bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-600"></button>
+                {product.color.map((item) => <button class="w-8 h-8 rounded-full border border-gray-300 bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-600">{item}</button>)}
               </div>
             </div>
 
