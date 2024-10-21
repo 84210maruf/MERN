@@ -332,7 +332,7 @@ function Header() {
                     </Link></div>
 
                 <div className="mr-[2px]">
-                    <Link to={"/men"}
+                    <Link to={"category-products/men"}
                         className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                         href="#"
                     >
@@ -347,7 +347,7 @@ function Header() {
                         </span>
                     </Link></div>
                 <div className="mr-[2px]">
-                    <Link to={"/women"}
+                    <Link to={"category-products/women"}
                         className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                         href="#"
                     >
@@ -362,7 +362,7 @@ function Header() {
                         </span>
                     </Link></div>
                 <div className="mr-[2px]">
-                    <Link to={"/kids"}
+                    <Link to={"category-products/kids"}
                         className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                         href="#"
                     >

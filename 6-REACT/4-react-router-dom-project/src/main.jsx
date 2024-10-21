@@ -40,7 +40,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Body /> },  // Main route ("/") uses <Body />
       { path: "/products", element: <Products /> }, // Route "/products"
-      { path: "/category-products", element: <Category_products /> }, // Route "/category-products"
+      { path: "/category-products/:category", element: <Category_products /> }, // Route "/category-products"
       { path: "/product/:id", element: <Product /> }, // Route "/product"
       { path: "/men", element: <Men /> }, // Route "/men"
       { path: "/women", element: <Women /> }, // Route "/women"

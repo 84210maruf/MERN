@@ -34,7 +34,7 @@ function Catagorys() {
                     products.find(item => item.category === category))
                     .map(item => (
                         <div key={item._id}>
-                            <Link to={`/category-products`} style={{
+                            <Link to={`/category-products/${item.category}`} style={{
                                 backgroundImage: `url(${item.image[0]})`,
                                 backgroundSize: `cover`,
                                 backgroundRepeat: `no-repeat`,
