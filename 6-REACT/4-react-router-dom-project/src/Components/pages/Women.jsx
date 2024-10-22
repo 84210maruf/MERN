@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Category_products from '../products/Category_products'
+import Category_products from './Category_products'
 
 
 function Women() {

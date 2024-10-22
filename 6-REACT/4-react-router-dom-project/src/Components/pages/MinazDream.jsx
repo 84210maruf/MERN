@@ -1,6 +1,6 @@
 import React from 'react';
 import { useProductValue } from '../../StateProvider';
-import ProductItem from './../products/ProductItem';
+import ProductItem from './ProductItem';
 
 function MinazDream() {
 
@@ -8,7 +8,7 @@ function MinazDream() {
   const { products, loading, error } = useProductValue();
   console.log(products);
 
-  const product_call_for_fatching = products.find(item => item.category === 'men');
+  // const product_call_for_fatching = products.find(item => item.category === 'men');
 
   if (loading) {
     return <div>Loading...</div>
