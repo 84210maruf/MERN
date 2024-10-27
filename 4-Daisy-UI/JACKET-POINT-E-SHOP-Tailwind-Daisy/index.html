@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tailwind Starter Template - Nordic Shop: Tailwind Toolbox</title>
+    <meta name="description" content="Free open source Tailwind CSS Store template">
+    <meta name="keywords"
+        content="tailwind,tailwindcss,tailwind css,css,starter template,free template,store template, shop layout, minimal, monochrome, minimalistic, theme, nordic">
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" /> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+
+    <title>JACKET POINT</title>
+
+
+</head>
+
+<body class="bg-gray-50 text-gray-600 work-sans leading-normal tracking-normal">
+
+
+    <!--Nav start -->
+    <nav class="">
+        <div class="navbar md:flex justify-between p-0 sm:p-2">
+
+            <div class="navbar-start sm:hidden">
+                <div class="dropdown dropdown-start">
+                    <div tabindex="0" class="">
+                        <label class="btn btn-ghost hover:bg-gray-100 hover:shadow-md swap swap-rotate">
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox" />
+
+                            <!-- hamburger icon -->
+                            <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 512 512">
+                                <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                            </svg>
+
+                            <!-- close icon -->
+                            <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 512 512">
+                                <polygon
+                                    points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+                            </svg>
+                        </label>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-md dropdown-content top-14 bg-gray-50 rounded-b z-[11] shadow-sm min-w-72">
+
+                        <h1 class="text-lg font-semibold mx-auto py-2">Home</h1>
+
+                        <!-- nested drop-down  -->
+                        <li class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105  duration-300">
+                            <details class="mb-1">
+                                <summary class="hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                    <a href="#" class="font-semibold">About</a>
+                                </summary>
+                                <ul class="">
+                                    <li class="bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-1</a></li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-2</a></li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-3</a></li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-4</a></li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-5</a></li>
+
+                                </ul>
+                            </details>
+                        </li>
+
+                        <!-- nested drop-down  -->
+                        <li class=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
+                                                            duration-300">
+                            <details class="mb-1">
+                                <summary
+                                    class="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                    <a href="#" class="font-semibold">About</a>
+                                </summary>
+                                <ul class="">
+                                    <li class="bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm">
+                                        <a href="#">content-1</a>
+                                    </li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-2</a></li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-3</a></li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-4</a></li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-5</a></li>
+
+                                </ul>
+                            </details>
+                        </li>
+
+                        <!-- nested drop-down  -->
+                        <li class=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
+                                                                                            duration-300">
+                            <details class="mb-1">
+                                <summary
+                                    class="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                    <a href="#" class="font-semibold">About</a>
+                                </summary>
+                                <ul class="">
+                                    <li class="bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm">
+                                        <a href="#">content-1</a>
+                                    </li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-2</a></li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-3</a></li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-4</a></li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm"><a
+                                            href="#">content-5</a></li>
+
+                                </ul>
+                            </details>
+                        </li>
+
+                        <!-- nested drop-down  -->
+                        <li class=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300">
+                            <details class="mb-1">
+                                <summary
+                                    class="bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
+                                    <a href="#" class="font-semibold">About</a>
+                                </summary>
+                                <ul class="">
+                                    <li class="bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm">
+                                        <a href="#">content-1</a>
+                                    </li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm">
+                                        <a href="#">content-2</a>
+                                    </li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm">
+                                        <a href="#">content-3</a>
+                                    </li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm">
+                                        <a href="#">content-4</a>
+                                    </li>
+                                    <li class=" bg-gray-50 p-2 my-2 rounded cursor-pointer shadow-sm">
+                                        <a href="#">content-5</a>
+                                    </li>
+
+                                </ul>
+                            </details>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class=" navbar-center">
+                <div class="avatar">
+                    <div class="w-12 sm:w-20 mask mask-hexagon">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    </div>
+                </div>
+                <a class="btn btn-ghost text-xl cursor-pointer">daisyUI</a>
+            </div>
+
+            <div class="navbar-end sm:hidden mr-2">
+                <button class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+
+                <a class="flex no-underline hover:text-black" href="#">
+                    <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z" />
+                        <circle cx="10.5" cy="18.5" r="1.5" />
+                        <circle cx="17.5" cy="18.5" r="1.5" />
+                    </svg>
+                </a>
+
+                <a class="flex px-2 sm:hidden no-underline hover:text-black" href="#">
+                    <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <circle fill="none" cx="12" cy="7" r="3" />
+                        <path
+                            d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z" />
+                    </svg>
+                </a>
+
+
+                <!-- <button class="btn btn-ghost btn-circle">
+                <div class="indicator">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                    <span class="badge badge-xs badge-primary indicator-item"></span>
+                </div>
+            </button> -->
+            </div>
+
+            <form class="navbar-end hidden sm:flex">
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+
+                    </div>
+                    <input type="search" id="default-search"
+                        class=" w-full p-3 ps-10 text-sm text-gray-900 outline-none rounded-lg bg-gray-50  ring-2 focus:ring-4 ring-gray-100 ring-offset-2 ring-offset-gray-200"
+                        placeholder="Searching" required />
+                    <button type="submit"
+                        class="text-white absolute end-1 bottom-1 bg-blue-400 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="hidden sm:flex items-center justify-end text-xs md:text-sm lg:text-lg">
+
+            <a class="flex no-underline hover:text-black" href="#">
+                <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z" />
+                    <circle cx="10.5" cy="18.5" r="1.5" />
+                    <circle cx="17.5" cy="18.5" r="1.5" />
+                </svg>
+                <span>Shopping Cart</span>
+            </a>
+
+            <a class="flex pl-3 no-underline hover:text-black" href="#">
+                <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z" />
+                    <circle cx="10.5" cy="18.5" r="1.5" />
+                    <circle cx="17.5" cy="18.5" r="1.5" />
+                </svg>
+                <span>Whish List</span>
+            </a>
+
+            <a class="flex pl-3 no-underline hover:text-gray-500 text-black" href="#">
+                <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <circle fill="none" cx="12" cy="7" r="3" />
+                    <path
+                        d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z" />
+                </svg>
+                <span>SignIn & Register</span>
+            </a>
+        </div>
+
+
+        <div class="hidden sm:flex justify-center items-center cursor-pointer bg-gray-50">
+            <div class="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">Home</div>
+
+            <div class="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">
+                <details>
+                    <summary>Home</summary>
+                    <ul class="absolute z-[12] w-full bg-gray-700 left-0">
+                        <li><a>Submenu 1</a></li>
+                        <li><a>Submenu 2</a></li>
+                        <li>
+                            <details>
+                                <summary>Parent</summary>
+                                <ul>
+                                    <li><a>item 1</a></li>
+                                    <li><a>item 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            <div class="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">
+                <details>
+                    <summary>Home</summary>
+                    <ul class="absolute z-[12]">
+                        <li><a>Submenu 1</a></li>
+                        <li><a>Submenu 2</a></li>
+                        <li>
+                            <details open>
+                                <summary>Parent</summary>
+                                <ul>
+                                    <li><a>item 1</a></li>
+                                    <li><a>item 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            <div class="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">
+                <details>
+                    <summary>Home</summary>
+                    <ul class="absolute z-[12]">
+                        <li><a>Submenu 1</a></li>
+                        <li><a>Submenu 2</a></li>
+                        <li>
+                            <details open>
+                                <summary>Parent</summary>
+                                <ul>
+                                    <li><a>item 1</a></li>
+                                    <li><a>item 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            <div class="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">
+                <details>
+                    <summary>Home</summary>
+                    <ul class="absolute z-[12]">
+                        <li><a>Submenu 1</a></li>
+                        <li><a>Submenu 2</a></li>
+                        <li>
+                            <details open>
+                                <summary>Parent</summary>
+                                <ul>
+                                    <li><a>item 1</a></li>
+                                    <li><a>item 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+
+            <div class="btn border-0 rounded-sm hover:bg-gray-200 py-4 my-1 mx-[1px] w-28">Home</div>
+        </div>
+    </nav>
+    <!-- Nav END -->
+
+
+
+
+
+
+    <!-- carousel section   start-->
+    <div class="sm:hidden">
+        <div class="carousel h-40 w-full">
+            <div class="carousel-item w-2/3 bg-cover"
+                style="background-image: url('https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp');">
+                <div class="w-2/3 mx-auto mt-auto">
+                    <p class="text-sm leading-none text-gray-500 p-2">lore Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit!
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item w-1/2 bg-cover bg-center"
+                style="background-image: url('https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp');">
+
+                <div class="w-2/3 mx-auto mt-auto">
+                    <p class="text-sm leading-none text-gray-500 p-2">lore Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit!
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item w-full bg-cover bg-center"
+                style="background-image: url('https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp');">
+                <div class="w-2/3 mx-auto mt-auto">
+                    <p class="text-sm leading-none text-gray-500 p-2"> lore Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit!
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item w-2/3 bg-cover bg-center"
+                style="background-image: url('https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp');">
+
+                <div class="w-2/3 mx-auto mt-auto">
+                    <p class="text-sm leading-none text-gray-500 p-2">lore Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit!
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item w-2/3 bg-cover bg-center"
+                style="background-image: url('https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp');">
+                <div class="w-2/3 mx-auto mt-auto">
+                    <p class="text-sm leading-none text-gray-500 p-2">lore Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit!
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item w-1/2 bg-cover bg-center"
+                style="background-image: url('https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp');">
+
+                <div class="w-2/3 mx-auto mt-auto">
+                    <p class="text-sm leading-none text-gray-500 p-2">lore Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit!
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item w-1/2 bg-cover bg-center"
+                style="background-image: url('https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp');">
+                <div class="w-2/3 mx-auto mt-auto">
+                    <p class="text-sm leading-none text-gray-500 p-2">lore Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden sm:block">
+        <div class="carousel w-full h-72">
+            <div id="item1" class="carousel-item w-full bg-cover bg-center bg-no-repeat"
+                style="background-image: url('https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp');">
+                <div class="w-2/3 mx-auto mt-auto">
+                    <p class="text-sm leading-none text-gray-500 p-2">lore Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit!
+                    </p>
+                </div>
+            </div>
+            <div id="item2" class="carousel-item w-full bg-cover bg-center bg-no-repeat"
+                style="background-image: url('https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp');">
+                <div class="w-2/3 mx-auto mt-auto">
+                    <p class="text-sm leading-none text-gray-500 p-2">lore Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit!
+                    </p>
+                </div>
+            </div>
+            <div id="item3" class="carousel-item w-full bg-cover bg-center bg-no-repeat"
+                style="background-image: url('https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp');">
+                <div class="w-2/3 mx-auto mt-auto">
+                    <p class="text-sm leading-none text-gray-500 p-2">lore Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit!
+                    </p>
+                </div>
+            </div>
+
+            <div id="item4" class="carousel-item w-full">
+                <p class="text-sm leading-none text-gray-500 p-2">lore Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit!
+                </p>
+            </div>
+        </div>
+        <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#item1" class="btn btn-xs">1</a>
+            <a href="#item2" class="btn btn-xs">2</a>
+            <a href="#item3" class="btn btn-xs">3</a>
+            <a href="#item4" class="btn btn-xs">4</a>
+        </div>
+    </div>
+
+    </div>
+    <!-- carousel section   end-->
+
+
+
+
+
+
+
+
+    <!-- Top Categories section start  -->
+
+    <div>
+        <div class="py-4">
+            <fieldset class="border-t-2 mx-2 border-gray-600 rounded-xl">
+                <legend class="px-6 text-2xl text-center">TOP CATEGORIES</legend>
+            </fieldset>
+        </div>
+
+        <div class="grid grid-cols-3 md:grid-cols-4 gap-1 mx-2 sm:mx-4">
+            <div class="bg-gray-400 h-40 md:h-60 bg-cover bg-center fit"
+                style="background-image: url('https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');">
+            </div>
+            <div class="bg-gray-400 h-40 md:h-60">
+            </div>
+            <div class="bg-gray-400 h-40 md:h-60">
+            </div>
+            <div class="bg-gray-400 h-40 md:h-60">
+            </div>
+            <div class="bg-gray-400 h-40 md:h-60">
+            </div>
+            <div class="bg-gray-400 h-40 md:h-60">
+            </div>
+            <div class="bg-gray-400 h-40 md:h-60">
+            </div>
+            <div class="bg-gray-400 h-40 md:h-60">
+            </div>
+        </div>
+
+        <div id="msg" class=" flex flex-col items-center border-y-[1px] my-4 py-2">
+            <div class="w-2/3 text-center">
+                <h1 class="text-xl font-semibold pb-2">Do you know how JACKET-POINT got its name?</h1>
+                <p class="text-lg">
+                    The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth, happiness,
+                    loyalty, and long-lasting connections 🌻</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Top Categories section end  -->
+
+
+
+    <!-- <product section start  -->
+    <div id="product-items">
+
+        <div class="py-6">
+            <fieldset class="border-t-2 mx-2 border-gray-600 rounded-xl">
+                <legend class="px-6 text-2xl">NEW ARRIVAL</legend>
+            </fieldset>
+        </div>
+
+        <!-- ✅ Grid Section - Starts Here 👇 -->
+        <article id="container" class="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+            <section id="Projects"
+                class="w-full  grid grid-cols-3 md:grid-cols-4  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+
+
+                <!--   ✅ Product card 1 - Starts Here 👇 -->
+                <div
+                    class="w-full h-fit bg-white shadow-md rounded md:rounded-lg duration-300 hover:scale-[1.03] md:hover:scale-105 hover:shadow-xl">
+                    <a href="#">
+                        <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-44 md:h-60  w-full object-fit rounded-t md:rounded-t-lg" />
+                        <div class="px-4 py-3 w-full">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center w-full">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 1 - Ends Here  -->
+
+
+                <!--   ✅ Product card 1 - Starts Here 👇 -->
+                <div
+                    class="w-full h-fit bg-white shadow-md rounded md:rounded-lg duration-300 hover:scale-[1.03] md:hover:scale-105 hover:shadow-xl">
+                    <a href="#">
+                        <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-44 md:h-60  w-full object-fit rounded-t md:rounded-t-lg" />
+                        <div class="px-4 py-3 w-full">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center w-full">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 1 - Ends Here  -->
+
+
+                <!--   ✅ Product card 1 - Starts Here 👇 -->
+                <div
+                    class="w-full h-fit bg-white shadow-md rounded md:rounded-lg duration-300 hover:scale-[1.03] md:hover:scale-105 hover:shadow-xl">
+                    <a href="#">
+                        <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-44 md:h-60  w-full object-fit rounded-t md:rounded-t-lg" />
+                        <div class="px-4 py-3 w-full">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center w-full">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 1 - Ends Here  -->
+
+
+                <!--   ✅ Product card 1 - Starts Here 👇 -->
+                <div
+                    class="w-full h-fit bg-white shadow-md rounded md:rounded-lg duration-300 hover:scale-[1.03] md:hover:scale-105 hover:shadow-xl">
+                    <a href="#">
+                        <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-44 md:h-60  w-full object-fit rounded-t md:rounded-t-lg" />
+                        <div class="px-4 py-3 w-full">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center w-full">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 1 - Ends Here  -->
+
+
+                <!--   ✅ Product card 1 - Starts Here 👇 -->
+                <div
+                    class="w-full h-fit bg-white shadow-md rounded md:rounded-lg duration-300 hover:scale-[1.03] md:hover:scale-105 hover:shadow-xl">
+                    <a href="#">
+                        <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-44 md:h-60  w-full object-fit rounded-t md:rounded-t-lg" />
+                        <div class="px-4 py-3 w-full">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center w-full">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 1 - Ends Here  -->
+
+
+                <!--   ✅ Product card 1 - Starts Here 👇 -->
+                <div
+                    class="w-full h-fit bg-white shadow-md rounded md:rounded-lg duration-300 hover:scale-[1.03] md:hover:scale-105 hover:shadow-xl">
+                    <a href="#">
+                        <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-44 md:h-60  w-full object-fit rounded-t md:rounded-t-lg" />
+                        <div class="px-4 py-3 w-full">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center w-full">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 1 - Ends Here  -->
+
+
+                <!--   ✅ Product card 1 - Starts Here 👇 -->
+                <div
+                    class="w-full h-fit bg-white shadow-md rounded md:rounded-lg duration-300 hover:scale-[1.03] md:hover:scale-105 hover:shadow-xl">
+                    <a href="#">
+                        <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="h-44 md:h-60  w-full object-fit rounded-t md:rounded-t-lg" />
+                        <div class="px-4 py-3 w-full">
+                            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                            <div class="flex items-center w-full">
+                                <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                                <del>
+                                    <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                                </del>
+                                <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg></div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <!--   🛑 Product card 1 - Ends Here  -->
+
+
+            </section>
+        </article>
+
+        <!-- 🛑 Grid Section - Ends Here -->
+    </div>
+    <!-- <product section end  -->
+
+
+
+
+    <!-- footer start  -->
+    <footer>
+        <div class="flex justify-evenly footer bg-base-200 text-base-content p-10">
+            <nav>
+                <h6 class="footer-title">Services</h6>
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Company</h6>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Legal</h6>
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+            </nav>
+        </div>
+
+        <div class="md:flex md:p-4 bg-base-200 gap-x-4 space-y-1">
+            <div class="md:size-[50%] space-y-1">
+                <div class="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="md:size-[50%] space-y-1">
+                <div class="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                        <p>hello</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="footer bg-neutral text-neutral-content flex items-center justify-between p-4">
+            <aside class="grid-flow-col items-center">
+                <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                    clip-rule="evenodd" class="fill-current">
+                    <path
+                        d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
+                    </path>
+                </svg>
+                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+            </aside>
+            <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                        </path>
+                    </svg>
+                </a>
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                        </path>
+                    </svg>
+                </a>
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                        </path>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </footer>
+    <!-- footer end  -->
+
+</body>
+
+</html>

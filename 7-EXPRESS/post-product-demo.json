@@ -1,0 +1,22 @@
+
+
+{
+    "productId": 101,
+    "title": "Winter Jacket",
+    "session": "winter",
+    "category": "men",
+    "subCategory": "outerwear",
+    "size": ["M", "L", "XL"],
+    "description": "A warm, comfortable winter jacket suitable for extreme cold.",
+    "image": [ "https://picsum.photos/seed/picsum/200/300", "https://picsum.photos/200/300"
+    ],
+    "discount": 20,
+    "price": 120.00,
+    "color": ["black", "gray"],
+    "ratings": 4.5,
+    "brand": "ArcticWear",
+    "quantity": 50
+}
+
+
+
