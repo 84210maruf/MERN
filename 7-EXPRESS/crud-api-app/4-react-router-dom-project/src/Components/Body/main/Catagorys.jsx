@@ -1,13 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import winterFashionImg from '../../../assets/AboutPic.jpg'
 import '../../../App.css'
 import { Link } from 'react-router-dom'
 import { useProductValue } from '../../../StateProvider'
+import axios from 'axios'
 
 
 function Catagorys() {
 
-    const { products, loading, error } = useProductValue();
+    // const { products, loading, error } = useProductValue();
+
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+  
+  
+    const fetchP = async () => {
+      try {
+        const response = await axios.get('/api/products');
+        console.log("Fetched Data:", response.data);
+        setProducts(response.data)
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    }
+  
+    console.log("Hello from products");
+    console.log('products: ',products);
+  
+    useEffect(() => {
+      fetchP();
+    }, []);
 
 
 

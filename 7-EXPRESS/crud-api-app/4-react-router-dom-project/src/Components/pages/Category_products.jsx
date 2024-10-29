@@ -1,23 +1,38 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { useStateValue, useProductValue } from '../../StateProvider';
 import ProductItem from './ProductItem';
+import axios from 'axios';
 
 function Category_products() {
   const { category } = useParams(); // Get category from URL
-  console.log(category);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const { products, loading, error } = useProductValue();
-  console.log(products);
+  const fetchP = async () => {
+    setLoading(true); // Start loading
+    try {
+      const response = await axios.get('/api/products');
+      console.log("Fetched Data:", response.data);
+      setProducts(response.data);
+      setLoading(false); // Stop loading once data is set
+    } catch (err) {
+      console.error("Error fetching products:", err);
+      setError(err); // Set error if request fails
+      setLoading(false); // Stop loading
+    }
+  };
 
-  const product_call_for_fatching = products.find(item => item.category === category);
+  useEffect(() => {
+    fetchP();
+  }, []);
 
   if (loading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   if (error) {
-    return <div>Error loading products: {error.message}</div>
+    return <div>Error loading products: {error.message}</div>;
   }
 
   return (

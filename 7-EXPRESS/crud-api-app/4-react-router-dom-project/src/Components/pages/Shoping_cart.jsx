@@ -35,7 +35,6 @@ function Shoping_cart() {
             <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
               <div className="space-y-6">
 
-
                 <div className="space-y-6">
 
 
@@ -87,7 +86,7 @@ function Shoping_cart() {
                   )}
 
                 </div>
-
+                
               </div>
 
             </div>
