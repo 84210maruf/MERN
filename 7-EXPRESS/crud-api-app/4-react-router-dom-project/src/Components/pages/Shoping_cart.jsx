@@ -55,7 +55,7 @@ function Shoping_cart() {
                         </div>
 
                         <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                          <a href="#" className="text-base font-medium text-gray-900 hover:underline dark:text-white font-semibold">{item.title}</a>
+                          <a href="#" className="text-base font-medium text-gray-900 hover:underline dark:text-white font-semibold">{item.size}</a>
 
                           <div className="flex items-center justify-around font-semibold">
                             <lebel className="font-semibold">Quantity add :</lebel>
