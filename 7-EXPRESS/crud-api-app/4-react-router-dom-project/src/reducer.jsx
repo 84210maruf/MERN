@@ -18,21 +18,21 @@ export const getBasketPriceTotal = (basket) => (basket?.reduce((amount, item) =>
 
 
 export const getItemPriceTotal = (basket, itemId) => {
-    const item = basket.find((item) => item.id === itemId);
+    const item = basket.find((item) => item._id === itemId);
     if (item) {
         return (item.price * item.quantity) || 0; // Return total price for the item, or 0 if not found
     }
     return 0; // Return 0 if the item is not found in the basket
 };
 export const getItemDiscountTotal = (basket, itemId) => {
-    const item = basket.find((item) => item.id === itemId);
+    const item = basket.find((item) => item._id === itemId);
     if (item) {
         return (item.discount * item.quantity) || 0; // Return total price for the item, or 0 if not found
     }
     return 0; // Return 0 if the item is not found in the basket
 };
 export const getItemTotal = (basket, itemId) => {
-    const item = basket.find((item) => item.id === itemId);
+    const item = basket.find((item) => item._id === itemId);
     if (item) {
         const totalPrice = (item.price * item.quantity) - (item.discount * item.quantity);
         return totalPrice; // Return the total price for the item
@@ -49,23 +49,27 @@ const reducer = (state, action) => {
     // eslint-disable-next-line default-case
     switch (action.type) {
 
-        case 'ADD_TO_BASKET':
+        case "ADD_TO_BASKET":
+            const existingIndex = state.basket.findIndex(
+                (item) =>
+                    item._id === action.item._id
+            );
 
-
-            // Check if the item already exists in the basket
-            const itemExists = state.basket.some(item => item.id === action.item.id);
-
-            if (itemExists) {
-                // If the item already exists, return the current state
-                return state;
+            if (existingIndex >= 0) {
+                // Update quantity if item already exists in basket
+                const updatedBasket = [...state.basket];
+                updatedBasket[existingIndex].quantity += 0
+                return {
+                    ...state,
+                    basket: updatedBasket,
+                };
+            } else {
+                // Add new item to basket
+                return {
+                    ...state,
+                    basket: [...state.basket, action.item],
+                };
             }
-
-
-            return {
-                ...state,
-                basket: [...state.basket, action.item]
-
-            };
 
         case 'REMOVE_FROM_BASKET':
             // remove all the same item
@@ -76,7 +80,7 @@ const reducer = (state, action) => {
             }*/
             // remove single item
             const index = state.basket.findIndex((basketItem) =>
-                basketItem.id === action.item.id);
+                basketItem._id === action.item._id);
 
             let newBasket = [...state.basket];
 
@@ -85,7 +89,7 @@ const reducer = (state, action) => {
                 newBasket.splice(index, 1);
             }
             else {
-                console.warn(`Cant remove product (id: ${action.item.id}) as in not in basket`)
+                console.warn(`Cant remove product (id: ${action.item._id}) as in not in basket`)
             }
 
             return {
@@ -110,7 +114,7 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 basket: state.basket.map(item =>
-                    item.id === action.id
+                    item._id === action.id
                         ? { ...item, quantity: item.quantity + 1 } // Increase quantity by 1
                         : item
                 )
@@ -120,7 +124,7 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 basket: state.basket.map(item =>
-                    item.id === action.id
+                    item._id === action.id
                         ? { ...item, quantity: Math.max(1, item.quantity - 1) } // Increase quantity by 1 with Prevent negative quantity
                         : item
                 )

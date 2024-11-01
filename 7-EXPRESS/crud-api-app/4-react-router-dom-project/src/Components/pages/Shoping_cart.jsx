@@ -49,24 +49,27 @@ function Shoping_cart() {
                         <div className="flex items-center justify-around md:order-3 md:justify-end">
 
                           <div className="text-end md:order-4 md:w-32">
-                            <p className="text-base font-bold text-gray-900 dark:text-white">Price : {getItemPriceTotal(basket, item.id)}Tk</p>
-                            <p className="text-sm font-semibold text-orange-500 dark:text-white">Discount : {getItemDiscountTotal(basket, item.id)}Tk</p>
+                            <p className="text-base font-bold text-gray-900 dark:text-white">Total Price : <span className='text-sky-500'>{getItemPriceTotal(basket, item._id)}Tk</span></p>
+                            <p className="text-sm font-semibold text-orange-500 dark:text-white">Total Discount : {getItemDiscountTotal(basket, item._id)}Tk</p>
+                            <p className="text-sm font-bold text-gray-900 dark:text-white">size : <span className='text-sky-500'>{item.size}</span></p>
+                            <p className="text-sm font-bold text-gray-900 dark:text-white">color : <span className='text-sky-500'>{item.color}</span></p>
                           </div>
                         </div>
 
                         <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                          <a href="#" className="text-base font-medium text-gray-900 hover:underline dark:text-white font-semibold">{item.size}</a>
+                          <a href="#" className="text-base font-medium text-gray-900 hover:underline dark:text-white font-semibold">{item.title}[{item._id}]</a>
 
                           <div className="flex items-center justify-around font-semibold">
                             <lebel className="font-semibold">Quantity add :</lebel>
                             <div className="flex items-center">
-                              <button onClick={() => dispatch({ type: 'decrement', id: item.id })} type="button" id="decrement-button" data-input-counter-decrement="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                              <button onClick={() => dispatch({ type: 'decrement', id: item._id })} type="button" id="decrement-button" data-input-counter-decrement="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                                 <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
                                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
                                 </svg>
                               </button>
+                              <p>{item.id}</p>
                               <input type="text" id="counter-input" data-input-counter className="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0 dark:text-white" placeholder="" value={item.quantity} required />
-                              <button onClick={() => dispatch({ type: 'increment', id: item.id })} type="button" id="increment-button" data-input-counter-increment="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                              <button onClick={() => dispatch({ type: 'increment', id: item._id })} type="button" id="increment-button" data-input-counter-increment="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                                 <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
                                 </svg>

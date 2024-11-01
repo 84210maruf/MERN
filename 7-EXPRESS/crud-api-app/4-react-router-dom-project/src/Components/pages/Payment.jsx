@@ -6,7 +6,8 @@ import { getTotal, getItemPriceTotal, getItemDiscountTotal, getBasketDiscountTot
 
 function Payment() {
 
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket,user }, dispatch] = useStateValue();
+  console.log('payment user:', user)
 
   const shipingCost = 60;
 
