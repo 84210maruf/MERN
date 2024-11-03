@@ -1,7 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const Product = require("./models/product.model.js");
+// const Product = require("./models/product.model.js");
 const productRoute = require("./routes/product.route.js");
+const orderRoute = require("./routes/order.route.js");
 const app = express();
 
 // middleware
@@ -10,7 +11,11 @@ app.use(express.urlencoded({extended: false}));
 
 
 // routes
+// products 
 app.use("/api/products", productRoute);
+
+// buyers Detalse
+// app.use("/api/order", orderRoute);
 
 
 
