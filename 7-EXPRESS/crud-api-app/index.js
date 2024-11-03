@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended: false}));
 app.use("/api/products", productRoute);
 
 // buyers Detalse
-// app.use("/api/order", orderRoute);
+app.use("/api/orders", orderRoute);
 
 
 
