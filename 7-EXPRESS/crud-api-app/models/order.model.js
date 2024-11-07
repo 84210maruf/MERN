@@ -14,6 +14,28 @@ const OrderSchema = new mongoose.Schema({
   // address: {
 
   // },
+  address: {
+    // phone: {
+    //   type: String,
+    //   required: true
+    // },
+    // house: {
+    //   type: String,
+    //   required: true
+    // },
+    // street: {
+    //   type: String,
+    //   required: true
+    // },
+    // city: {
+    //   type: String,
+    //   required: true
+    // },
+    // postalCode: {
+    //   type: String,
+    //   required: true
+    // }
+  },
   total: {
     type: Number,
     required: true,

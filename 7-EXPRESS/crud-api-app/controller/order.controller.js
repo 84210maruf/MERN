@@ -3,12 +3,13 @@ const Order = require('../models/order.model.js'); // Assuming Order model is in
 // Create a new order
 exports.createOrder = async (req, res) => {
     try {
-        const { user, basket, shippingCost, total, status = 'Pending' } = req.body;
+        const { user, basket, shippingCost,address, total, status = 'Pending' } = req.body;
 
         const newOrder = new Order({
             user,
             basket,
             shippingCost,
+            address,
             total,
             status
         });

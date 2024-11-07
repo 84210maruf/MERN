@@ -65,7 +65,7 @@ function OrdersTable() {
                     <tr>
                         <th className="border border-gray-300 p-2">Order ID</th>
                         <th className="border border-gray-300 p-2">User Info</th>
-                        <th className="border border-gray-300 p-2">Phone No.</th>
+                        <th className="border border-gray-300 p-2">Address</th>
                         <th className="border border-gray-300 p-2">Product Details</th>
                         <th className="border border-gray-300 p-2">Shipping Cost</th>
                         <th className="border border-gray-300 p-2">Total Price</th>
@@ -82,6 +82,16 @@ function OrdersTable() {
                                 <p>Name: {order.user.name}</p>
                                 <p>Email: {order.user.email}</p>
                             </td>
+
+                            <td className="border border-gray-300 p-2">
+                                <p>Phone: {order.address?.phone || "N/A"}</p>
+                                <p>House: {order.address?.house || "N/A"}</p>
+                                <p>Street: {order.address?.street || "N/A"}</p>
+                                <p>City: {order.address?.city || "N/A"}</p>
+                                <p>Postal Code: {order.address?.postalCode || "N/A"}</p>
+                            </td>
+
+
                             <td className="border border-gray-300 p-2">
                                 {order.basket.length > 0 ? (
                                     <table className="min-w-full border border-gray-200">
@@ -108,7 +118,6 @@ function OrdersTable() {
                             </td>
                             <td className="border border-gray-300 p-2">{order.shippingCost}</td>
                             <td className="border border-gray-300 p-2">{order.total}</td>
-                            <td className="border border-gray-300 p-2">{order.phone}</td>
                             <td className="border border-gray-300 p-2">{order.status}</td>
                             <td className="border border-gray-300 p-2">{new Date(order.orderDate).toLocaleDateString()}</td>
                             <td className="border border-gray-300 p-2 flex flex-wrap justify-around">
