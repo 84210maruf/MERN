@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import Logo from "./../../../assets/Website Logo.png"
+import Logo from "./../../../assets/WebsiteLogo.png"
 import { useStateValue } from "../../../StateProvider";
 import Dropdown from "./Dropdown";
 
@@ -222,7 +222,7 @@ function Header() {
                     </Link></div>
 
                 <div className="mr-[2px]">
-                    <Link to={"/winter"}
+                    <Link to={"/category-session/winter"}
                         className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                         href="#"
                     >
@@ -285,7 +285,7 @@ function Header() {
                 <div className="mr-[2px]">
                     <Link
                         className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
-                        to={"/minaz-dream"}
+                        to={"/category-brand/minasdream"}
                     >
                         <span
                             className="absolute inset-x-0 top-0 h-0 bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"

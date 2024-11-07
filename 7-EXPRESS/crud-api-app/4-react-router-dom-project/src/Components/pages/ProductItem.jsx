@@ -63,13 +63,13 @@ function ProductItem({ item }) {
       </Link>
       <div className="px-4 pt-1 w-full bg-gradient-to-tr from-yellow-300 to-sky-300 rounded-b">
         <p className="text-sm text-black truncate block capitalize">{item.title}</p>
-        <div className="flex items-center w-full mb-1">
-          <p className="text-md font-semibold text-black cursor-auto">{(item.price - item.discount).toFixed(2)} Tk</p>
-          <del>
-            <p className="text-sm text-gray-600 cursor-auto ml-4">Tk{item.price.toFixed()}</p>
-          </del>
+        <div className="flex justify-center w-full mb-1">
+          <p className="text-md font-semibold text-black cursor-auto">{(item.price - item.discount).toFixed()} Tk</p>
           <div className="ml-auto">
-            <span className="text-white mr-1 uppercase text-sm cursor-auto">Brand</span>
+            <del>
+              <p className="text-[12] text-gray-600 cursor-auto ml-4">{item.price.toFixed()}Tk</p>
+            </del>
+            <span className="text-white  uppercase text-[12px] cursor-auto">{item.brand}</span>
           </div>
         </div>
         <div className="flex justify-between">

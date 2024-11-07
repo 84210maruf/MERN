@@ -33,7 +33,7 @@ function Products() {
   }
 
   console.log("Hello from products");
-  console.log('products: ',products);
+  console.log('products: ', products);
 
   useEffect(() => {
     fetchP();
@@ -64,7 +64,7 @@ function Products() {
               .filter(item => item.category === 'men')
               .slice(0, 5) // Get only the first 5 products
               .map(item => (
-                
+
                 <ProductItem key={item.productId} item={item} />
               ))}
 
@@ -119,9 +119,43 @@ function Products() {
         </article>
 
       </div>
+     
+      <div className='mx-2 text-md text-sky-600 font-semibold'>minasdream</div>
+      <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+        <section id="Projects"
+          className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+
+          {products
+            .filter(item => item.brand === 'minasdream')
+            .slice(0, 5) // Get only the first 5 products
+            .map(item => (
+              <ProductItem key={item._id} item={item} />
+            ))}
 
 
-    </div>
+        </section>
+      </article>
+
+      <div className='mx-2 text-md text-sky-600 font-semibold'>Winter Session</div>
+      <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+        <section id="Projects"
+          className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+
+          {products
+            .filter(item => item.session === 'winter')
+            .slice(0, 5) // Get only the first 5 products
+            .map(item => (
+              <ProductItem key={item._id} item={item} />
+            ))}
+
+
+        </section>
+      </article>
+
+ 
+
+
+    </div >
   )
 }
 

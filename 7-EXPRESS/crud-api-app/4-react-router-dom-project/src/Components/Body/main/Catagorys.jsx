@@ -35,6 +35,8 @@ function Catagorys() {
 
 
     const uniqueCategories = [...new Set(products.map(item => item.category))];
+    const uniqueSession = [...new Set(products.map(item => item.session))];
+    const uniqueBrand = [...new Set(products.map(item => item.brand))];
     // console.log(uniqueCategories);
 
     // const [uniqueProducts, setUniqueProducts] = useState(['']);
@@ -64,6 +66,36 @@ function Catagorys() {
                                 backgroundPosition: `center`
                             }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded '>
                                 <h1 className='btn btn-ghost md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest shadow'>{item.category}</h1>
+                            </Link>
+                        </div>
+                    ))
+                }
+                {uniqueSession.map(session =>
+                    products.find(item => item.session === session))
+                    .map(item => (
+                        <div key={item._id}>
+                            <Link to={`/category-session/${item.session}`} style={{
+                                backgroundImage: `url(${item.image[0]})`,
+                                backgroundSize: `cover`,
+                                backgroundRepeat: `no-repeat`,
+                                backgroundPosition: `center`
+                            }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded '>
+                                <h1 className='btn btn-ghost md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest shadow'>{item.session}</h1>
+                            </Link>
+                        </div>
+                    ))
+                }
+                {uniqueBrand.map(brand =>
+                    products.find(item => item.brand === brand))
+                    .map(item => (
+                        <div key={item._id}>
+                            <Link to={`/category-brand/${item.brand}`} style={{
+                                backgroundImage: `url(${item.image[0]})`,
+                                backgroundSize: `cover`,
+                                backgroundRepeat: `no-repeat`,
+                                backgroundPosition: `center`
+                            }} className='flex justify-center items-end h-44 md:h-60  w-full object-fit rounded '>
+                                <h1 className='btn btn-ghost md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest shadow'>{item.brand}</h1>
                             </Link>
                         </div>
                     ))
