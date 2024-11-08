@@ -1,3 +1,219 @@
+// import React, { useEffect, useState } from 'react';
+
+// function OrdersTable() {
+//     const [orders, setOrders] = useState([]);
+//     const [editingOrderId, setEditingOrderId] = useState(null);
+//     const [updatedOrder, setUpdatedOrder] = useState({});
+
+//     // Fetch orders on component mount
+//     useEffect(() => {
+//         fetchOrders();
+//     }, []);
+
+//     const fetchOrders = async () => {
+//         try {
+//             const response = await fetch('/api/orders');
+//             const data = await response.json();
+//             setOrders(data);
+//         } catch (error) {
+//             console.error('Error fetching orders:', error);
+//         }
+//     };
+
+//     const handleEditClick = (order) => {
+//         setEditingOrderId(order._id);
+//         setUpdatedOrder(order); // Set initial state for the selected order
+//     };
+
+//     const handleChange = (e) => {
+//         const { name, value } = e.target;
+//         setUpdatedOrder((prev) => ({
+//             ...prev,
+//             [name]: value,
+//         }));
+//     };
+
+//     const handleAddressChange = (e) => {
+//         const { name, value } = e.target;
+//         setUpdatedOrder((prev) => ({
+//             ...prev,
+//             address: {
+//                 ...prev.address,
+//                 [name]: value,
+//             },
+//         }));
+//     };
+
+//     const saveOrder = async () => {
+//         try {
+//             const response = await fetch(`/api/orders/${editingOrderId}`, {
+//                 method: 'PUT',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                 },
+//                 body: JSON.stringify(updatedOrder),
+//             });
+//             if (response.ok) {
+//                 alert('Order updated successfully');
+//                 fetchOrders(); // Refresh orders
+//                 setEditingOrderId(null); // Exit edit mode
+//             } else {
+//                 console.error('Failed to update order');
+//             }
+//         } catch (error) {
+//             console.error('Error updating order:', error);
+//         }
+//     };
+
+//     return (
+//         <div>
+//             <table className="min-w-full border-collapse border border-gray-200 mt-3">
+//                 <thead>
+//                     <tr>
+//                         <th className="border border-gray-300 p-2">Order ID</th>
+//                         <th className="border border-gray-300 p-2">User Info</th>
+//                         <th className="border border-gray-300 p-2">Address</th>
+//                         <th className="border border-gray-300 p-2">Shipping Cost</th>
+//                         <th className="border border-gray-300 p-2">Total Price</th>
+//                         <th className="border border-gray-300 p-2">Status</th>
+//                         <th className="border border-gray-300 p-2">Date</th>
+//                         <th className="border border-gray-300 p-2">Actions</th>
+//                     </tr>
+//                 </thead>
+//                 <tbody>
+//                     {orders.map((order) => (
+//                         <tr key={order._id} className="bg-white border-b">
+//                             <td className="border border-gray-300 p-2">{order._id}</td>
+//                             <td className="border border-gray-300 p-2">
+//                                 <p>Name: {order.user?.name || 'N/A'}</p>
+//                                 <p>Email: {order.user?.email || 'N/A'}</p>
+//                             </td>
+//                             <td className="border border-gray-300 p-2">
+//                                 {editingOrderId === order._id ? (
+//                                     <>
+//                                         <input
+//                                             type="text"
+//                                             name="phone"
+//                                             value={updatedOrder.address?.phone || ""}
+//                                             onChange={handleAddressChange}
+//                                             placeholder="Phone"
+//                                             className="border p-1 w-full mb-1"
+//                                         />
+//                                         <input
+//                                             type="text"
+//                                             name="house"
+//                                             value={updatedOrder.address?.house || ""}
+//                                             onChange={handleAddressChange}
+//                                             placeholder="House"
+//                                             className="border p-1 w-full mb-1"
+//                                         />
+//                                         <input
+//                                             type="text"
+//                                             name="street"
+//                                             value={updatedOrder.address?.street || ""}
+//                                             onChange={handleAddressChange}
+//                                             placeholder="Street"
+//                                             className="border p-1 w-full mb-1"
+//                                         />
+//                                         <input
+//                                             type="text"
+//                                             name="city"
+//                                             value={updatedOrder.address?.city || ""}
+//                                             onChange={handleAddressChange}
+//                                             placeholder="City"
+//                                             className="border p-1 w-full mb-1"
+//                                         />
+//                                         <input
+//                                             type="text"
+//                                             name="postalCode"
+//                                             value={updatedOrder.address?.postalCode || ""}
+//                                             onChange={handleAddressChange}
+//                                             placeholder="Postal Code"
+//                                             className="border p-1 w-full"
+//                                         />
+//                                     </>
+//                                 ) : (
+//                                     <>
+//                                         <p>Phone: {order.address?.phone || "N/A"}</p>
+//                                         <p>House: {order.address?.house || "N/A"}</p>
+//                                         <p>Street: {order.address?.street || "N/A"}</p>
+//                                         <p>City: {order.address?.city || "N/A"}</p>
+//                                         <p>Postal Code: {order.address?.postalCode || "N/A"}</p>
+//                                     </>
+//                                 )}
+//                             </td>
+//                             <td className="border border-gray-300 p-2">
+//                                 {editingOrderId === order._id ? (
+//                                     <input
+//                                         type="number"
+//                                         name="shippingCost"
+//                                         value={updatedOrder.shippingCost || ""}
+//                                         onChange={handleChange}
+//                                         className="border p-1 w-full"
+//                                     />
+//                                 ) : (
+//                                     order.shippingCost
+//                                 )}
+//                             </td>
+//                             <td className="border border-gray-300 p-2">{order.total}</td>
+//                             <td className="border border-gray-300 p-2">
+//                                 {editingOrderId === order._id ? (
+//                                     <select
+//                                         name="status"
+//                                         value={updatedOrder.status}
+//                                         onChange={handleChange}
+//                                         className="border p-1 w-full"
+//                                     >
+//                                         <option value="Pending">Pending</option>
+//                                         <option value="Processing">Processing</option>
+//                                         <option value="Shipped">Shipped</option>
+//                                         <option value="Delivered">Delivered</option>
+//                                         <option value="Cancelled">Cancelled</option>
+//                                     </select>
+//                                 ) : (
+//                                     order.status
+//                                 )}
+//                             </td>
+//                             <td className="border border-gray-300 p-2">
+//                                 {new Date(order.orderDate).toLocaleDateString()}
+//                             </td>
+//                             <td className="border border-gray-300 p-2 flex gap-2">
+//                                 {editingOrderId === order._id ? (
+//                                     <>
+//                                         <button
+//                                             onClick={saveOrder}
+//                                             className="bg-blue-500 text-white px-2 py-1 rounded"
+//                                         >
+//                                             Save
+//                                         </button>
+//                                         <button
+//                                             onClick={() => setEditingOrderId(null)}
+//                                             className="bg-gray-500 text-white px-2 py-1 rounded"
+//                                         >
+//                                             Cancel
+//                                         </button>
+//                                     </>
+//                                 ) : (
+//                                     <button
+//                                         onClick={() => handleEditClick(order)}
+//                                         className="bg-yellow-500 text-white px-2 py-1 rounded"
+//                                     >
+//                                         Edit
+//                                     </button>
+//                                 )}
+//                             </td>
+//                         </tr>
+//                     ))}
+//                 </tbody>
+//             </table>
+//         </div>
+//     );
+// }
+
+// export default OrdersTable;
+
+
+
 import React, { useEffect, useState } from 'react';
 
 function OrdersTable() {
@@ -79,8 +295,10 @@ function OrdersTable() {
                         <tr key={index} className="bg-white border-b">
                             <td className="border border-gray-300 p-2">{order._id}</td>
                             <td className="border border-gray-300 p-2">
-                                <p>Name: {order.user.name}</p>
-                                <p>Email: {order.user.email}</p>
+                                {/* <p>Name: {order.user.name}</p>
+                                <p>Email: {order.user.email}</p> */}
+                                <p>{order.user ? `Name: ${order.user.name}` : "Name: N/A"}</p>
+                                <p>{order.user ? `Email: ${order.user.email}` : "Email: N/A"}</p>
                             </td>
 
                             <td className="border border-gray-300 p-2">
@@ -143,3 +361,4 @@ function OrdersTable() {
 }
 
 export default OrdersTable;
+

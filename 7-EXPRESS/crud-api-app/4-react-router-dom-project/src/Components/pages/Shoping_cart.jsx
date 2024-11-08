@@ -27,7 +27,7 @@ function Shoping_cart() {
                   <p>gmail : <b>{user.email}</b></p>
                   {/* <button className='btn btn-ghost btn-sm w-full' onClick={handleLogout}>logout</button> */}
                 </>
-              ) : (<p>Loading... or not to signIn</p>)}
+              ) : (<p></p>)}
             </div>
           </div>
 
