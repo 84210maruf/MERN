@@ -8,8 +8,6 @@ import {
 import { StateProvider, ProductProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
 
-import AuthHandler from "./AuthHandler";
-
 import "./App.css";
 import Layout from "./Components/Layout/Layout";
 import Body from "./Components/Body/Body";
@@ -66,7 +64,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer={reducer}>
       <ProductProvider>
-        <AuthHandler /> {/*/AuthHandler to track login state*/}
         <RouterProvider router={router} />
       </ProductProvider>
     </StateProvider>

@@ -297,7 +297,7 @@ function OrdersTable() {
                             <td className="border border-gray-300 p-2">
                                 {/* <p>Name: {order.user.name}</p>
                                 <p>Email: {order.user.email}</p> */}
-                                <p>{order.user ? `Name: ${order.user.name}` : "Name: N/A"}</p>
+                                <p>{order.user ? `UserID: ${order.user.uid}` : "Name: N/A"}</p>
                                 <p>{order.user ? `Email: ${order.user.email}` : "Email: N/A"}</p>
                             </td>
 

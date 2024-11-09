@@ -23,8 +23,8 @@ function Shoping_cart() {
             <div className='text-sm text-sky-500'>
               {user ? (
                 <>
-                  <p>Hallow  <b>{user.name}</b></p>
-                  <p>gmail : <b>{user.email}</b></p>
+                  <p>Hallow  <b>{user.email}</b></p>
+                  {/* <p>gmail : <b>{user.email}</b></p> */}
                   {/* <button className='btn btn-ghost btn-sm w-full' onClick={handleLogout}>logout</button> */}
                 </>
               ) : (<p></p>)}

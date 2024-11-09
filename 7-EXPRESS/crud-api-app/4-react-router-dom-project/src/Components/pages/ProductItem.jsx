@@ -89,6 +89,7 @@ function ProductItem({ item }) {
         </div>
       </div>
     </div>
+    
   );
 }
 

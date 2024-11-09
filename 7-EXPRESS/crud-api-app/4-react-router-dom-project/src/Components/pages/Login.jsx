@@ -4,8 +4,10 @@ import { auth } from '../../firebase'; // Adjust the path as necessary
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useStateValue } from '../../StateProvider';
 
 function Login() {
+    const [{ user }, dispatch] = useStateValue();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
@@ -16,17 +18,35 @@ function Login() {
         setLoading(true);
 
         try {
-            await signInWithEmailAndPassword(auth, email, password);
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+            
+            // Dispatching full user data if needed
+            dispatch({
+                type: "SET_USER",
+                user: {
+                    email: user.email,
+                    uid: user.uid,
+                    // Add other user info as needed
+                },
+            });
+
             toast.success('Login successful!', {
                 position: 'top-center',
             });
 
             setTimeout(() => {
                 navigate('/shoping-cart');
-            }, 3000); // Redirect to your dashboard or home page
+            }, 3000);
 
         } catch (error) {
-            toast.error(error.message, {
+            let errorMessage = error.message;
+            if (error.code === 'auth/user-not-found') {
+                errorMessage = 'No account found with this email';
+            } else if (error.code === 'auth/wrong-password') {
+                errorMessage = 'Incorrect password';
+            }
+            toast.error(errorMessage, {
                 position: 'bottom-center',
             });
         } finally {

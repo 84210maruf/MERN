@@ -1,0 +1,50 @@
+[
+    {
+        "_id": 1,
+        "title": "Premium Men Jacket",
+        "collection": "winter",
+        "category": "men",
+        "subCategory": "Men shirt",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+        "image": "/men_jacket_2.jpg",
+        "discount": 110,
+        "price": 739.99,
+        "color": [
+            "Olive",
+            "Poweder Blue"
+        ],
+        "ratings": 4.5,
+        "brand": "Millennial"
+    },
+    {
+        "_id": 2,
+        "title": "Premium Bomber Jacket",
+        "collection": "winter",
+        "category": "women",
+        "subCategory": "pant",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+        "image": "/women_jacket_1.jpg",
+        "discount": 110,
+        "price": 739.99,
+        "color": [
+            "Olive",
+            "Poweder Blue"
+        ],
+        "ratings": 4.5,
+        "brand": "Millenium"
+    }
+]

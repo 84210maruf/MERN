@@ -2,7 +2,8 @@
 export const initialState = {
 
     basket: [],
-    user: {name:"maruf",email:"m@gmail.com",phone:"01321747121"}
+    // user: {name:"maruf",email:"m@gmail.com",phone:"01321747121"}
+    user: null
 };
 // Selector
 // export const getTotal = (basket) => (basket?.reduce((amount, item) => (item.price + amount) - item.discount, 0));

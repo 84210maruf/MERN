@@ -47,7 +47,7 @@ function Carousel_div() {
     return (
         <div>
             {/* Carousel */}
-            <div className="carousel w-full h-72 md:h-80 overflow-hidden relative">
+            <div className="carousel w-full h-72 md:h-96 overflow-hidden relative">
                 {images.map((image, index) => (
                     <div
                         key={index}
