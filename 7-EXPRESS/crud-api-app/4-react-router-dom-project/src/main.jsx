@@ -27,6 +27,11 @@ import Payment from "./Components/pages/Payment";
 import Thankyou from "./Components/pages/Thankyou";
 import Dashboard from "./Components/Dashboard";
 import NotFound from "./Components/pages/NotFound";
+import FAQs from "./Components/pages/FAQs"
+import SizeGuide from "./Components/pages/SizeGuide";
+import Shipping_and_Delivery from "./Components/pages/Shipping_and_Delivery";
+import PrivacyPolicy from "./Components/pages/PrivacyPolicy";
+import ReturnPolicy from "./Components/pages/ReturnPolicy";
 
 
 
@@ -50,6 +55,12 @@ const router = createBrowserRouter([
       { path: "/about-us", element: <AboutUs /> }, // Route "/about-us"
       { path: "/contact-us", element: <ContactUs /> }, // Route "/contact-us"
       { path: "/branding", element: <Branding_company /> }, // Route "/branding"
+      { path: "/FAQs", element: <FAQs /> }, // Route "/FAQs"
+      { path: "/size-guide", element: <SizeGuide /> }, // Route "/Size Guide"
+      { path: "/Shipping_and_Delivery", element: <Shipping_and_Delivery /> }, // Route "/Shipping & Delivery"
+      { path: "/privacy-policy", element: <PrivacyPolicy /> }, // Route "/Privacy Policy"
+      { path: "/return-policy", element: <ReturnPolicy /> }, // Route "/Return Policy"
+
    
       
       

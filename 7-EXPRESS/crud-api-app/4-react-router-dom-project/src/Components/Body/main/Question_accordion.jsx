@@ -3,9 +3,8 @@ import React from 'react'
 function Question_accordion() {
     return (
         <div>
-
-            <div className="md:flex md:p-4 gap-x-4 space-y-1 bg-sky-50 text-gray-500">
-                <div className="md:size-[50%] space-y-1">
+            <div className="md:flex md:p-4 gap-x-4 space-y-1 bg-customBg bg-opacity-40 text-gray-500">
+                <div className="w-full md:w-[50%] lg:w-[50%] space-y-1 ">
                     <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
                         <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
                         <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
@@ -34,10 +33,12 @@ function Question_accordion() {
                         </div>
                     </div>
                 </div>
+                
+                {/* Youtube Video Frame  */}
 
-                <div className="hidden md:flex bg-base-100 image-full size-[50%]  shadow-xl pt-0 mt-0">
+                <div className="hidden md:flex bg-base-100 image-full size-[50%] shadow-xl pt-0 mt-0">
                     <iframe width="100%" height="330" src="https://www.youtube.com/embed/sSLPytgnlbM?si=VvWRt7VyYkgzNz6q=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/sSLPytgnlbM?si=VvWRt7VyYkgzNz6q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
+                   
                 </div>
             </div>
 

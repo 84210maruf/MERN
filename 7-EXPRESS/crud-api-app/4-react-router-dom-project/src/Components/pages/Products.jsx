@@ -45,11 +45,11 @@ function Products() {
 
   return (
 
-    <div className='bg-sky-50'>
+    <div className='bg-customBg'>
 
       <div className="py-2">
         <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
-          <legend className="px-6 text-2xl text-center">Collections</legend>
+          <legend className="px-6 text-2xl text-center">Our Collections</legend>
         </fieldset>
       </div>
 

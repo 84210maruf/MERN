@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../../StateProvider';
-import demoImg from './../../assets/slide4.jpg'; // You might want to use this as a placeholder
+import demoImg from './../../assets/Banner1.jpg'; // You might want to use this as a placeholder
 
 function ProductItem({ item }) {
 
