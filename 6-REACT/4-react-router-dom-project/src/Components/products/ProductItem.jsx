@@ -6,40 +6,7 @@ const ProductItem = ({ item }) => {
   const { category } = useParams();
   const { user, createUser, state, dispatch } = useStateValue();  // Destructuring `basket` and `user` directly
   const { basket } = state;  // Access `basket` from `state`
-  // const {
-  //   _id = '',
-  //   title = 'No title available',
-  //   image = ['demoImg'],
-  //   price = 0,
-  //   discount = 0,
-  //   description = 'No description available'
-  // } = item;
 
-  // Load basket from local storage on initial mount
-  // useEffect(() => {
-  //   const savedBasket = JSON.parse(localStorage.getItem('basket')) || [];
-  //   if (savedBasket.length > 0) {
-  //     dispatch({
-  //       type: 'SET_BASKET',
-  //       basket: savedBasket,
-  //     });
-  //   }
-  // }, [dispatch]);
-
-  // const addToBasket = () => {
-  //   // Retrieve the current basket from local storage
-  //   const savedBasket = JSON.parse(localStorage.getItem('basket')) || [];
-  //   const updatedBasket = [...savedBasket, { ...item, quantity: 1 }];
-
-  //   // Dispatch to add to the basket state
-  //   dispatch({
-  //     type: "ADD_TO_BASKET",
-  //     item: { ...item, quantity: 1 }
-  //   });
-
-  //   // Save updated basket to local storage
-  //   localStorage.setItem('basket', JSON.stringify(updatedBasket));
-  // };
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",
@@ -56,22 +23,6 @@ const ProductItem = ({ item }) => {
       },
     });
   };
-  // Sync local storage whenever the basket state changes
-  // const addToBasket = () => {
-  //   const newItem = { ...item, quantity: 1 };
-
-  //   // Save updated basket to local storage
-  //   const updatedBasket = [...basket, newItem];
-  //   dispatch({
-  //     type: "ADD_TO_BASKET",
-  //     item: newItem,
-  //   });
-  //   localStorage.setItem('basket', JSON.stringify(updatedBasket));
-  // };
-  // Sync local storage whenever the basket state changes
-  // useEffect(() => {
-  //   localStorage.setItem('basket', JSON.stringify(basket));
-  // }, [basket]);
 
   return (
     <div className="product-item border-2 border-customBg-800 rounded-md text-center">     

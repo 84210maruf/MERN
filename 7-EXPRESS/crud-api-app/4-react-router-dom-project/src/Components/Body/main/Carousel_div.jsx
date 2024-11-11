@@ -45,30 +45,33 @@ function Carousel_div() {
     };
 
     return (
-        <div>
-            {/* Carousel */}
-            <div className="carousel w-full h-72 md:h-96 overflow-hidden relative">
-                {images.map((image, index) => (
-                    <div
-                        key={index}
-                        className={`carousel-item absolute inset-0 w-full h-full transition-opacity duration-700 ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
-                    >
-                        <img src={image} className="w-full h-full object-fill" alt={`Slide ${index + 1}`} />
+        <div className="bg-[#bae9f3] bg-opacity-90 ">
+            <div className="w-[90%] mx-auto relative overflow-hidden rounded-md">
+                <div className="w-full pt-[56.25%] relative md:h-[420px] lg:h-[600px]">
+                    {images.map((image, index) => (
+                        <div
+                            key={index}
+                            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                        >
+                            <img
+                                src={image}
+                                className="w-full h-full object-fit mx-auto"
+                                alt={`Slide ${index + 1}`}
+                            />
+                        </div>
+                    ))}
+                    
+                    {/* Navigation Indicators */}
+                    <div className="absolute bottom-10 lg:bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {images.map((_, index) => (
+                            <div
+                                key={index}
+                                onClick={() => setCurrentIndex(index)}
+                                className={`w-5 md:w-7 lg:w-10 h-2 md:h-4 lg:h-6 border-solid border-2 border-customBg-800 rounded-full cursor-pointer transition duration-300 ${index === currentIndex ? 'bg-customBg-500 scale-125' : 'bg-transparen'}`}
+                            ></div>
+                        ))}
                     </div>
-                ))}
-            </div>
-
-            {/* Navigation Buttons */}
-            <div className="flex w-full justify-center gap-4 pb-2">
-                {images.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={`btn btn-xs ${index === currentIndex ? 'bg-sky-500' : 'bg-sky-100'} shadow-md`}
-                    >
-                        {index + 1}
-                    </button>
-                ))}
+                </div>
             </div>
         </div>
     );
