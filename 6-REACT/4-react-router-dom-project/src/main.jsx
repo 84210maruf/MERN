@@ -33,7 +33,7 @@ import SizeGuide from "./Components/pages/SizeGuide";
 import Shipping_and_Delivery from "./Components/pages/Shipping_and_Delivery";
 import Collections from "./Components/products/Collections";
 import Results from "./Components/pages/Results";
-// import AuthHandler from "./AuthHandler";
+
 
 
 const router = createBrowserRouter([

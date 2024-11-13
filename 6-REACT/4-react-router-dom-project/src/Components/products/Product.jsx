@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { useProductValue } from '../../StateProvider'; // For fetching products
-import { useStateValue } from '../../StateProvider'; // For managing basket
+import { useProductValue, useStateValue } from '../../StateProvider'; // For fetching products
+// import { useStateValue } from '../../StateProvider'; // For managing basket
 
 function Product() {
   const { id } = useParams(); // Get the product ID from the URL

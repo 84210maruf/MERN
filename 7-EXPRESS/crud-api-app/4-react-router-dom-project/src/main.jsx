@@ -32,6 +32,7 @@ import SizeGuide from "./Components/pages/SizeGuide";
 import Shipping_and_Delivery from "./Components/pages/Shipping_and_Delivery";
 import PrivacyPolicy from "./Components/pages/PrivacyPolicy";
 import ReturnPolicy from "./Components/pages/ReturnPolicy";
+import Results from "./Components/pages/Results";
 
 
 
@@ -60,6 +61,7 @@ const router = createBrowserRouter([
       { path: "/Shipping_and_Delivery", element: <Shipping_and_Delivery /> }, // Route "/Shipping & Delivery"
       { path: "/privacy-policy", element: <PrivacyPolicy /> }, // Route "/Privacy Policy"
       { path: "/return-policy", element: <ReturnPolicy /> }, // Route "/Return Policy"
+      { path: "/results", element: <Results /> }, // Route "/results Show results"
 
    
       
