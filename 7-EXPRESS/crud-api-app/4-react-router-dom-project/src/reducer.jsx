@@ -59,7 +59,7 @@ const reducer = (state, action) => {
             if (existingIndex >= 0) {
                 // Update quantity if item already exists in basket
                 const updatedBasket = [...state.basket];
-                updatedBasket[existingIndex].quantity += 0
+                // updatedBasket[existingIndex].quantity += 0
                 return {
                     ...state,
                     basket: updatedBasket,

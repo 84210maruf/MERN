@@ -149,7 +149,7 @@
 
 
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
 import { useStateValue } from '../../StateProvider';
@@ -238,22 +238,75 @@ const Payment = () => {
 
 // Basket Items List Component
 const BasketItemsList = ({ basket, dispatch }) => (
-  <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
-    <h1 className="text-center text-lg font-bold">Your order list</h1>
+  <div className="space-y-6 p-4 bg-gray-100 dark:bg-gray-900">
     {basket.map((item) => (
-      <div key={item._id} className="rounded-lg border border-gray-200 bg-white p-2 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-4">
-        <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
-          <a href="#" className="shrink-0 md:order-1">
-            <img className="h-20 w-20 dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg" alt="product" />
-          </a>
-          <div className="flex items-center justify-between md:order-3 md:justify-end overflow-hidden">
-            <QuantityControls item={item} dispatch={dispatch} />
-            <PriceSummary item={item} basket={basket} />
+      <div
+        key={item._id}
+        className="rounded-lg border border-gray-200 bg-white shadow-lg p-6 transition hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
+      >
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:items-center">
+
+          {/* Item Image */}
+          <Link to={`/product/${item._id}`} className="flex justify-center md:justify-start">
+            <img
+              className="h-32 w-32 rounded-md object-cover border border-gray-300 dark:border-gray-600"
+              src={item.image[0]}
+              alt={item.title}
+            />
+          </Link>
+
+          {/* Item Info */}
+          <div className="space-y-2 text-center md:text-left">
+            <Link
+              to={`/product/${item._id}`}
+              className="text-lg font-semibold text-gray-900 hover:text-sky-500 dark:text-white"
+            >
+              {item.title}
+            </Link>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Size: <span className="text-gray-900 dark:text-sky-400">{item.size}</span></p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Color: <span className="text-gray-900 dark:text-sky-400">{item.color}</span></p>
           </div>
-        </div>
-        <div className="text-center border-t pt-1">
-          <h1 className="text-sm font-semibold">{item.title}</h1>
-          <p className="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+          {/* Pricing and Actions */}
+          <div className="flex flex-col items-center md:items-end space-y-2">
+            <p className="text-base font-bold text-gray-900 dark:text-white">
+              Price: <span className="text-sky-500">{getItemPriceTotal(basket, item._id)} Tk</span>
+            </p>
+            <p className="text-sm font-medium text-orange-500 dark:text-orange-300">
+              Discount: {getItemDiscountTotal(basket, item._id)} Tk
+            </p>
+
+            <div className="flex items-center space-x-2">
+              {/* Decrement Button */}
+              <button
+                onClick={() => dispatch({ type: 'decrement', id: item._id })}
+                className="flex items-center justify-center h-8 w-8 rounded-md border border-gray-300 bg-gray-100 text-gray-900 hover:bg-gray-200 focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+              >
+                -
+              </button>
+
+              {/* Quantity Display */}
+              <span className="px-3 py-1 text-gray-900 bg-gray-100 rounded-md border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                {item.quantity}
+              </span>
+
+              {/* Increment Button */}
+              <button
+                onClick={() => dispatch({ type: 'increment', id: item._id })}
+                className="flex items-center justify-center h-8 w-8 rounded-md border border-gray-300 bg-gray-100 text-gray-900 hover:bg-gray-200 focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+              >
+                +
+              </button>
+            </div>
+
+            {/* Remove Button */}
+            <button
+              onClick={() => dispatch({ type: 'REMOVE_FROM_BASKET', item })}
+              className="mt-3 text-sm font-medium text-red-500 hover:underline dark:text-red-400"
+            >
+              Remove
+            </button>
+          </div>
         </div>
       </div>
     ))}

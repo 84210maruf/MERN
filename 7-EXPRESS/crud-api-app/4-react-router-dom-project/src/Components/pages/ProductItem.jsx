@@ -11,6 +11,8 @@ function ProductItem({ item }) {
 
   const [, dispatch] = useStateValue();
 
+  const [isDisabled, setIsDisabled] = useState(false);
+
 
   const addToBasket = () => {
     dispatch({
@@ -27,6 +29,7 @@ function ProductItem({ item }) {
         color: item.color[0],
       },
     });
+    setIsDisabled(true); // Disable the button after clicking
   };
 
   return (
@@ -66,17 +69,20 @@ function ProductItem({ item }) {
     //     </div>
     //   </div>
     // </div>
-    <div className="product-item border-2 border-customBg-800 rounded-md text-center">     
+    <div className="product-item border-2 border-customBg-800 rounded-md text-center">
 
       <Link to={`/product/${item._id}`}>
         <img src={item.image[1] || demoImg} alt={item.title} className="product-image" />
         <h2>{item.title}</h2>
         <p>{item.price} Tk</p>
       </Link>
-      
-      <button onClick={addToBasket}>Add to Basket !!</button>
+
+      <button onClick={addToBasket} style={{ color: isDisabled ? "gray" : "black" }} aria-label="Add to Basket">
+        {isDisabled? 'Added in Basket' : 'Add to Basket'} <span role="img" aria-hidden="true">🛒</span>
+      </button>
+
     </div>
-    
+
   );
 }
 
