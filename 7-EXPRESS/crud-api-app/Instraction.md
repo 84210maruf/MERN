@@ -16,4 +16,7 @@
 9. now adding MongoDB with mogodb.com/atlas [Username:"maruf84210cse" password:"OgrBCtALnAhJOhEd" importent]
 
 10. 'npm install mongodb' and 'npm i mongoose'
-11. 
+11. npm install contcurrently
+
+    "client": "npm run dev --prefix 4-react-router-dom-project",
+    "dev": "concurrently \"npm start\"\"npm run client\""
