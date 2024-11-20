@@ -7,7 +7,7 @@ import reducer, { initialState } from "./reducer";
 import "./App.css"
 import Layout from "./Components/Layout/Layout";
 import Body from "./Components/Body/Body";
-import Products from "./Components/products/Products";
+// import Products from "./Components/products/Products";
 import Product from "./Components/products/Product"
 import Shoping_cart from "./Components/pages/Shoping_cart";
 import Whish_list from "./Components/pages/Whish_list";
@@ -43,7 +43,8 @@ const router = createBrowserRouter([
     element: <Layout />, // Apply Layout globally
     children: [
       { path: "/", element: <Body /> },  // Main route ("/") uses <Body />
-      { path: "/products", element: <Products /> }, // Route "/products"
+      // { path: "/products", element: <Products /> }, // Route "/products"
+      // { path: "/products", element: <Collections /> }, // Route "/products"
       { path: "/results", element: <Results /> }, // Route "/results Show results"
       { path: "/collections", element: <Collections /> }, // Route "/products"
       { path: "/category-products/:category", element: <Category_products /> }, // Route "/category-products"
@@ -163,16 +164,18 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ProductProvider>
-      {/* StateProvider provide busket universally */}
-      <StateProvider initialState={initialState} reducer={reducer} >
+
+    {/* StateProvider provide busket universally */}
+    <StateProvider initialState={initialState} reducer={reducer} >
+      <ProductProvider>
         {/* <AuthHandler /> AuthHandler to track login state */}
         {/* Provide product univarsally */}
 
 
         <RouterProvider router={router} />
 
-      </StateProvider>
-    </ProductProvider>
+
+      </ProductProvider>
+    </StateProvider>
   </React.StrictMode>
 );

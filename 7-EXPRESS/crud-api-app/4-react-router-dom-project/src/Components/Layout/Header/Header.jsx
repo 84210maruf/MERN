@@ -318,7 +318,9 @@ import Dropdown from "./Dropdown";
 
 
 function Header() {
-    const { user, logOut } = useContext(StateContext);
+    // const { user, logOut } = useContext(StateContext);
+    const [{user}, dispatch ] = useStateValue()
+
     const navigate = useNavigate();
     // Get products from ProductContext
     const { products } = useProductValue();

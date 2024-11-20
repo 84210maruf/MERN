@@ -9,9 +9,16 @@ function ProductItem({ item }) {
     return <div>Product not found.</div>;
   }
 
-  const [, dispatch] = useStateValue();
+  const [{basket}, dispatch] = useStateValue();
 
-  const [isDisabled, setIsDisabled] = useState(false);
+  // const [isDisabled, setIsDisabled] = useState(false);
+  const [isAdded, setIsAdded] = useState(false);
+
+  // Check if the item is already in the basket
+  useEffect(() => {
+    const isInCart = basket.some((basketItem) => basketItem._id === item._id);
+    setIsAdded(isInCart);
+  }, [basket, item._id]);
 
 
   const addToBasket = () => {
@@ -29,8 +36,21 @@ function ProductItem({ item }) {
         color: item.color[0],
       },
     });
-    setIsDisabled(true); // Disable the button after clicking
+    // setIsDisabled(true); // Disable the button after clicking
   };
+
+  // Facebook Pixel "Add to Cart" Event Tracking
+  if (window.fbq) {
+    window.fbq('track', 'AddToCart', {
+      content_name: item.title,
+      content_ids: [item._id],
+      content_type: 'product',
+      value: item.price,
+      currency: 'BDT', // Change the currency if needed (e.g., 'USD')
+    });
+    setIsAdded(true); // Update button state to indicate it's added
+  }
+
 
   return (
     // <div className="w-full h-fit shadow-md duration-300 hover:scale-[1.02] md:hover:scale-105 hover:shadow-xl rounded">
@@ -69,18 +89,36 @@ function ProductItem({ item }) {
     //     </div>
     //   </div>
     // </div>
-    <div className="product-item border-2 border-customBg-800 rounded-md text-center">
-
+    <div className="product-item w-[200px] h-[320px] border-2 bg-customBg-300 border-customBg-800 rounded-md text-center font-normal relative group overflow-hidden">
       <Link to={`/product/${item._id}`}>
-        <img src={item.image[1] || demoImg} alt={item.title} className="product-image" />
-        <h2>{item.title}</h2>
-        <p>{item.price} Tk</p>
+        <div className="w-[auto] h-[auto]">
+          <img
+            src={item.image[0]}
+            alt={item.title}
+            className="product-image object-cover rounded-t-md"
+          />
+        </div>
+        <div className="p-[1px] w-full">
+          <h2 className="text-sm font-semibold text-customBg-900">{item.title}</h2>
+          <p className="text-sm font-medium text-gray-700">
+            Price Only <span className="font-bold">{item.price}</span> Tk
+          </p>
+        </div>
       </Link>
 
-      <button onClick={addToBasket} style={{ color: isDisabled ? "gray" : "black" }} aria-label="Add to Basket">
-        {isDisabled? 'Added in Basket' : 'Add to Basket'} <span role="img" aria-hidden="true">🛒</span>
+      {/* Add to Cart Button */}
+      <button
+        onClick={addToBasket}
+        disabled={isAdded} // Disable if already added
+        className={`${isAdded ? 'bg-green-600 cursor-not-allowed' : 'bg-[#e49b0f]'
+          } text-white rounded-md absolute bottom-2 left-1/2 
+        transform -translate-x-1/2 w-[90%] font-semibold py-1 
+        opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out 
+        focus:outline-none focus:ring-2 focus:ring-offset-2 ${isAdded ? 'hover:bg-green-700' : 'hover:bg-customBg-900'
+          }`}
+      >
+        {isAdded ? 'In Cart' : 'Add to Cart'}
       </button>
-
     </div>
 
   );

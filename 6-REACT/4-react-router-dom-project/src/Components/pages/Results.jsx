@@ -16,7 +16,7 @@ const Results = () => {
 
         dispatch({
             type: "ADD_TO_BASKET",
-            item: products
+            item: product
         });
     }
     return (

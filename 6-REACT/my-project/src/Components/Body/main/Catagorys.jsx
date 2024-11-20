@@ -7,7 +7,16 @@ import { useProductValue } from '../../../StateProvider'
 function Catagorys() {
 
     const { products, loading, error } = useProductValue();
-
+    // Handling loading and error state
+    if (loading) {
+        return <div className="text-center py-8">Loading...</div>;
+    }
+    if (error) {
+        return <div className="text-center py-8 text-red-500">Failed to load data</div>;
+    }
+    if (!products || products.length === 0) {
+        return <div className="text-center py-8 text-gray-500">No products available</div>;
+    }
     // Get unique categories from products
 
     const uniqueCategories = [...new Set(products.map(item => item.category))];
@@ -26,7 +35,9 @@ function Catagorys() {
                 </fieldset>
             </div>
 
-            <div className=" w-[auto] h-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-2 lg:gap-5 mx-4 md:mx-8 lg:mx-16 relative ">
+            <div className="w-auto h-full grid grid-cols-2 grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-2 lg:gap-5 mx-4 md:mx-8 lg:mx-16 justify-center">
+
+
 
                 {uniqueCategories.map((category, index) => {
                     // Find the first product for each category to get the image
@@ -44,10 +55,9 @@ function Catagorys() {
                                     backgroundPosition: `center`
                                 }}
                             >
-                                <div className="absolute bottom-0 w-full bg-opacity-50 flex justify-center items-center">
-                                    <h1 className='btn btn-ghost md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest '>
-                                        {category}
-                                    </h1>
+                                <div className=" absolute bottom-0 w-full flex justify-center items-center">
+
+                                    <button className="btn btn-sm bg-customBg-900 bg-opacity-15 tracking-wide md:tracking-widest text-customBg-900 font-bold animate-bounce tracking-widest ">{category}</button>
                                 </div>
                             </Link>
                         </div>
@@ -57,10 +67,10 @@ function Catagorys() {
 
             <div className=" flex flex-col items-center border-y-[1px] py-3 ">
                 <div className="w-2/3 text-center">
-                    <h1 className="text-lg font-semibold pb-2 ">Do you know how JACKET-POINT got its name?</h1>
+                    <h1 className="text-lg font-semibold pb-2 ">Do you know how “Millennial Clothing” got its name?</h1>
                     <p className="font-light">
-                        The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth, happiness,
-                        loyalty, and long-lasting connections 🌻</p>
+                        The name "Millennial Clothing" reflects our commitment to a generation that values style, individuality, and quality.
+                    </p>
                 </div>
             </div>
         </div>

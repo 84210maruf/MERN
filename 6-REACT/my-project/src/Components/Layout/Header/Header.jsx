@@ -107,25 +107,6 @@ function Header() {
     };
 
 
-    // useEffect(() => {
-    //     if (!user) {
-    //         toast.info("Please Login to access full features & discounts!", {
-    //             position: "top-right",
-    //             autoClose: 2500,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "customBg",
-    //             style: {
-    //                 backgroundColor: "#bae9f3",  // Dark blue background
-    //                 color: "#12323a"  // White text color
-    //             }
-
-    //         });
-    //     }
-    // }, [user]);
     return (
         <>
             <style>
@@ -175,10 +156,10 @@ function Header() {
                             >
                                 <Link to="/" className="text-lg font-semibold mx-auto py-2">Home</Link>
                                 <li className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300">
-                                    <Link to="/products" className="mb-1 bg-gray-50 hover:bg-gray-100 p-2 rounded cursor-pointer shadow-sm">Collections</Link>
+                                    <Link to="/collections" className="mb-1 bg-gray-50 hover:bg-gray-100 p-2 rounded cursor-pointer shadow-sm">Collections</Link>
                                 </li>
                                 <li className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300">
-                                    <Link to="/category-products/winter" className="mb-1 bg-gray-50 hover:bg-gray-100 p-2 rounded cursor-pointer shadow-sm">Winter</Link>
+                                    <Link to="/winter" className="mb-1 bg-gray-50 hover:bg-gray-100 p-2 rounded cursor-pointer shadow-sm">Winter</Link>
                                 </li>
                                 <li className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300">
                                     <details className="mb-1">
@@ -485,42 +466,7 @@ function Header() {
 
                                 {
                                     !user && <Link onClick={handleLogOut} className="flex items-center pl-3 no-underline hover:text-black" to={"/login"}>
-                                        {/*
-                                 <svg
-                                    className="mr-1 w-9 h-7"
-                                    version="1.1"
-                                    id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                                    x="0px"
-                                    y="0px"
-                                    viewBox="0 0 512 512"
-                                    xmlSpace="preserve"
-                                >
-                                    <g>
-                                        <g>
-                                            <g>
-                                               
-                                                <path
-                                                    // fill="#1E3050"
-                                                    fill="#ef4444"
-                                                    d="M403.4,248.4L272.2,381.2c-19.7,19.9-53.6,6-53.6-22V290H87c-15.9,0-28.8-12.9-28.8-28.8v-69.6
-				c0-15.9,12.9-28.8,28.8-28.8h131.6V93.6c0-28,33.9-41.9,53.6-22l131.2,132.8C415.4,216.6,415.4,236.2,403.4,248.4z"
-                                                />
-                                                
-                                                <path
-                                                    fill="#ef4444"
-                                                    d="M571.8,93.9v265c0,50.7-41.1,91.9-91.9,91.9h-71.4c-17.2,0-31.1-13.9-31.1-31.1l0,0
-				c0-17.2,13.9-31.1,31.1-31.1h62.3c21.4,0,38.8-17.4,38.8-38.8V103c0-21.4-17.4-38.8-38.8-38.8h-62.3c-17.2,0-31.1-13.9-31.1-31.1
-				l0,0c0-17.2,13.9-31.1,31.1-31.1h71.4C530.7,2,571.8,43.2,571.8,93.9z"
-                                                />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                                 */}
-
-
+                                       
                                         <svg
                                             className="mr-1 w-9 h-7"
                                             version="1.1"
@@ -564,7 +510,7 @@ function Header() {
                             </span>
                         </Link></div>
                     <div className="mr-[2px]">
-                        <Link to={"/products"}
+                        <Link to={"/collections"}
                             className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                             href="#"
                         >
@@ -580,7 +526,7 @@ function Header() {
                         </Link></div>
 
                     <div className="mr-[2px]">
-                        <Link to={"/category-products/winter"}
+                        <Link to={"/winter"}
                             className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                             href="#"
                         >

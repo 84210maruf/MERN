@@ -1,7 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 function Thankyou() {
+    // const location = useLocation();
+
+    // useEffect(() => {
+    //     const params = new URLSearchParams(location.search);
+    //     if (params.get('reload') === 'true') {
+    //         window.location.replace('/'); // Replace to remove the reload query parameter
+    //     }
+    // }, [location]);
     return (
 
         <div >

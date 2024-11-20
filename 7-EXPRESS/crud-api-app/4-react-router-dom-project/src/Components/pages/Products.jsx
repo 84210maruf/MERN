@@ -65,7 +65,7 @@ function Products() {
               .slice(0, 5) // Get only the first 5 products
               .map(item => (
 
-                <ProductItem key={item.productId} item={item} />
+                <ProductItem key={item._id} item={item} />
               ))}
 
           </section>

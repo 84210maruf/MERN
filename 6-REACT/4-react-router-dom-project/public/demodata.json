@@ -5,6 +5,7 @@
         "collection": "winter",
         "category": "Men",
         "subCategory": "NewArrival",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -35,6 +36,7 @@
         "collection": "winter",
         "category": "Women",
         "subCategory": "NewArrival",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -65,6 +67,7 @@
         "collection": "winter",
         "category": "Men",
         "subCategory": "NewArrival",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -95,6 +98,7 @@
         "collection": "winter",
         "category": "Men",
         "subCategory": "NewArrival",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -125,6 +129,7 @@
         "collection": "winter",
         "category": "Men",
         "subCategory": "NewArrival",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -155,6 +160,7 @@
         "collection": "winter",
         "category": "Men",
         "subCategory": "NewArrival",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -185,6 +191,7 @@
         "collection": "winter",
         "category": "Women",
         "subCategory": "NewArrival",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -215,6 +222,7 @@
         "collection": "Dell 2024  New arrival",
         "category": "kids",
         "subCategory": "BestSelling",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -246,6 +254,7 @@
         "collection": "Dell 2024  New arrival",
         "category": "Mina's Dream",
         "subCategory": "NewArrival",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -277,6 +286,7 @@
         "collection": "Dell 2024  New arrival",
         "category": "Winter",
         "subCategory": "BestSelling",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -308,6 +318,7 @@
         "collection": "Latest 2024",
         "category": "Accessories",
         "subCategory": "BestSelling",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -338,6 +349,7 @@
         "collection": "Moder Technology",
         "category": "Accessories",
         "subCategory": "BestSelling",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -368,6 +380,7 @@
         "collection": "winter",
         "category": "Men",
         "subCategory": "NewArrival",
+       "productType":"Jacket",
         "size": [
             "XS",
             "S",
@@ -384,6 +397,38 @@
         ],
         "discount": 110,
         "price": 2850,
+        "color": [
+            "Olive",
+            "Poweder Blue"
+        ],
+        "ratings": 4.5,
+        "brand": "Millennial"
+    },
+    {
+        "_id": 15,
+        "title": "Men’s Premium Bomber Jacket All Olive",
+        "collection": "winter",
+        "category": "Men",
+        "subCategory": "NewArrival",
+        "productType":"Jacket",
+       
+        "size": [
+            
+            "M",
+            "L",
+            "XL"
+           
+        ],
+        "description": " Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+        "image": [
+            "/assets/Men/menjacket3.jpg",
+            "/assets/Men/menjacket3.jpg",
+            "/assets/Men/menjacket3.jpg",
+            "/assets/Men/menjacket3.jpg",
+            "/assets/Men/menjacket3.jpg"
+        ],
+        "discount": 110,
+        "price": 990,
         "color": [
             "Olive",
             "Poweder Blue"

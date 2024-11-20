@@ -38,10 +38,10 @@ const Best_Selling = () => {
                                     backgroundRepeat: 'no-repeat',
                                 }}
                             >
-                                <div className="absolute bottom-0 w-full  flex justify-center items-center">
-                                    <h1 className="btn btn-ghost md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce">
-                                        {category}
-                                    </h1>
+                               
+                                <div className=" absolute bottom-0 w-full flex justify-center items-center">
+
+                                    <button className="btn btn-sm bg-customBg-900 bg-opacity-15 tracking-wide md:tracking-widest text-customBg-900 font-semibold p-2 animate-bounce tracking-widest ">{category}</button>
                                 </div>
                             </Link>
                         </div>

@@ -26,7 +26,7 @@ function Login() {
         const email = form.get('email');
         const password = form.get('password');
 
-        console.log("your Email & password is :",email, password);
+        console.log("your Email & password is :", email, password);
         // reset error 
         setRegisterError('');
         // reset Success 
@@ -37,10 +37,11 @@ function Login() {
             setRegisterError('Password Should Be at least 6 character or longer');
             return;
         }
-
+        // Call signInUser to log the user in
         signInUser(email, password)
             .then(result => {
                 console.log("signInUser is used from login", result.user);
+                // setUser(result.user);
                 // Show success toast if login is successful
                 toast.success("Login successful!", {
                     style: {

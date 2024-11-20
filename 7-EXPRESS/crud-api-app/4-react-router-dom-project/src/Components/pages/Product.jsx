@@ -11,7 +11,7 @@ function Product() {
   const [, dispatch] = useStateValue();
   const [selectedSize, setSelectedSize] = useState(''); // State for selected size
   const [selectedColor, setSelectedColor] = useState(''); // State for selected color
-
+  
   const fetchP = async () => {
     try {
       const response = await axios.get(`/api/products/${id}`);
@@ -23,10 +23,21 @@ function Product() {
       setLoading(false);
     }
   };
-
+  
   useEffect(() => {
     fetchP();
   }, [id]);
+  
+  // const [selectedImage, setSelectedImage] = useState(product.image[0]);
+  const [selectedImage, setSelectedImage] = useState(product?.image?.[1] || null);
+  useEffect(() => {
+    if (product && product.image?.length > 0) {
+      setSelectedImage(product.image[0]); // Default to the first image
+      setSelectedColor(product.color[0]); // Default to the first image
+      setSelectedSize(product.size[0]); // Default to the first image
+    }
+  }, [product]);
+
 
   const addToBasket = () => {
     dispatch({
@@ -53,95 +64,126 @@ function Product() {
   return (
     <div>
       <main className="py-10 bg-sky-50">
-        <div className="container space-x-4 mx-auto px-4 flex flex-col md:flex-row">
-          {/* Product Images Section */}
-          <div className="md:w-1/2">
-            <div className="relative">
-              <div
-                style={{
-                  backgroundImage: `url(${product.image[0] || fallbackImage})`,
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                }}
-                className="w-full h-72 object-cover rounded-lg shadow-lg"
-              ></div>
 
-              <div className="flex justify-center space-x-5 mt-4">
-                {product.image.slice(1).map((img, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      backgroundImage: `url(${img || fallbackImage})`,
-                      backgroundSize: 'cover',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center',
-                    }}
-                    className="w-28 h-20 object-cover rounded-md shadow-md"
-                  ></div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Product Details Section */}
-          <div className="md:w-1/2 md:pl-8 mt-8 md:mt-0">
-            <h1 className="text-xl font-bold text-gray-900">[ {product.title} ]</h1>
-            <div className="p-2 bg-yellow-200 rounded-2xl">
-              <p className="text-md text-gray-700 font-semibold">Original Price: {product.price} Tk</p>
-              <p className="text-sm text-gray-600 font-semibold">Discount: {product.discount} Tk</p>
-            </div>
-
-            <p className="text-sm text-gray-600 mt-4">{product.description}</p>
-
-            {product.size && (
-              <div className="mt-4 text-sm">
-                <label htmlFor="size" className="block text-gray-700 font-semibold">
-                  Size
-                </label>
-                <select
-                  id="size"
-                  className="block w-full mt-2 p-2 border border-gray-300 rounded-lg"
-                  value={selectedSize}
-                  onChange={(e) => setSelectedSize(e.target.value)} // Set selected size
-                >
-                  <option value="">Select Size</option>
-                  {product.size.map((item, index) => (
-                    <option key={index} value={item}>
-                      {item}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
-
-            {product.color && (
-              <div className="mt-4 text-sm">
-                <label htmlFor="color" className="block text-gray-700 font-semibold">
-                  Color
-                </label>
-                <div className="flex space-x-4 mt-2">
-                  {product.color.map((color, index) => (
-                    <button
+        <div className="container mx-auto px-4 flex flex-col md:flex-row overflow-hidden">
+          {/* Left Section */}
+          {product && (
+            <div className="hidden lg:block w-full lg:w-3/4">
+              <div className="grid lg:grid-cols-2 gap-4">
+                {/* Thumbnail Section */}
+                <div className="grid grid-cols-2 gap-2">
+                  {product.image.map((image, index) => (
+                    <div
                       key={index}
-                      onClick={() => setSelectedColor(color)} // Set selected color
-                      className={`w-8 h-8 rounded-full border ${
-                        selectedColor === color ? 'ring-2 ring-blue-500' : ''
-                      }`}
-                      style={{ backgroundColor: color }}
-                    ></button>
+                      onClick={() => setSelectedImage(image)}
+                      className={`my-5 w-15 h-20 md:w-27 md:h-36 aspect-[3/4] rounded-md shadow-md cursor-pointer
+                                bg-cover bg-center transition-transform duration-200 hover:scale-105
+                                ${selectedImage === image ? "border-2 border-blue-500 shadow-lg" : "border border-transparent"}`}
+                      style={{ backgroundImage: `url(${image})` }}
+                    />
                   ))}
                 </div>
+                {/* Main Image */}
+                <div
+                  className="w-[340px] h-[452px] max-w-sm aspect-[3/4] rounded-lg shadow-lg bg-cover bg-center"
+                  style={{ backgroundImage: `url(${selectedImage || product.image[0]})` }}
+                />
               </div>
-            )}
+            </div>
+          )}
 
-            <Link to={"/shoping-cart"} onClick={addToBasket}>
-              <button className="w-full mt-10 animate-bounce bg-gradient-to-tr from-sky-900 to-blue-500 text-white py-2 font-bold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                <p className="animate-pulse tracking-widest">Buy Now</p>
-              </button>
-            </Link>
+          {/* Product Details Section */}
+          <div className="p-4 rounded-2xl shadow-lg bg-customBg-300 w-full md:w-1/2  mt-0">
+            <h1 className="">{product.title}</h1>
+            {/* Price section  */}
+
+            {/* <div className='p-2 bg-yellow-200 rounded-2xl'>
+              <p className="text-md text-gray-700 font-semibold">Original Price: {product.price} Tk</p>
+              <p className="text-sm text-gray-600 cursor-auto font-semibold">Discount: {product.discount}% finalPrice :{finalPrice} </p>
+            </div> */}
+
+            <div className="p-2 bg-customBg-100 rounded-2xl border shadow-lg">
+              <p className="">Original Price : <span className="line-through text-red-500">{product.price} Tk</span></p>
+              <p className="">
+                <span className="text-green-600">Discount : {((product.discount/product.price)*100).toFixed(2)} %</span>
+
+              </p>
+              <p>
+                <span className="">Final Price : {product.price - product.discount} Tk</span>
+              </p>
+              <div className="flex items-center">
+                <span className="">You Save: </span>
+                <span className="ml-2 font-semibold text-red-600">{(product.discount)} Tk</span>
+              </div>
+            </div>
+            <h3 className="">Product Code : {product.productId}</h3>
+            {/* Description */}
+            {/* <p className=" text-sm text-gray-600 mt-2">{product.description}</p> */}
+            {/* Dynamic Description Section */}
+            <div className="mb-1">
+              <h3 className="text-lg">Description:</h3>
+              <ul className="list-disc ml-5">
+                {product.description}
+                {/* {product.description?.map((desc, index) => (
+                  <li className="text-sm" key={index}>{desc}</li>
+                ))} */}
+              </ul>
+            </div>
+
+            {/* Features */}
+            <div>
+              <h3 className="text-lg">Features:</h3>
+              <ul className="list-disc ml-5">
+                {product.features && product.features.map((feature, index) => (
+                  <li className="text-sm" key={index}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="">
+              <label htmlFor="size" className="block text-lg">Size</label>
+              <select
+                id="size"
+                value={selectedSize}
+                onChange={(e) => setSelectedSize(e.target.value)}
+                className="block w-[30%] p-1 border border-[#e49b0f] text-sm rounded-lg text-center"
+              >
+                {product.size.map((size, index) => (
+                  <option key={index} value={size}>{size}</option>
+                ))}
+              </select>
+            </div>
+            <div className="">
+              <label htmlFor="size" className="block text-lg">Colors</label>
+              <select
+                id="color"
+                value={selectedColor}
+                onChange={(e) => setSelectedColor(e.target.value)}
+                className="block w-[40%] p-2 border border-[#e49b0f] text-sm rounded-lg text-center"
+              >
+                {product.color.map((color, index) => (
+                  <option key={index} value={color}>{color}</option>
+                ))}
+              </select>
+            </div>
+
+
+            <div className="mt-2 ">
+              {/* <h3 className="text-md">Color : {product.color}</h3> */}
+              <h3 className="text-md">Product Code : {product.productId}</h3>
+
+            </div>
+
+            <div className="flex justify-center items-center mt-4">
+              <Link to={`/shoping-cart`} onClick={addToBasket}>
+                <button className="w-[230px] animate-bounce bg-[#e49b0f] text-white py-[10px] font-bold px-4 rounded-lg hover:bg-customBg-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                  <p className='animate-pulse tracking-widest'>Buy Now</p>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
+
 
         {/* Product Description Section */}
         <div className="container mx-auto px-4 mt-12 text-sm">

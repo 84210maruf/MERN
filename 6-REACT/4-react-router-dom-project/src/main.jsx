@@ -7,7 +7,7 @@ import reducer, { initialState } from "./reducer";
 import "./App.css"
 import Layout from "./Components/Layout/Layout";
 import Body from "./Components/Body/Body";
-import Products from "./Components/products/Products";
+// import Products from "./Components/products/Products";
 import Product from "./Components/products/Product"
 import Shoping_cart from "./Components/pages/Shoping_cart";
 import Whish_list from "./Components/pages/Whish_list";
@@ -33,7 +33,8 @@ import SizeGuide from "./Components/pages/SizeGuide";
 import Shipping_and_Delivery from "./Components/pages/Shipping_and_Delivery";
 import Collections from "./Components/products/Collections";
 import Results from "./Components/pages/Results";
-
+import AuthHandler from "./AuthHandler";
+// import AuthHandler from "./AuthHandler";
 
 
 const router = createBrowserRouter([
@@ -42,7 +43,8 @@ const router = createBrowserRouter([
     element: <Layout />, // Apply Layout globally
     children: [
       { path: "/", element: <Body /> },  // Main route ("/") uses <Body />
-      { path: "/products", element: <Products /> }, // Route "/products"
+      // { path: "/products", element: <Products /> }, // Route "/products"
+      // { path: "/products", element: <Collections /> }, // Route "/products"
       { path: "/results", element: <Results /> }, // Route "/results Show results"
       { path: "/collections", element: <Collections /> }, // Route "/products"
       { path: "/category-products/:category", element: <Category_products /> }, // Route "/category-products"
@@ -79,15 +81,101 @@ const router = createBrowserRouter([
 
 
 
+//   {
+//     path: "/", element: (<Layout> <Body /> </Layout>)
+//   },
+//   {
+//     path: "/products", element: (<Layout> <Products />  </Layout>)
+//   },
+//   {
+//     path: "/category-products/:category", element: (<Layout>  <Category_products />  </Layout>)
+//   },
+//   {
+//     path: "/product/:id", element: (<Layout> <Product /> </Layout>)
+//   },
+
+//   {
+//     path: "/men", element: (<Layout>   <Men />  </Layout>)
+//   },
+//   {
+//     path: "/women", element: (<Layout>   <Women />  </Layout>)
+//   },
+//   {
+//     path: "*", element: <h1>404 Not Found</h1> // Catch-all for unmatched routes
+//   },
+//   {
+//     path: "/kids", element: (<Layout> <Kids /> </Layout>)
+//   },
+//   {
+//     path: "/winter", element: (<Layout>   <Winter /> </Layout>)
+//   },
+//   {
+//     path: "/minas-dream", element: (<Layout> <MinasDream />   </Layout>)
+//   },
+//   {
+//     path: "/shoping-cart", element: (<Layout> <Shoping_cart />  </Layout>)
+//   },
+//   {
+//     path: "/whish-list", element: (<Layout>  <Whish_list /> </Layout>)
+//   },
+//   {
+//     path: "/payment", element: (<Layout>  <Payment /> </Layout>)
+//   },
+//   {
+//     path: "/thank-you", element: (<Thankyou />)
+//   },
+//   {
+//     path: "/size-guide", element: (<Layout> <SizeGuide />  </Layout>)
+//   },
+//   {
+//     path: "/login", element: (<Layout>   <Login />  </Layout>)
+//   },
+//   {
+//     path: "/register", element: (<Layout> <Register /> </Layout>)
+//   },
+//   {
+//     path: "/about-us", element: (<Layout>  <AboutUs />  </Layout>)
+//   },
+//   {
+//     path: "/contact-us", element: (<Layout> <ContactUs />  </Layout>)
+//   },
+//   {
+//     path: "/branding", element: (<Layout> <Branding_company /> </Layout>)
+//   },
+//   {
+//     path: "/terms-conditions", element: (<Layout>  <Terms_comditions />  </Layout>)
+//   },
+//   {
+//     path: "/privacy-policy", element: (<Layout> <PrivacyPolicy />  </Layout>)
+//   },
+//   {
+//     path: "/return-policy", element: (<Layout>  <ReturnPolicy />  </Layout>)
+//   },
+//   {
+//     path: "/Shipping_and_Delivery", element: (<Layout>  <Shipping_and_Delivery />  </Layout>)
+//   },
+//   {
+//     path: "/FAQs", element: (<Layout>  <FAQs />  </Layout>)
+//   },
+//   {
+//     path: "/dashboard", element: (<Dashboard />)
+//   },
+// ]);
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ProductProvider>
-      {/* StateProvider provide busket universally */}
-      <StateProvider initialState={initialState} reducer={reducer} >
+
+    {/* StateProvider provide busket universally */}
+    <StateProvider initialState={initialState} reducer={reducer} >
+      <ProductProvider>
+        {/* <AuthHandler /> AuthHandler to track login state */}
+        {/* Provide product univarsally */}
+
 
         <RouterProvider router={router} />
 
-      </StateProvider>
-    </ProductProvider>
+
+      </ProductProvider>
+    </StateProvider>
   </React.StrictMode>
 );

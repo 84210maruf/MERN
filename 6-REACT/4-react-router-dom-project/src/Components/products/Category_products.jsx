@@ -90,9 +90,9 @@ function Category_products() {
     <div className='bg-customBg bg-opacity-50'>
       <h1 className='text-center text-2xl font-semibold'>{category}</h1>
       {filteredProducts.length > 0 ? (
-        <div className='w-full py-6 px-2 md:px-4 flex justify-center'>
+        <div className='w-full py-6 px-8 md:px-8 lg:px-12 flex justify-center'>
           <section
-            className='w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center'
+            className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-items-center justify-center  gap-y-4 place-content-center'
           >
             {filteredProducts.map(item => (
               <ProductItem key={item._id} item={item} />

@@ -17,9 +17,9 @@ function Register() {
     const [success, setSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate();
+
     const handleRegister = e => {
         e.preventDefault();
-        // console.log("clicked");
         // console.log(e.currentTarget);
         const form = new FormData(e.currentTarget);
         // console.log(form.get('email'));

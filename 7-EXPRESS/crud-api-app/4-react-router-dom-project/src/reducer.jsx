@@ -5,6 +5,16 @@ export const initialState = {
     // user: {name:"maruf",email:"m@gmail.com",phone:"01321747121"}
     user: null
 };
+// export const initialState = {
+//     basket: JSON.parse(localStorage.getItem('basket')) || [],
+//     user: JSON.parse(localStorage.getItem('user')) || null,
+// };
+
+// // Utility function to update `localStorage`
+// const updateLocalStorage = (basket) => {
+//     localStorage.setItem('basket', JSON.stringify(basket));
+// };
+
 // Selector
 // export const getTotal = (basket) => (basket?.reduce((amount, item) => (item.price + amount) - item.discount, 0));
 export const getTotal = (basket) => {
@@ -60,12 +70,16 @@ const reducer = (state, action) => {
                 // Update quantity if item already exists in basket
                 const updatedBasket = [...state.basket];
                 // updatedBasket[existingIndex].quantity += 0
+                // localStorage.setItem('basket', JSON.stringify(updatedBasket));
+                // updateLocalStorage(updatedBasket)
                 return {
                     ...state,
                     basket: updatedBasket,
                 };
             } else {
                 // Add new item to basket
+                // localStorage.setItem('basket', JSON.stringify(newBasket));
+                // updateLocalStorage(updatedBasket)
                 return {
                     ...state,
                     basket: [...state.basket, action.item],
@@ -93,18 +107,22 @@ const reducer = (state, action) => {
                 console.warn(`Cant remove product (id: ${action.item._id}) as in not in basket`)
             }
 
+            // localStorage.setItem('basket', JSON.stringify(newBasket)); // Save updated basket to localStorage
+
             return {
                 ...state,
                 basket: newBasket
             };
 
         case 'SET_USER':
+            // localStorage.setItem('user', JSON.stringify(action.user)); // Save user to localStorage
             return {
                 ...state,
                 user: action.user
             }
 
         case 'EMPTY_BASKET':
+            // localStorage.removeItem('basket');
             return {
                 ...state,
                 basket: [],
