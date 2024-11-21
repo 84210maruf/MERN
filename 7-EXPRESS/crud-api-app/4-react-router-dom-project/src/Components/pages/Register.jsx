@@ -1,21 +1,35 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth, db } from '../../firebase';
-import { setDoc, doc } from 'firebase/firestore';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { auth } from '../../firebase';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Register() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+    });
     const [loading, setLoading] = useState(false);
-    const navigate = useNavigate(); // Use useNavigate hook
+    const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
+
+    const toggleShowPassword = () => {
+        setShowPassword((prev) => !prev);
+    };
+
+    // Handle input change
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+    };
 
     const handleRegister = async (e) => {
         e.preventDefault();
+
+        const { name, email, password, confirmPassword } = formData;
 
         if (password !== confirmPassword) {
             toast.error("Passwords do not match!", {
@@ -26,117 +40,150 @@ function Register() {
 
         setLoading(true);
         try {
+            // Create user with email and password
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
 
-            await setDoc(doc(db, 'Users', user.uid), {
-                email: user.email,
-                name: name,
+            // Update user profile with name
+            await updateProfile(user, {
+                displayName: name,
             });
 
-            console.log("User Registered Successfully!");
-            toast.success('User Registered Successfully!', {
-                position: 'top-center',
+            toast.success("Registration Success! Redirecting to login...", {
+                position: 'bottom-center',
+                style: {
+                    backgroundColor: "#bae9f3",
+                    color: "#1a202c"
+                },
             });
 
-            // Redirect to login page after a short delay
+            // Redirect to login page
             setTimeout(() => {
                 navigate('/login');
-            }, 3000); // 5 seconds delay
+            }, 3000);
 
         } catch (error) {
-            console.log(error.message);
+            console.error("Registration Error:", error);
             toast.error(error.message, {
                 position: 'bottom-center',
+                style: {
+                    backgroundColor: "#f44336",
+                    color: "#ffffff"
+                },
             });
         } finally {
             setLoading(false);
         }
     };
 
+    const { name, email, password, confirmPassword } = formData;
+
     return (
-        <div>
-            <section className="bg-sky-50 py-10">
-                <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                    <div className="w-full bg-white rounded-lg shadow-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 bg-sky-100">
-                        <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                            <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                                Create an account
-                            </h1>
-                            <form className="space-y-4 md:space-y-6" onSubmit={handleRegister}>
-                                <div>
-                                    <label className="block mb-2 text-sm font-semibold text-gray-900 dark:text-white">Name</label>
-                                    <input
-                                        type='text'
-                                        placeholder='Enter your name'
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                        required
-                                        className="form-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block mb-2 text-sm font-semibold text-gray-900 dark:text-white">Email</label>
-                                    <input
-                                        type='email'
-                                        placeholder='Enter your email'
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        required
-                                        className="form-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block mb-2 text-sm font-semibold text-gray-900 dark:text-white">Password (<span className='text-xs text-orange-600 font-normal'>minimum six digit</span>)</label>
-                                    <input
-                                        type="password"
-                                        placeholder="• • • • • •"
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
-                                        required
-                                        className="form-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block mb-2 text-sm font-semibold text-gray-900 dark:text-white">Confirm Password</label>
-                                    <input
-                                        type="password"
-                                        placeholder="• • • • • •"
-                                        value={confirmPassword}
-                                        onChange={(e) => setConfirmPassword(e.target.value)}
-                                        required
-                                        className="form-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    />
-                                </div>
-                                <div className="flex items-start">
-                                    <div className="flex items-center h-5">
-                                        <input
-                                            id="terms"
-                                            aria-describedby="terms"
-                                            type="checkbox"
-                                            className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-sky-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                                            required
-                                        />
-                                    </div>
-                                    <div className="ml-3 text-sm">
-                                        <label className="font-light text-gray-500 dark:text-gray-300">
-                                            I accept the <Link to={'/terms-conditions'} className="font-medium text-sky-600 hover:underline dark:text-primary-500">Terms and Conditions</Link>
-                                        </label>
-                                    </div>
-                                </div>
-                                <button
-                                    type="submit"
-                                    disabled={loading}
-                                    className="btn w-full text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                                >
-                                    {loading ? 'Creating account...' : 'Create an account'}
-                                </button>
-                                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                                    Already have an account?<Link to={"/login"} className="font-medium text-primary-600 hover:underline dark:text-primary-500"> Login here</Link>
-                                </p>
-                            </form>
+        <div className='bg-customBg-600 py-10'>
+            <section className="py-10 min-h-screen flex justify-center items-center">
+                <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6 sm:p-8 space-y-6">
+                    <h1 className="text-xl font-bold text-center text-gray-900 sm:text-2xl">
+                        Create an account
+                    </h1>
+                    <form onSubmit={handleRegister} className="space-y-4">
+                        <div>
+                            <label className="block text-sm font-semibold mb-2">Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Enter your name"
+                                value={name}
+                                onChange={handleChange}
+                                required
+                                className="w-[80%] lg:w-full focus:outline-none focus:ring-2 focus:ring-sky-400
+                                             border border-[#e49b0f] text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-customBg-900 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            />
                         </div>
-                    </div>
+                        <div>
+                            <label className="block text-sm font-semibold mb-2">Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                value={email}
+                                onChange={handleChange}
+                                required
+                                className="w-[80%] lg:w-full focus:outline-none focus:ring-2 focus:ring-sky-400
+                                             border border-[#e49b0f] text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-customBg-900 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            />
+                        </div>
+                        <div>
+                            <label className="block text-sm font-semibold mb-2">
+                                Password <span className="text-xs text-orange-600">(minimum six characters)</span>
+                            </label>
+                            <div className="relative">
+                                <input
+                                    name="password"
+                                    type={showPassword ? 'text' : 'password'} // Dynamically change type
+                                    value={password}
+                                    onChange={handleChange}
+                                    placeholder="••••••"
+                                    className="focus:outline-none focus:ring-2 focus:ring-sky-400
+                                            border border-[#e49b0f] text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-customBg-900 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required
+                                />
+                                <button
+                                    type="button"
+                                    onClick={toggleShowPassword}
+                                    className="absolute inset-y-0 right-3 flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
+                                    aria-label="Toggle password visibility"
+                                >
+                                    {showPassword ? 'Hide' : 'Show'}
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <label className="block text-sm font-semibold mb-2">Confirm Password</label>
+
+                            <div className="relative">
+                                <input
+                                    name="confirmPassword"
+                                    type={showPassword ? 'text' : 'password'} // Dynamically change type
+                                    value={confirmPassword}
+                                    onChange={handleChange}
+                                    placeholder="••••••"
+                                    className="focus:outline-none focus:ring-2 focus:ring-sky-400
+                                            border border-[#e49b0f] text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-customBg-900 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required
+                                />
+                                <button
+                                    type="button"
+                                    onClick={toggleShowPassword}
+                                    className="absolute inset-y-0 right-3 flex items-center text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
+                                    aria-label="Toggle password visibility"
+                                >
+                                    {showPassword ? 'Hide' : 'Show'}
+                                </button>
+                            </div>
+                        </div>
+                        <div className="flex items-start">
+                            <input
+                                id="terms"
+                                type="checkbox"
+                                className="checkbox"
+                                required
+                            />
+                            <label htmlFor="terms" className="ml-3 text-sm font-light">
+                                I accept the <Link to="/terms-conditions" className="text-sky-600 hover:underline">Terms and Conditions</Link>
+                            </label>
+                        </div>
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className={`btn w-full ${loading ? 'opacity-50' : 'btn mb-4 w-3/4 bg-[#e49b0f] text-white px-4 py-2 rounded-md hover:bg-customBg-900 transition-all" type="submit" value="Create an Account'}`}
+                        >
+                            {loading ? 'Creating account...' : 'Create an account'}
+                        </button>
+                        <p className="text-sm text-center">
+                            Already have an account?{' '}
+                            <Link to="/login" className="text-sky-600 hover:underline">Login here</Link>
+                        </p>
+                    </form>
                 </div>
             </section>
             <ToastContainer />

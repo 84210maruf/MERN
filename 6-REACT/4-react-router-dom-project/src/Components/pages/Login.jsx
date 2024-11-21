@@ -151,7 +151,7 @@ function Login() {
 
                                 <label className="label">
                                     <a onClick={handleForgetPassword} className="label-text-alt link link-hover">Forget Password?</a>
-                                </label>
+                                </label>    
                                 <div className="flex justify-center items-center w-full">
                                     <input className="bg-[#e49b0f] text-white px-4 py-2 rounded-md hover:bg-customBg-900 transition-all   btn mb-4 w-3/4
                                     " type="submit" value="Login Now !" />

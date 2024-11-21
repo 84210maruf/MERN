@@ -314,7 +314,8 @@ import { useNavigate } from 'react-router-dom'
 import { StateContext, useProductValue, useStateValue } from "../../../StateProvider"; // Adjust the import path as needed
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Dropdown from "./Dropdown";
+import { getAuth, signOut } from "firebase/auth";
+import app from './../../../firebase';
 
 
 function Header() {
@@ -341,8 +342,14 @@ function Header() {
         setSearchQuery(''); // Clear query when search opens/closes
         setFilteredResults([]);
     };
+    const auth = getAuth(app);
+    const logOut = () =>{
+
+        return signOut(auth);
+      }
     // Handle Logout 
     const handleLogOut = () => {
+        
         logOut()
             .then(() => {
                 console.log('User LogOut Done')
