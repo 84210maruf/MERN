@@ -3,33 +3,33 @@ import React from 'react'
 function Question_accordion() {
     return (
         <div>
-            <div className="md:flex md:p-4 gap-x-4 space-y-1 bg-customBg bg-opacity-40">
+            <div className="md:flex md:p-4 gap-x-4 space-y-1 bg-customBg-800">
                 <div className="w-full md:w-[50%] lg:w-[50%] space-y-1 ">
-                    <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
+                    <div className="collapse collapse-plus rounded-[3px] bg-customBg-500 shadow-md">
                         <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
-                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Why choose “Millennial Clothing”?
+                        <div className="collapse-title text-black text-md font-medium bg-customBg-300 peer-checked:bg-customBg-600">Why choose “Millennial Clothing”?
                         </div>
-                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
+                        <div className="collapse-content text-sm bg-customBg-800 peer-checked:bg-customBg-600">
                             <hr className="py-1" />
-                            <p className="font-normal">Shop at Millennial Clothing for a blend of modern style, unmatched quality, and designs crafted to elevate your everyday look. Each piece is thoughtfully created to offer you comfort, style, and individuality, making sure you stand out effortlessly.</p>
+                            <p className="font-normal text-black">Shop at Millennial Clothing for a blend of modern style, unmatched quality, and designs crafted to elevate your everyday look. Each piece is thoughtfully created to offer you comfort, style, and individuality, making sure you stand out effortlessly.</p>
                         </div>
                     </div>
                     <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
                         <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
-                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Does “Millennial Clothing” have any outlets?</div>
-                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
+                        <div className="text-black collapse-title text-md font-medium bg-customBg-300 peer-checked:bg-customBg-600">Does “Millennial Clothing” have any outlets?</div>
+                        <div className="collapse-content text-sm bg-customBg-800 peer-checked:bg-customBg-600">
                             <hr className="py-1" />
-                            <p className="font-normal">While Millennial Clothing primarily operates online, we welcome customers to visit our office, where they can see our collection firsthand and purchase items directly. It’s a great opportunity to experience our quality and craftsmanship up close!
+                            <p className="font-normal text-black">While Millennial Clothing primarily operates online, we welcome customers to visit our office, where they can see our collection firsthand and purchase items directly. It’s a great opportunity to experience our quality and craftsmanship up close!
                             </p>
                         </div>
                     </div>
                     <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
                         <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
-                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Where does “Millennial Clothing” come from?
+                        <div className="text-black collapse-title text-md font-medium bg-customBg-300 peer-checked:bg-customBg-600">Where does “Millennial Clothing” come from?
                         </div>
-                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
+                        <div className="collapse-content text-sm bg-bg-customBg-800 peer-checked:bg-customBg-800">
                             <hr className="py-1" />
-                            <p className="font-normal">Millennial Clothing was born from the passion of redefining modern fashion with a vision of style that’s fresh, bold, and uniquely yours. We’ve crafted our brand to resonate with the trends of today and the quality you’ll love—making every piece a statement, every outfit an experience.</p>
+                            <p className="font-normal text-black">Millennial Clothing was born from the passion of redefining modern fashion with a vision of style that’s fresh, bold, and uniquely yours. We’ve crafted our brand to resonate with the trends of today and the quality you’ll love—making every piece a statement, every outfit an experience.</p>
                         </div>
                     </div>
                 </div>

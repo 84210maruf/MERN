@@ -12,7 +12,7 @@ function Thankyou() {
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Thank You !</h1>
-                        <p>Thank you for Shoping with the name.</p>
+                        <p>Thank you for Shoping with Millennial Clothing.</p>
                         <Link to={"/"}
                             class="inline-flex items-center px-4 py-2 text-white bg-gradient-to-r from-sky-600 via-pink-600 to-green-500  border-2 border-sky-200  rounded-full focus:outline-none focus:ring">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-2" fill="none" viewBox="0 0 24 24"

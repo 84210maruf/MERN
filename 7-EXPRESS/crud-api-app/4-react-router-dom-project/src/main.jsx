@@ -43,6 +43,7 @@ const router = createBrowserRouter([
     element: <Layout />, // Apply Layout globally
     children: [
       { path: "/", element: <Body /> },  // Main route ("/") uses <Body />
+      
       { path: "/products", element: <Products /> }, // Route "/products"
       { path: "/category-products/:category", element: <Category_products /> }, // Route "/category-products"
       { path: "/category-session/:session", element: <Category_session /> }, // Route "/category-products"

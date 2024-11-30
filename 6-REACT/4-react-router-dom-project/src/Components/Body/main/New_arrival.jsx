@@ -11,14 +11,28 @@ const New_arrival = () => {
     const newArrivalProducts = products.filter(item => item.subCategory === 'NewArrival');
     // Get unique categories from products
 
-    const uniqueCategories = [...new Set(products.map(item => item.category))];
+    // const uniqueCategories = [...new Set(products.map(item => item.category))];
+    const uniqueCategories = [
+        ...new Map(
+          products.map(item => [item.category.toLowerCase(), item.category])
+        ).values()
+      ];
     //  console.log(uniqueCategories);
-    return (
-        <div className="bg-customBg bg-opacity-70">
 
-            <div className=" py-6">
-                <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
-                    <legend className="px-6 text-3xl md:text-2xl lg:text-3xl font-semibold text-center">New Arrival</legend>
+    const formatCategoryName = (category) => {
+        return category
+            .replace(/([a-z])([A-Z])/g, "$1 $2") // Handle camelCase to add space
+            .replace(/[_-]/g, " ")              // Replace underscores or dashes with spaces
+            .replace(/\b\w/g, char => char.toUpperCase()) // Capitalize the first letter of each word
+            .trim();                            // Remove any leading/trailing spaces
+    };
+
+    return (
+        <div className="bg-customBg-400">
+
+            <div className=" py-4">
+                <fieldset className="text-black border-t-2 mx-4 md:mx-8 lg:mx-12 border-gray-600 rounded-xl">
+                    <legend className="text-black px-6 text-2xl md:text-2xl lg:text-3xl font-semibold text-center dark:text-white">New Arrival</legend>
                 </fieldset>
             </div>
             <div className=" w-[auto] h-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-2 lg:gap-5 mx-4 md:mx-8 lg:mx-16 relative">
@@ -40,7 +54,7 @@ const New_arrival = () => {
                             >
                                 <div className=" absolute bottom-0 w-full flex justify-center items-center">
 
-                                    <button className="btn btn-sm bg-customBg-900 bg-opacity-15 tracking-wide md:tracking-widest text-customBg-900 font-semibold p-2 animate-bounce tracking-widest ">{category}</button>
+                                    <button className="btn btn-sm bg-customBg-900 bg-opacity-50 tracking-wide md:tracking-widest text-xs px-1 text-white animate-bounce tracking-widest hover:bg-[#e49b0f] ">{formatCategoryName(category)}</button>
                                 </div>
                             </Link>
                         </div>

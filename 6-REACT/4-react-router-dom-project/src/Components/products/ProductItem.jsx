@@ -47,7 +47,7 @@ const ProductItem = ({ item }) => {
   };
 
   return (
-    <div className="product-item w-[200px] h-[320px] border-2 bg-customBg-300 border-customBg-800 rounded-md text-center font-normal relative group overflow-hidden">
+    <div className="product-item sm:w-[180px] sm:h-[300px] md:w-[190px] md:h-[310px] lg:w-[200px] lg:h-[324px] border-2 bg-customBg-300 border-customBg-600 rounded-md text-center font-normal relative group overflow-hidden">
       <Link to={`/product/${item._id}`}>
         <div className="w-[auto] h-[auto]">
           <img
@@ -59,8 +59,10 @@ const ProductItem = ({ item }) => {
         <div className="p-[1px] w-full">
           <h2 className="text-sm font-semibold text-customBg-900">{item.title}</h2>
           <p className="text-sm font-medium text-gray-700">
-            Price Only <span className="font-bold">{item.price}</span> Tk
+            <span className="line-through font-bold ">{item.price}TK</span> <span className='font-bold'>{(item.price - (item.price * (item.discount / 100))).toFixed(0)} TK</span>
+
           </p>
+         
         </div>
       </Link>
 

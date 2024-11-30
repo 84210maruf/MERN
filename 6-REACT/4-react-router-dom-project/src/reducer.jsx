@@ -1,6 +1,7 @@
 // Initial State
 export const initialState = {
     basket: JSON.parse(localStorage.getItem('basket')) || [], // Load basket from localStorage
+    shippingCost: 60, // Default value
     user: null,
 };
 
@@ -99,7 +100,7 @@ const reducer = (state, action) => {
             return { ...state, user: action.user };
 
         case 'EMPTY_BASKET': {
-            updateLocalStorage.removeItem('basket'); // Clear localStorage
+            localStorage.removeItem('basket'); // Clear localStorage
             return { ...state, basket: [] };
         }
 
@@ -118,6 +119,12 @@ const reducer = (state, action) => {
             updateLocalStorage(updatedBasket); // Save to localStorage
             return { ...state, basket: updatedBasket };
         }
+        case "SET_SHIPPING_COST":
+            return {
+                ...state,
+                shippingCost: action.shippingCost,
+            };
+
 
         default:
             return state;

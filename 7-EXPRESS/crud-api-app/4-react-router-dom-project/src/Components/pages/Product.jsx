@@ -11,7 +11,7 @@ function Product() {
   const [, dispatch] = useStateValue();
   const [selectedSize, setSelectedSize] = useState(''); // State for selected size
   const [selectedColor, setSelectedColor] = useState(''); // State for selected color
-  
+
   const fetchP = async () => {
     try {
       const response = await axios.get(`/api/products/${id}`);
@@ -23,11 +23,11 @@ function Product() {
       setLoading(false);
     }
   };
-  
+
   useEffect(() => {
     fetchP();
   }, [id]);
-  
+
   // const [selectedImage, setSelectedImage] = useState(product.image[0]);
   const [selectedImage, setSelectedImage] = useState(product?.image?.[1] || null);
   useEffect(() => {
@@ -67,30 +67,66 @@ function Product() {
 
         <div className="container mx-auto px-4 flex flex-col md:flex-row overflow-hidden">
           {/* Left Section */}
-          {product && (
-            <div className="hidden lg:block w-full lg:w-3/4">
-              <div className="grid lg:grid-cols-2 gap-4">
-                {/* Thumbnail Section */}
-                <div className="grid grid-cols-2 gap-2">
-                  {product.image.map((image, index) => (
-                    <div
-                      key={index}
-                      onClick={() => setSelectedImage(image)}
-                      className={`my-5 w-15 h-20 md:w-27 md:h-36 aspect-[3/4] rounded-md shadow-md cursor-pointer
+
+          <div className="hidden lg:block w-full lg:w-3/4">
+            <div className="grid lg:grid-cols-2 gap-4">
+              {/* Thumbnail Section */}
+              <div className="grid grid-cols-2 gap-2">
+                {product.image.map((image, index) => (
+                  <div
+                    key={index}
+                    onClick={() => setSelectedImage(image)}
+                    className={`my-5 w-15 h-20 md:w-27 md:h-36 aspect-[3/4] rounded-md shadow-md cursor-pointer
                                 bg-cover bg-center transition-transform duration-200 hover:scale-105
                                 ${selectedImage === image ? "border-2 border-blue-500 shadow-lg" : "border border-transparent"}`}
-                      style={{ backgroundImage: `url(${image})` }}
-                    />
-                  ))}
-                </div>
-                {/* Main Image */}
-                <div
-                  className="w-[340px] h-[452px] max-w-sm aspect-[3/4] rounded-lg shadow-lg bg-cover bg-center"
-                  style={{ backgroundImage: `url(${selectedImage || product.image[0]})` }}
-                />
+                    style={{ backgroundImage: `url(${image})` }}
+                  />
+                ))}
               </div>
+              {/* Main Image */}
+              <div
+                className="w-[340px] h-[452px] max-w-sm aspect-[3/4] rounded-lg shadow-lg bg-cover bg-center"
+                style={{ backgroundImage: `url(${selectedImage || product.image[0]})` }}
+              />
             </div>
-          )}
+          </div>
+          <div className="block lg:hidden w-full md:w-1/2 px-4">
+            <div className="flex flex-wrap justify-around">
+              {/* Main Image Preview */}
+              <div
+                style={{
+                  backgroundImage: `url(${selectedImage})`,
+                  backgroundSize: `cover`,
+                  backgroundPosition: `center`,
+                  width: '300px',  // Custom width
+                  height: '400px'   // Custom height
+                }}
+                className="flex justify-center items-center  pl-0  max-w-sm aspect-[3/4] rounded-lg shadow-lg z-10"
+              >
+              </div>
+              {/* All Image Preview Section */}
+
+              <div className='flex flex-row gap-2 md:grid md:grid-cols-3 md:gap-4 items-center ml-0 z-10'>
+                {product.image.map((image, index) => (
+                  <div
+                    key={index}
+                    onClick={() => setSelectedImage(image)} // Update selected image on click
+                    style={{
+                      backgroundImage: `url(${image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                    className={`my-5 aspect-[3/4] w-15 h-20 md:w-27 md:h-36 rounded-md shadow-md cursor-pointer 
+        transition-transform duration-200 ease-in-out 
+        hover:scale-105 ${selectedImage === image ? 'border-2 border-blue-500 shadow-lg' : 'border border-transparent'}
+      `}
+                  >
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
 
           {/* Product Details Section */}
           <div className="p-4 rounded-2xl shadow-lg bg-customBg-300 w-full md:w-1/2  mt-0">
@@ -105,7 +141,7 @@ function Product() {
             <div className="p-2 bg-customBg-100 rounded-2xl border shadow-lg">
               <p className="">Original Price : <span className="line-through text-red-500">{product.price} Tk</span></p>
               <p className="">
-                <span className="text-green-600">Discount : {((product.discount/product.price)*100).toFixed(2)} %</span>
+                <span className="text-green-600">Discount : {((product.discount / product.price) * 100).toFixed(2)} %</span>
 
               </p>
               <p>

@@ -10,8 +10,10 @@ const Collections = () => {
     // State to control "Show More" for each category
     const [showMoreMen, setShowMoreMen] = useState(false);
     const [showMoreWomen, setShowMoreWomen] = useState(false);
+    const [showMoreCombo, setShowMoreCombo] = useState(false);
     const [showMoreKids, setShowMoreKids] = useState(false);
     const [showMoreMinasDream, setShowMoreMinasDream] = useState(false);
+
 
     const addToBasket = (product) => {
         dispatch({
@@ -22,7 +24,7 @@ const Collections = () => {
 
     // Unique categories are already being logged if needed for future use
     const uniqueCategories = [...new Set(products.map(item => item.category))];
-    console.log(uniqueCategories);
+    // console.log(uniqueCategories);
 
     // Function to get the displayed products based on the showMore state
     const getDisplayedProducts = (categoryProducts, showMore) => (
@@ -40,32 +42,35 @@ const Collections = () => {
     }
 
     return (
-        <div className='bg-customBg bg-opacity-50'>
+        <div className='bg-customBg-600'>
             <div className="py-2">
-                <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
+                <fieldset className="text-black border-t-2 mx-4 md:mx-8 lg:mx-12 border-gray-600 rounded-xl">
                     <legend className="px-6 text-2xl text-center">Our Collections</legend>
                 </fieldset>
             </div>
 
             {/* Updated Section for Improved Responsiveness */}
+            {/* { title: 'Kids', category: 'kids', showMore: showMoreKids, setShowMore: setShowMoreKids }, */}
+
             {[{ title: 'Men', category: 'Men', showMore: showMoreMen, setShowMore: setShowMoreMen },
             { title: 'Women', category: 'Women', showMore: showMoreWomen, setShowMore: setShowMoreWomen },
-            { title: 'Kids', category: 'kids', showMore: showMoreKids, setShowMore: setShowMoreKids },
+            { title: 'Couple Goals', category: 'Couple Goals', showMore: showMoreCombo, setShowMore: setShowMoreCombo },
+          
             { title: "Mina's Dream", category: null, brand: "Mina's Dream", showMore: showMoreMinasDream, setShowMore: setShowMoreMinasDream }]
                 .map((section, index) => (
                     <div key={index}>
-                        <h1 className='text-center text-xl py-4 text-sky-600 font-semibold underline underline-offset-8'>
+                        <h1 className='text-center text-xl py-1 text-black font-semibold underline underline-offset-8'>
                             {section.title}
                         </h1>
                         <div className="w-full py-2 px-2 md:px-4 lg:px-6 flex justify-center">
                             <section
                                 className="grid w-full max-w-screen-xl gap-2 md:gap-4
-                                           grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+                                           grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5"
                             >
                                 {getDisplayedProducts(
                                     section.category
-                                        ? products.filter(item => item.category === section.category)
-                                        : products.filter(item => item.brand === section.brand),
+                                        ? products.filter(item => item.category.toLowerCase() === section.category.toLowerCase())
+                                        : products.filter(item => item.brand.toLowerCase() === section.brand.toLowerCase()),
                                     section.showMore
                                 ).map(item => (
                                     <div
@@ -75,16 +80,16 @@ const Collections = () => {
                                         <ProductItem
                                             item={item}
                                             addToBasket={addToBasket}
-                                            className="w-full max-w-[140px] h-[140px] md:h-[220px] lg:h-[250px] flex items-center"
+                                            className="flex items-center"
                                         />
                                     </div>
                                 ))}
                             </section>
                         </div>
-                        <div className="flex justify-center py-2">
+                        <div className="flex justify-end px-4 md:px-6 lg:px-8">
                             <button
                                 onClick={() => section.setShowMore(!section.showMore)}
-                                className="bg-sky-600 text-white py-2 px-4 rounded-md shadow-md hover:bg-sky-700 transition-all
+                                className="btn btn-sm bg-[#e49b0f]  text-white px-4 rounded-md shadow-md hover:bg-customBg-900 transition-all
                                            text-sm md:text-base"
                             >
                                 {section.showMore ? 'Show Less' : 'Show More'}
@@ -93,10 +98,10 @@ const Collections = () => {
                     </div>
                 ))}
         </div>
-//     );
-// }
+        //     );
+        // }
 
-// export default Collections;
+        // export default Collections;
 
 
         // <div className='bg-customBg bg-opacity-50'>

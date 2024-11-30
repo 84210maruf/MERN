@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AboutImg from './../../assets/banner3.jpg';
+import AboutImg from './../../assets/banner5.jpg';
 function ReturnPolicy() {
+    const email = "info@millennial-clothing.com"; // Replace with the desired email address
+    const subject = ""; // Optional subject
+    const body = "";
+  
     return (<>
         {/* CSS-in-JS style block */}
         <style jsx>{`
@@ -30,7 +34,7 @@ function ReturnPolicy() {
                     />
                     <div className="absolute inset-0 bg-black opacity-30"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <h1 className="text-4xl text-white font-semibold">Return & Replacement Policy</h1>
+                        <h1 className="text-4xl text-center text-white font-semibold">Return & Replacement Policy</h1>
                     </div>
                 </div>
                 <div className="p-8">
@@ -155,6 +159,35 @@ function ReturnPolicy() {
 
                 </div>
 
+            </div>
+            <div className="mt-8 text-center">
+                <p>
+                    For any questions or concerns,contact us at:<br />
+
+                    Email: <a
+                        href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+                        className="text-blue-500 hover:underline ml-1"
+                    >
+                        info@millennial-clothing.com
+                    </a>
+                    <br />
+                    Website:<Link to="/" className="text-orange-500 hover:underline">
+                        www.millennial-clothing.com
+                    </Link>
+                </p>
+                <p className="text-gray-700 mb-4">
+                    Thank you for choosing <span>
+                        <Link to="/" className="text-orange-500 hover:underline">
+                            Millennial Clothing
+                        </Link>
+                    </span>. We look forward to serving you and making your shopping experience exceptional.
+                </p>
+                <Link
+                    to="/contact-us"
+                    className="animate-bounce  bg-sky-500 text-sky-50 py-2 px-4 rounded hover:bg-sky-600 transition duration-300"
+                >
+                    Contact Us
+                </Link>
             </div>
         </div>
 

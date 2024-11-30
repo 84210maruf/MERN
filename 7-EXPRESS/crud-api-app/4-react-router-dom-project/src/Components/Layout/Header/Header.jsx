@@ -320,7 +320,7 @@ import app from './../../../firebase';
 
 function Header() {
     // const { user, logOut } = useContext(StateContext);
-    const [{user}, dispatch ] = useStateValue()
+    const [{ user, basket }, dispatch] = useStateValue();
 
     const navigate = useNavigate();
     // Get products from ProductContext
@@ -343,13 +343,13 @@ function Header() {
         setFilteredResults([]);
     };
     const auth = getAuth(app);
-    const logOut = () =>{
+    const logOut = () => {
 
         return signOut(auth);
-      }
+    }
     // Handle Logout 
     const handleLogOut = () => {
-        
+
         logOut()
             .then(() => {
                 console.log('User LogOut Done')
@@ -426,25 +426,6 @@ function Header() {
     };
 
 
-    // useEffect(() => {
-    //     if (!user) {
-    //         toast.info("Please Login to access full features & discounts!", {
-    //             position: "top-right",
-    //             autoClose: 2500,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "customBg",
-    //             style: {
-    //                 backgroundColor: "#bae9f3",  // Dark blue background
-    //                 color: "#12323a"  // White text color
-    //             }
-
-    //         });
-    //     }
-    // }, [user]);
     return (
         <>
             <style>
@@ -608,16 +589,26 @@ function Header() {
                                 <path fill="#1E3050" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
                             </svg>
                         </Link>
-                        <Link to={"/shoping-cart"} className="flex no-underline hover:text-black" href="#">
+                        <Link to="/shoping-cart" className="relative flex items-center no-underline hover:text-black">
                             <svg
-                                className="w-6 h-4 md:w-8 md:h-6"
+                                className="w-6 h-6 md:w-8 md:h-8"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 576 512"
                             >
                                 {/* SVG path data */}
-                                <path fill="#1E3050" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z" />
+                                <path
+                                    fill="#1E3050"
+                                    d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                                />
                             </svg>
+                            {basket?.length > 0 && (
+                                <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full h-4 w-4 text-center flex items-center justify-center text-xs font-bold">
+                                    {basket.length}
+                                </span>
+                            )}
                         </Link>
+
+
 
                         {/* Login Icon SVG */}
                         <div>
@@ -752,16 +743,26 @@ function Header() {
                                     <path fill="#1E3050" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
                                 </svg>
                             </Link>
-                            <Link className="flex items-center pl-3 no-underline hover:text-black " to={"/shoping-cart"}>
+                            <Link className="relative flex items-center pl-3 no-underline hover:text-black" to="/shoping-cart">
                                 <svg
                                     className="mr-1 w-7 h-7"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 576 512"
                                 >
                                     {/* SVG path data */}
-                                    <path fill="#1E3050" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z" />
+                                    <path
+                                        fill="#1E3050"
+                                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                                    />
                                 </svg>
+
+                                {basket?.length > 0 && (
+                                    <span className="absolute top-[-4px] right-[-4px] transform translate-x-1/4 -translate-y-1/4 bg-red-500 text-white rounded-full h-5 w-5 flex items-center justify-center text-xs font-bold">
+                                        {basket.length}
+                                    </span>
+                                )}
                             </Link>
+
 
                             <div>
                                 {
@@ -804,41 +805,6 @@ function Header() {
 
                                 {
                                     !user && <Link onClick={handleLogOut} className="flex items-center pl-3 no-underline hover:text-black" to={"/login"}>
-                                        {/*
-                                 <svg
-                                    className="mr-1 w-9 h-7"
-                                    version="1.1"
-                                    id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                                    x="0px"
-                                    y="0px"
-                                    viewBox="0 0 512 512"
-                                    xmlSpace="preserve"
-                                >
-                                    <g>
-                                        <g>
-                                            <g>
-                                               
-                                                <path
-                                                    // fill="#1E3050"
-                                                    fill="#ef4444"
-                                                    d="M403.4,248.4L272.2,381.2c-19.7,19.9-53.6,6-53.6-22V290H87c-15.9,0-28.8-12.9-28.8-28.8v-69.6
-				c0-15.9,12.9-28.8,28.8-28.8h131.6V93.6c0-28,33.9-41.9,53.6-22l131.2,132.8C415.4,216.6,415.4,236.2,403.4,248.4z"
-                                                />
-                                                
-                                                <path
-                                                    fill="#ef4444"
-                                                    d="M571.8,93.9v265c0,50.7-41.1,91.9-91.9,91.9h-71.4c-17.2,0-31.1-13.9-31.1-31.1l0,0
-				c0-17.2,13.9-31.1,31.1-31.1h62.3c21.4,0,38.8-17.4,38.8-38.8V103c0-21.4-17.4-38.8-38.8-38.8h-62.3c-17.2,0-31.1-13.9-31.1-31.1
-				l0,0c0-17.2,13.9-31.1,31.1-31.1h71.4C530.7,2,571.8,43.2,571.8,93.9z"
-                                                />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                                 */}
-
 
                                         <svg
                                             className="mr-1 w-9 h-7"

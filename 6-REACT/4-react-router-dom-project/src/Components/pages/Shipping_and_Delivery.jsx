@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import AboutImg from './../../assets/banner4.jpg'
+// import AboutImg from './../../assets/banner4.jpg'
+import AboutImg from './../../assets/banner6.jpg';
 const Shipping_and_Delivery = () => {
     const [openIndex, setOpenIndex] = useState(null); // Track which collapsible is open
 

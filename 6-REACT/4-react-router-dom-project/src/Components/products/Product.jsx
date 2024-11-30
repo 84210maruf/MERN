@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useProductValue } from '../../StateProvider'; // For fetching products
 import { useStateValue } from '../../StateProvider'; // For managing basket
+import sizeGuideImage from "../../assets/sizeguidefull.webp"; // Adjust the path as needed
 
 function Product() {
   const { id } = useParams(); // Get the product ID from the URL
@@ -16,6 +17,9 @@ function Product() {
   // Find the product by ID (parse ID to number if necessary)
   const product = products && products.find(item => item._id === parseInt(id));
   const [selectedSize, setSelectedSize] = useState(product.size[0]); // Default to the first size
+  const [showSizeGuide, setShowSizeGuide] = useState(false);
+
+  const toggleSizeGuide = () => setShowSizeGuide(!showSizeGuide);
 
   // State to store the selected image
   const [selectedImage, setSelectedImage] = useState(product.image[0]);
@@ -42,9 +46,8 @@ function Product() {
     });
   };
 
-  return (
-    <div>
-      <main className="py-3 lg:py-6 bg-sky-50">
+  return (  <div>
+      <main className="py-3 lg:py-6 bg-customBg-500">
         <div className="container  mx-auto px-4 flex flex-col md:flex-row">
 
           {/* Left Section - Image Previews Only For Large device */}
@@ -86,8 +89,8 @@ function Product() {
             </div>
           </div>
           {/* Left Section - Image Previews Only For Small & Medium device */}
-          <div className="block lg:hidden w-full md:w-1/2 px-4">
-            <div className="flex flex-wrap justify-around		">
+          <div className="block lg:hidden w-full md:w-1/2 px-4  bg-customBg-400 rounded-xl">
+            <div className="flex flex-wrap justify-around">
               {/* Main Image Preview */}
               <div
                 style={{
@@ -125,8 +128,9 @@ function Product() {
           </div>
 
           {/* Right Section - Product Details */}
-          <div className="p-4 rounded-2xl shadow-lg bg-customBg-300 w-full md:w-1/2  mt-0">
+          <div className="p-4 rounded-xl shadow-lg bg-customBg-300 w-full md:w-1/2  mt-0">
             <h1 className="">{product.title}</h1>
+            <h3 className="">SKU : {product.sku}</h3>
             {/* Price section  */}
 
             {/* <div className='p-2 bg-yellow-200 rounded-2xl'>
@@ -135,41 +139,30 @@ function Product() {
             </div> */}
 
             <div className="p-2 bg-customBg-100 rounded-2xl border shadow-lg">
-              <p className="">Original Price : <span className="line-through text-red-500">{product.price} Tk</span></p>
-              <p className="">
-                <span className="text-green-600">Discount : {product.discount}%</span>
+              {/* <p className="">Original Price : <span className="line-through ">{product.price} </span>Tk <span className="text-red-600 text-xs font-semibold tracking-tight">
+                {product.discount}% OFF
+              </span>
+              </p> */}
+              <p className="flex items-start space-x-2">
+                <span>Original Price: </span>
+                <span className="line-through">{product.price} </span>Tk
+                <span className="text-red-600 text-xs font-semibold tracking-tight self-start">
+                  {product.discount}% OFF
+                </span>
+              </p>
 
-              </p>
-              <p>
-                <span className="">Final Price : {finalPrice} Tk</span>
-              </p>
-              <div className="flex items-center">
-                <span className="">You Save: </span>
-                <span className="ml-2 font-semibold text-red-600">{(product.price - finalPrice)} Tk</span>
+              <div className="flex items-start space-x-2">
+                <span className="">Discounted Price : {finalPrice} Tk</span>
+                <span className="text-green-600 text-xs font-semibold tracking-tight self-start">
+                  [Save: {(product.price - finalPrice)} TK]
+                </span>
               </div>
-            </div>
-            <h3 className="">Product Code : {product.sku}</h3>
-            {/* Description */}
-            {/* <p className=" text-sm text-gray-600 mt-2">{product.description}</p> */}
-            {/* Dynamic Description Section */}
-            <div className="mb-1">
-              <h3 className="text-lg">Description:</h3>
-              <ul className="list-disc ml-5">
-                {product.description?.map((desc, index) => (
-                  <li className="text-sm" key={index}>{desc}</li>
-                ))}
-              </ul>
+
             </div>
 
-            {/* Features */}
-            <div>
-              <h3 className="text-lg">Features:</h3>
-              <ul className="list-disc ml-5">
-                {product.features && product.features.map((feature, index) => (
-                  <li className="text-sm" key={index}>{feature}</li>
-                ))}
-              </ul>
-            </div>
+
+
+
 
 
             {/* Sizes */}
@@ -195,8 +188,18 @@ function Product() {
                 ))}
               </select>
             </div> */}
-            <div className="">
-              <label htmlFor="size" className="block text-lg">Size</label>
+
+
+
+            {/* color  */}
+            <div className="mt-2 ">
+              <h3 className="text-md">Color : {product.color}</h3>
+              {/* <h3 className="text-md">Product Code : {product.sku}</h3> */}
+
+            </div>
+            {/* SIZE */}
+            <div className="flex items-center space-x-4">
+              <label htmlFor="size" className="text-lg">Size</label>
               <select
                 id="size"
                 value={selectedSize}
@@ -207,14 +210,38 @@ function Product() {
                   <option key={index} value={size}>{size}</option>
                 ))}
               </select>
+
+              <button
+                onClick={toggleSizeGuide}
+                className="px-2 py-1 border border-[#e49b0f] text-sm rounded-lg text-center  font-semibold rounded-full hover:bg-customBg-900 hover:text-white transition-all duration-300 ease-in-out"
+              >
+                Size Guide
+              </button>
+
             </div>
 
+            {/* Full-Screen Overlay for Size Guide Image */}
+            {showSizeGuide && (
+              <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex justify-center items-center">
+                <div className="relative w-full h-full flex justify-center items-center">
+                  {/* Close Button */}
+                  <button
+                    onClick={toggleSizeGuide}
+                    className="absolute top-4 left-4 lg:left-20 bg-red-500 text-white px-2 py-1 rounded-full text-xs hover:bg-red-700"
+                  >
+                    Close
+                  </button>
+                  {/* Image */}
+                  <img
+                    src={sizeGuideImage} // Use the imported image or public path
+                    alt="Size Guide"
+                    className="w-auto h-full object-contain" // Adjust width and height for full screen
+                  />
+                </div>
+              </div>
+            )}
 
-            <div className="mt-2 ">
-              <h3 className="text-md">Color : {product.color}</h3>
-              <h3 className="text-md">Product Code : {product.sku}</h3>
 
-            </div>
 
             <div className="flex justify-center items-center mt-4">
               <Link to={`/shoping-cart`} onClick={addToBasket}>
@@ -223,6 +250,31 @@ function Product() {
                 </button>
               </Link>
             </div>
+
+            {/* Description */}
+            {/* <p className=" text-sm text-gray-600 mt-2">{product.description}</p> */}
+            {/* Dynamic Description Section */}
+            <div className="mb-1">
+              <h3 className="text-lg">Specification:</h3>
+              <ul className="list-disc ml-5">
+                {product.description?.map((desc, index) => (
+                  <li className="text-sm" key={index}>{desc}</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Features */}
+            <div>
+              <h3 className="text-lg">Features:</h3>
+              <ul className="list-disc ml-5">
+                {product.features && product.features.map((feature, index) => (
+                  <li className="text-sm" key={index}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+
+
+
           </div>
         </div>
 

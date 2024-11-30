@@ -156,7 +156,20 @@ function Shoping_cart() {
                   </dl>
                 </div>
 
-                <Link to={"/payment"} className="animate-bounce flex w-full items-center justify-center rounded-lg px-5 py-2.5 text-md text-sky-50 hover:text-white font-medium bg-gradient-to-tr from-sky-500 to-sky-800 hover: focus:outline-none focus:ring-2 focus:ring-blue-600">Proceed to Checkout</Link>
+                <Link
+                  to={getTotal(basket) === 0 ? "#" : "/payment"}
+                  className={`flex w-full items-center justify-center rounded-lg px-5 py-2.5 text-md font-medium transition duration-200 
+    ${getTotal(basket) === 0
+                      ? "bg-gray-400 text-gray-200 cursor-not-allowed"
+                      : "bg-gradient-to-tr from-sky-500 to-sky-800 text-sky-50 hover:text-white hover:bg-sky-600 focus:ring-2 focus:ring-blue-600"
+                    }`}
+                  aria-label="Proceed to Checkout"
+                  onClick={(e) => {
+                    if (getTotal(basket) === 0) e.preventDefault();
+                  }}
+                >
+                  Proceed to Checkout
+                </Link>
 
                 <div className="flex items-center justify-center gap-2">
                   <span className="text-sm font-normal text-gray-500 dark:text-gray-400"> or </span>

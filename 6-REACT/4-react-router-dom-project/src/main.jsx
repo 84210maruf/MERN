@@ -34,6 +34,8 @@ import Shipping_and_Delivery from "./Components/pages/Shipping_and_Delivery";
 import Collections from "./Components/products/Collections";
 import Results from "./Components/pages/Results";
 import AuthHandler from "./AuthHandler";
+import Career from "./Components/pages/Career";
+import HowToOrder from "./Components/pages/HowToOrder";
 // import AuthHandler from "./AuthHandler";
 
 
@@ -54,6 +56,7 @@ const router = createBrowserRouter([
       { path: "/kids", element: <Kids /> }, // Route "/kids"
       { path: "/winter", element: <Winter /> }, // Route "/winter"
       { path: "/minas-dream", element: <MinasDream /> }, // Route "/mina's-dream"
+      // { path: "/minas-dream", element: <MinasDream /> }, // Route "/mina's-dream"
       { path: "/shoping-cart", element: <Shoping_cart /> }, // Route "/shoping-cart"
       { path: "/whish-list", element: <Whish_list /> }, // Route "/Whish List"
       { path: "/payment", element: <Payment /> }, // Route "/payment"
@@ -67,8 +70,11 @@ const router = createBrowserRouter([
       { path: "/terms-conditions", element: <Terms_comditions /> }, // Route "/Terms & Conditions"
       { path: "/privacy-policy", element: <PrivacyPolicy /> }, // Route "/Privacy Policy"
       { path: "/return-policy", element: <ReturnPolicy /> }, // Route "/Return Policy"
+      { path: "/career", element: <Career /> }, // Route "/Return Policy"
+      { path: "/howtoorder", element: <HowToOrder /> }, // Route "/Return Policy"
       { path: "/Shipping_and_Delivery", element: <Shipping_and_Delivery /> }, // Route "/Shipping & Delivery"
       { path: "/FAQs", element: <FAQs /> }, // Route "/FAQs"
+      { path: "/thankyou", element: <Thankyou /> }, // Route "/FAQs"
 
 
     ]

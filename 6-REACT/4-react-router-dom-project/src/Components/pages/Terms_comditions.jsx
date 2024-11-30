@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AboutImg from './../../assets/aboutPic.jpg';
+import AboutImg from './../../assets/banner1.jpg';
 function Terms_comditions() {
 
     const email = "info@millennial-clothing.com"; // Replace with the desired email address

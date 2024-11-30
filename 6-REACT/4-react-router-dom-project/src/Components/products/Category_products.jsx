@@ -52,7 +52,7 @@ function Category_products() {
   // const filteredProducts = products.filter(product => 
   //   product.category && product.category.toLowerCase() === category.toLowerCase()
   // );
-  
+
 
   const addToBasket = () => {
     // Push the item into the data Layer
@@ -88,11 +88,17 @@ function Category_products() {
     //   </article>
     // </div>
     <div className='bg-customBg bg-opacity-50'>
-      <h1 className='text-center text-2xl font-semibold'>{category}</h1>
+      {/* <h1 className='text-center text-2xl font-semibold'>{category}</h1> */}
+      <h1 className='text-center text-2xl font-semibold'>
+      {category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()}
+
+
+      </h1>
+
       {filteredProducts.length > 0 ? (
-        <div className='w-full py-6 px-8 md:px-8 lg:px-12 flex justify-center'>
+        <div className='w-full py-6 px-1 md:px-8 lg:px-12 flex justify-center'>
           <section
-            className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-items-center justify-center  gap-y-4 place-content-center'
+            className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-items-center justify-center gap-x-2 gap-y-4 place-content-center'
           >
             {filteredProducts.map(item => (
               <ProductItem key={item._id} item={item} />

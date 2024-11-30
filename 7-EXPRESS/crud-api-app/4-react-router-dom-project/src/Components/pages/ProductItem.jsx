@@ -89,7 +89,7 @@ function ProductItem({ item }) {
     //     </div>
     //   </div>
     // </div>
-    <div className="product-item w-[200px] h-[320px] border-2 bg-customBg-300 border-customBg-800 rounded-md text-center font-normal relative group overflow-hidden">
+    <div className="product-item w-[150px] sm:w-[180px] md:w-[200px] h-[300px] md:h-[320px] border-2 bg-customBg-300 border-customBg-800 rounded-md text-center font-normal relative group overflow-hidden">
       <Link to={`/product/${item._id}`}>
         <div className="w-[auto] h-[auto]">
           <img

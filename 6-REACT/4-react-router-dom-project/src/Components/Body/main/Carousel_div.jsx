@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import slider1 from './../../../assets/banner1.jpg';
+import slider1 from './../../../assets/banner6.jpg';
 import slider2 from './../../../assets/banner2.jpg';
 import slider3 from './../../../assets/banner3.webp';
 import slider4 from './../../../assets/banner4.webp';
+import slider5 from './../../../assets/banner5.jpg';
+import slider6 from './../../../assets/banner1.jpg';
 
 const Carousel_div = () => {
-    const images = [slider1, slider2, slider3, slider4];
+    const images = [slider1, slider2, slider3, slider4,slider5, slider6];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {

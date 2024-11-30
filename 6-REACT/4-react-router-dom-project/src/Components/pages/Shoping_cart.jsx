@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { useStateValue } from '../../StateProvider'
 import { getTotal, getBasketDiscountTotal, getBasketPriceTotal, getItemTotal, getItemPriceTotal, getItemDiscountTotal } from '../../reducer';
 
 function Shopping_cart() {
-
-  const shippingCost = 0;
+  // const shippingCost = 60;
   const { user, state, dispatch } = useStateValue();
   const { basket } = state;
   // console.log('this is current busket', basket)
@@ -70,8 +69,8 @@ function Shopping_cart() {
                           </div>
                           {/* Quantity Details  */}
                           <div>
-                            <div className="flex items-center justify-around font-semibold">
-                              <label className="font-semibold">Quantity add :</label>
+                            <div className="flex items-center justify-around">
+                              <label className="">Quantity:</label>
                               <div className="flex items-center">
                                 <button onClick={() => dispatch({ type: 'decrement', id: item._id })} type="button" id="decrement-button" data-input-counter-decrement="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                                   {/* Decrement SVG */}
@@ -80,7 +79,7 @@ function Shopping_cart() {
                                   </svg>
                                 </button>
 
-                                <input type="text" id="counter-input" data-input-counter className="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0 dark:text-white" value={item.quantity} required />
+                                <input type="text" id="counter-input" data-input-counter className="w-5 shrink-0 border-0 bg-transparent text-center text-sm font-bold text-gray-900 focus:outline-none focus:ring-0 dark:text-white" value={item.quantity} required />
                                 <button onClick={() => dispatch({ type: 'increment', id: item._id })} type="button" id="increment-button" data-input-counter-increment="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                                   {/* Increment SVG */}
                                   <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -138,27 +137,40 @@ function Shopping_cart() {
                       <dt className="text-sm font-normal  dark:text-gray-400">Total discount : </dt>
                       <dd className="text-sm font-medium text-gray-900 dark:text-white">{getBasketDiscountTotal(basket)} Tk</dd>
                     </dl>
-                    <dl className="flex items-center justify-between gap-4">
+
+
+                    {/* <dl className="flex items-center justify-between gap-4">
                       <dt className="text-sm font-normal  dark:text-gray-400">Shipping fee : </dt>
                       <dd className="text-sm font-medium text-gray-900 dark:text-white">{shippingCost} Tk</dd>
-                    </dl>
+                    </dl> */}
 
                     <hr className="border-gray-300 dark:border-gray-600" />
 
                     <dl className="flex items-center justify-between gap-4">
                       <dt className="text-base font-semibold text-gray-900 dark:text-white">Total amount : </dt>
-                      <dd className="text-base font-semibold text-gray-900 dark:text-white">{getBasketPriceTotal(basket) - getBasketDiscountTotal(basket) + shippingCost} Tk</dd>
+                      <dd className="text-base font-semibold text-gray-900 dark:text-white">{getBasketPriceTotal(basket) - getBasketDiscountTotal(basket) } Tk</dd>
                     </dl>
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center mt-4">
+                {/* <div className="flex justify-center items-center mt-4">
                   <Link to="/payment" >
                     <button className="w-[100%] animate-bounce bg-[#e49b0f] text-white py-[10px] font-bold px-4 rounded-lg hover:bg-customBg-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
                       <p className='animate-pulse tracking-widest'>Checkout</p>
                     </button>
                   </Link>
+                </div> */}
+                <div className="flex justify-center items-center mt-4">
+                  <Link to="/payment">
+                    <button
+                      className={`w-[100%] ${basket.length === 0 ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#e49b0f]'} text-white py-[10px] font-bold px-4 rounded-lg hover:bg-customBg-900 focus:outline-none focus:ring-2 focus:ring-blue-600`}
+                      disabled={basket.length === 0}
+                    >
+                      <p className='animate-pulse tracking-widest'>{basket.length === 0 ? 'No items in cart' : 'Checkout'}</p>
+                    </button>
+                  </Link>
                 </div>
+
               </div>
             </div>
           </div>
