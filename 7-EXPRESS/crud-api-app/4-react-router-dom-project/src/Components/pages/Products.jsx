@@ -61,7 +61,7 @@ function Products() {
         className="w-full grid grid-cols-2 xs:grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 justify-items-center gap-x-2 xs:gap-x-1 gap-y-2 xs:gap-y-1 place-content-center">
 
         {products
-          .filter(item => item.category === 'men')
+          .filter(item => item.category === 'Men')
           .slice(0, 5) // Get only the first 5 products
           .map(item => (
             <ProductItem key={item._id} item={item} />
@@ -76,7 +76,7 @@ function Products() {
         className="w-full grid grid-cols-2 xs:grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 justify-items-center gap-x-2 xs:gap-x-1 gap-y-2 xs:gap-y-1 place-content-center">
 
         {products
-          .filter(item => item.category === 'women')
+          .filter(item => item.category === 'Women')
           .slice(0, 5)
           .map(item => (
             <ProductItem key={item._id} item={item} />
@@ -91,7 +91,7 @@ function Products() {
         className="w-full grid grid-cols-2 xs:grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 justify-items-center gap-x-2 xs:gap-x-1 gap-y-2 xs:gap-y-1 place-content-center">
 
         {products
-          .filter(item => item.category === 'kids')
+          .filter(item => item.category === 'Kids')
           .slice(0, 5)
           .map(item => (
             <ProductItem key={item._id} item={item} />
@@ -106,7 +106,7 @@ function Products() {
         className="w-full grid grid-cols-2 xs:grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 justify-items-center gap-x-2 xs:gap-x-1 gap-y-2 xs:gap-y-1 place-content-center">
 
         {products
-          .filter(item => item.brand === 'Millennial')
+          .filter(item => item.brand === 'Millennial Clothing')
           .slice(0, 5)
           .map(item => (
             <ProductItem key={item._id} item={item} />
@@ -121,7 +121,7 @@ function Products() {
         className="w-full grid grid-cols-2 xs:grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 justify-items-center gap-x-2 xs:gap-x-1 gap-y-2 xs:gap-y-1 place-content-center">
 
         {products
-          .filter(item => item.brand === 'minasdream')
+          .filter(item => item.brand === "Mina's Dream")
           .slice(0, 5)
           .map(item => (
             <ProductItem key={item._id} item={item} />

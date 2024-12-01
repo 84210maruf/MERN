@@ -20,9 +20,13 @@ const ProductSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ["men", "women", "kids","accessories"]
+        enum: ["men", "women", "kids","accessories","Men", "Women", "Kids","Accessories"]
     },
     subCategory: {
+        type: String,
+        trim: true
+    },
+    productType: {
         type: String,
         trim: true
     },
@@ -31,7 +35,12 @@ const ProductSchema = new mongoose.Schema({
         enum: ["XS", "S", "M", "L", "XL", "XXL"]
     },
     description: {
-        type: String,
+        type: [String],
+        required: true,
+        trim: true
+    },
+    features: {
+        type: [String],
         required: true,
         trim: true
     },
