@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, useRef, useContext } from "react"
 import { Link } from "react-router-dom"
 import Logo from "./../../../assets/Website_Logo.svg"
@@ -438,7 +436,7 @@ function Header() {
                             </Link>
                             <Link className="relative flex items-center pl-3 no-underline hover:text-black" to="/shoping-cart">
                                 <svg
-                                    className="mr-1 w-7 h-7"
+                                    className="mr-1 w-8 h-6"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 576 512"
                                 >
